@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mariage de Patricia et Juraj" />
+    <title>Patricia & Juraj</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-logo">P & J</a>
+
+        <div class="nav-right">
+          <ul id="nav-menu" class="nav-menu"></ul>
+
+          <div id="lang-switch" class="lang-switch" role="group" aria-label="Changer la langue">
+            <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+            <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
+            <button type="button" class="lang-btn" data-lang="cs" aria-pressed="false">CZ</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="hero-content reveal">
+          <p id="hero-eyebrow" class="hero-eyebrow"></p>
+          <h1 id="hero-names" class="hero-names"></h1>
+          <p id="hero-date" class="hero-date"></p>
+          <p id="hero-location" class="hero-location"></p>
+          <p id="hero-tagline" class="hero-tagline"></p>
+
+          <div id="countdown" class="countdown" aria-live="polite"></div>
+
+          <div class="hero-cta">
+            <a href="#rsvp" id="hero-cta-rsvp" class="btn btn-primary"></a>
+            <a href="#save-the-date" id="hero-cta-save-the-date" class="btn btn-outline"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="essentiel" class="section section--compact">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="essentials-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="essentials-grid" class="essentials-grid"></div>
+        </div>
+      </section>
+
+      <section id="save-the-date" class="section section--media">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="save-the-date-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+            <p id="save-the-date-intro" class="section-intro"></p>
+          </header>
+          <div id="media-grid" class="media-grid"></div>
+        </div>
+      </section>
+
+      <section id="programme" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="events-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="events-list" class="events-list"></div>
+        </div>
+      </section>
+
+      <section id="infos" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="details-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="details-grid" class="details-grid"></div>
+          <div id="map-links" class="map-links"></div>
+        </div>
+      </section>
+
+      <section id="hebergement" class="section section--alt">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="accommodation-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+            <p id="accommodation-intro" class="section-intro"></p>
+          </header>
+          <div id="accommodation-list" class="accommodation-list"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="faq-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="faq-list" class="faq-list"></div>
+        </div>
+      </section>
+
+      <section id="rsvp" class="section rsvp-section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="rsvp-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div class="rsvp-wrapper">
+            <p id="rsvp-message" class="rsvp-message"></p>
+            <form id="rsvp-form" class="rsvp-form">
+              <div class="form-group">
+                <label for="rsvp-name" id="label-rsvp-name"></label>
+                <input type="text" id="rsvp-name" name="name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="rsvp-email" id="label-rsvp-email"></label>
+                <input type="email" id="rsvp-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="rsvp-attendance" id="label-rsvp-attendance"></label>
+                <select id="rsvp-attendance" name="attendance" required>
+                  <option id="opt-choose" value=""></option>
+                  <option id="opt-yes" value="yes"></option>
+                  <option id="opt-no" value="no"></option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="rsvp-guests" id="label-rsvp-guests"></label>
+                <input type="number" id="rsvp-guests" name="guests" min="1" max="10" value="1" />
+              </div>
+              <div class="form-group" id="rsvp-shuttle-group">
+                <label for="rsvp-shuttle" id="label-rsvp-shuttle"></label>
+                <select id="rsvp-shuttle" name="shuttle">
+                  <option value=""></option>
+                  <option id="opt-shuttle-1330" value="13h30"></option>
+                  <option id="opt-shuttle-1400" value="14h00"></option>
+                  <option id="opt-shuttle-no" value="no"></option>
+                </select>
+              </div>
+              <div class="form-group" id="rsvp-dietary-group">
+                <label for="rsvp-dietary" id="label-rsvp-dietary"></label>
+                <textarea id="rsvp-dietary" name="dietary"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="rsvp-message-field" id="label-rsvp-message"></label>
+                <textarea id="rsvp-message-field" name="message"></textarea>
+              </div>
+              <button type="submit" id="rsvp-submit" class="btn btn-primary"></button>
+            </form>
+            <p id="rsvp-feedback" class="rsvp-feedback" hidden role="status"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="contact-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div class="contact-links">
+            <a id="contact-email" class="contact-link" href="#">email</a>
+            <a id="contact-phone" class="contact-link" href="#">téléphone</a>
+          </div>
+          <div id="contact-witnesses" class="contact-witnesses"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-text" class="footer-text container"></p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true">
+      <div class="lightbox-backdrop"></div>
+      <div class="lightbox-panel">
+        <button class="lightbox-close" aria-label="Fermer">&times;</button>
+        <div class="lightbox-content"></div>
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
