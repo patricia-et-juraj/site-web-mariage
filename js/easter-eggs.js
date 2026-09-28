@@ -187,7 +187,7 @@ function launchConfetti() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const colors = ["#9b87b8", "#a04558", "#f7f4fa", "#722f37", "#d4c4e8"];
+  const colors = ["#6b2830", "#8f3d45", "#f4efe6", "#4a1a20", "#e8ddd0"];
   const particles = Array.from({ length: 120 }, () => ({
     x: Math.random() * canvas.width,
     y: -20 - Math.random() * 100,

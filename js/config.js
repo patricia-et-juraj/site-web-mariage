@@ -14,13 +14,13 @@ export const siteConfig = {
 
   theme: {
     colors: {
-      background: "#f7f4fa",
-      surface: "#ffffff",
-      text: "#2e1520",
-      textMuted: "#6e5a72",
-      accent: "#9b87b8",
-      accentDark: "#722f37",
-      gold: "#a04558",
+      background: "#f4efe6",
+      surface: "#fffcf7",
+      text: "#4a1a20",
+      textMuted: "#7a5055",
+      accent: "#6b2830",
+      accentDark: "#4a1a20",
+      gold: "#8f3d45",
     },
   },
 
