@@ -71,9 +71,6 @@ function renderHero() {
   }
 
   const tr = t();
-  const eyebrow = document.getElementById("hero-eyebrow");
-  if (eyebrow) eyebrow.textContent = tr.hero.eyebrow;
-
   document.getElementById("hero-names").innerHTML =
     `${couple.person1} <span class="hero-amp" id="hero-amp" title="?">&</span> ${couple.person2}`;
   document.getElementById("hero-date").textContent = tr.hero.dateDisplay;
