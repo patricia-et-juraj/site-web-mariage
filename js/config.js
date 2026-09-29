@@ -8,7 +8,7 @@ export const siteConfig = {
   },
 
   wedding: {
-    date: "2027-03-21T15:00:00",
+    date: "2027-03-20T15:00:00",
     mapsUrl: "https://maps.app.goo.gl/UHJKb2dV2LsLW7pU8",
   },
 
@@ -58,7 +58,7 @@ export const siteConfig = {
     konami: { enabled: true },
     ampersand: { enabled: true },
     logoClicks: { enabled: true, requiredClicks: 5 },
-    secretWord: { enabled: true, word: "210327" },
+    secretWord: { enabled: true, word: "200327" },
     footerHearts: { enabled: true },
     countdown100: { enabled: true },
   },

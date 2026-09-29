@@ -31,13 +31,13 @@ export const translations = {
     hero: {
       eyebrow: "Nous nous marions",
       tagline: "Nous avons hâte de célébrer ce jour avec vous",
-      dateDisplay: "Samedi 21 mars 2027",
+      dateDisplay: "Samedi 20 mars 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Confirmer ma présence",
       ctaSaveTheDate: "Voir le Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Date", value: "21 mars 2027" },
+      { icon: "📅", label: "Date", value: "20 mars 2027" },
       { icon: "⏰", label: "Heure", value: "15h00 — cérémonie" },
       { icon: "📍", label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
       { icon: "👔", label: "Tenue", value: "Chic décontracté — pas de blanc" },
@@ -251,7 +251,7 @@ export const translations = {
         "C'est ici, entre nos deux prénoms, que tout a commencé — un sourire, une rencontre, et le reste…",
       logoClicks:
         "Psst… Juraj a mis du temps à choisir la bague. Patricia a dit oui avant qu'il finisse sa phrase.",
-      secretWord: "💍 21 · 03 · 27 — marquez la date, on a hâte de vous voir !",
+      secretWord: "💍 20 · 03 · 27 — marquez la date, on a hâte de vous voir !",
       footerHearts: "Merci d'être dans notre vie ❤️",
       countdown100: "Plus que 100 jours… le stress monte, l'excitation aussi !",
     },
@@ -287,13 +287,13 @@ export const translations = {
     hero: {
       eyebrow: "Berieme sa",
       tagline: "Tešíme sa, že tento deň oslávime spolu s vami",
-      dateDisplay: "Sobota 21. marca 2027",
+      dateDisplay: "Sobota 20. marca 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Potvrdiť účasť",
       ctaSaveTheDate: "Pozrieť Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Dátum", value: "21. marca 2027" },
+      { icon: "📅", label: "Dátum", value: "20. marca 2027" },
       { icon: "⏰", label: "Čas", value: "15:00 — obrad" },
       { icon: "📍", label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
       { icon: "👔", label: "Oblečenie", value: "Elegantné casual — nie biela" },
@@ -507,7 +507,7 @@ export const translations = {
         "Tu, medzi našimi menami, sa všetko začalo — úsmev, stretnutie a zvyšok príbehu…",
       logoClicks:
         "Psst… Juraj dlho vyberal prsteň. Patrícia povedala áno skôr, než dohovoril.",
-      secretWord: "💍 21 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
+      secretWord: "💍 20 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
       footerHearts: "Ďakujeme, že ste v našich životoch ❤️",
       countdown100: "Už len 100 dní… stres rastie, ale aj vzrušenie!",
     },
