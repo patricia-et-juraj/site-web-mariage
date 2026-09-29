@@ -135,47 +135,25 @@
           </header>
           <div class="rsvp-wrapper">
             <p id="rsvp-message" class="rsvp-message"></p>
-            <form id="rsvp-form" class="rsvp-form">
-              <div class="form-group">
-                <label for="rsvp-name" id="label-rsvp-name"></label>
-                <input type="text" id="rsvp-name" name="name" required autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label for="rsvp-email" id="label-rsvp-email"></label>
-                <input type="email" id="rsvp-email" name="email" required autocomplete="email" />
-              </div>
-              <div class="form-group">
-                <label for="rsvp-attendance" id="label-rsvp-attendance"></label>
-                <select id="rsvp-attendance" name="attendance" required>
-                  <option id="opt-choose" value=""></option>
-                  <option id="opt-yes" value="yes"></option>
-                  <option id="opt-no" value="no"></option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="rsvp-guests" id="label-rsvp-guests"></label>
-                <input type="number" id="rsvp-guests" name="guests" min="1" max="10" value="1" />
-              </div>
-              <div class="form-group" id="rsvp-shuttle-group">
-                <label for="rsvp-shuttle" id="label-rsvp-shuttle"></label>
-                <select id="rsvp-shuttle" name="shuttle">
-                  <option value=""></option>
-                  <option id="opt-shuttle-1330" value="13h30"></option>
-                  <option id="opt-shuttle-1400" value="14h00"></option>
-                  <option id="opt-shuttle-no" value="no"></option>
-                </select>
-              </div>
-              <div class="form-group" id="rsvp-dietary-group">
-                <label for="rsvp-dietary" id="label-rsvp-dietary"></label>
-                <textarea id="rsvp-dietary" name="dietary"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="rsvp-message-field" id="label-rsvp-message"></label>
-                <textarea id="rsvp-message-field" name="message"></textarea>
-              </div>
-              <button type="submit" id="rsvp-submit" class="btn btn-primary"></button>
-            </form>
-            <p id="rsvp-feedback" class="rsvp-feedback" hidden role="status"></p>
+            <p id="rsvp-hint" class="rsvp-hint"></p>
+            <div class="rsvp-actions">
+              <a
+                id="rsvp-form-link"
+                class="btn btn-primary"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
+            <p id="rsvp-not-configured" class="rsvp-feedback is-error" hidden role="status"></p>
+            <div id="rsvp-embed-wrap" class="rsvp-embed-wrap" hidden>
+              <iframe
+                id="rsvp-embed"
+                class="rsvp-embed"
+                title="Formulaire RSVP"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

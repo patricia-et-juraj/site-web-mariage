@@ -2,8 +2,6 @@ import { siteConfig } from "./config.js";
 import { getTranslations, getLocale, setLocale, onLocaleChange, initLocale, formatTemplate } from "./locale.js";
 import { initGallery } from "./gallery.js";
 import { initEasterEggs, updateEasterEggMessages } from "./easter-eggs.js";
-import { submitRsvp, readRsvpForm } from "./rsvp.js";
-
 const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs } = siteConfig;
 
 let countdownInterval;
@@ -21,6 +19,34 @@ function applyTheme() {
 
 function removeSection(id) {
   document.getElementById(id)?.remove();
+}
+
+function getGoogleFormUrl() {
+  return siteConfig.rsvp?.googleFormUrl?.trim() || "";
+}
+
+function toGoogleFormEmbedUrl(url) {
+  if (!url) return "";
+  if (url.includes("embedded=true")) return url;
+  return url.includes("?") ? `${url}&embedded=true` : `${url}?embedded=true`;
+}
+
+function applyRsvpLinks(formUrl) {
+  const heroCta = document.getElementById("hero-cta-rsvp");
+  const formLink = document.getElementById("rsvp-form-link");
+
+  [heroCta, formLink].forEach((el) => {
+    if (!el) return;
+    if (formUrl) {
+      el.href = formUrl;
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    } else {
+      el.href = "#rsvp";
+      el.removeAttribute("target");
+      el.removeAttribute("rel");
+    }
+  });
 }
 
 function mergeMediaWithCaptions() {
@@ -219,39 +245,42 @@ function renderRsvp() {
   }
 
   const tr = t().rsvp;
+  const formUrl = getGoogleFormUrl();
+
   document.getElementById("rsvp-title").textContent = t().sections.rsvp;
   document.getElementById("rsvp-message").textContent = formatTemplate(tr.message, {
     deadline: tr.deadline,
   });
+  document.getElementById("rsvp-hint").textContent = tr.formHint;
 
-  document.getElementById("label-rsvp-name").textContent = tr.labels.name;
-  document.getElementById("label-rsvp-email").textContent = tr.labels.email;
-  document.getElementById("label-rsvp-attendance").textContent = tr.labels.attendance;
-  document.getElementById("label-rsvp-guests").textContent = tr.labels.guests;
-  document.getElementById("label-rsvp-shuttle").textContent = tr.labels.shuttle;
-  document.getElementById("label-rsvp-dietary").textContent = tr.labels.dietary;
-  document.getElementById("label-rsvp-message").textContent = tr.labels.message;
-  document.getElementById("rsvp-submit").textContent = tr.labels.submit;
+  const formLink = document.getElementById("rsvp-form-link");
+  formLink.textContent = tr.formCta;
 
-  const optChoose = document.getElementById("opt-choose");
-  const optYes = document.getElementById("opt-yes");
-  const optNo = document.getElementById("opt-no");
-  const optShuttle1330 = document.getElementById("opt-shuttle-1330");
-  const optShuttle1400 = document.getElementById("opt-shuttle-1400");
-  const optShuttleNo = document.getElementById("opt-shuttle-no");
+  const notConfigured = document.getElementById("rsvp-not-configured");
+  const embedWrap = document.getElementById("rsvp-embed-wrap");
+  const embed = document.getElementById("rsvp-embed");
 
-  if (optChoose) {
-    optChoose.textContent = tr.placeholders.choose;
-    optChoose.value = "";
+  if (formUrl) {
+    notConfigured.hidden = true;
+    formLink.hidden = false;
+    applyRsvpLinks(formUrl);
+
+    if (siteConfig.rsvp?.embedForm !== false) {
+      embed.src = toGoogleFormEmbedUrl(formUrl);
+      embed.title = tr.formCta;
+      embedWrap.hidden = false;
+    } else {
+      embedWrap.hidden = true;
+      embed.removeAttribute("src");
+    }
+  } else {
+    notConfigured.textContent = tr.notConfiguredMessage;
+    notConfigured.hidden = false;
+    formLink.hidden = true;
+    embedWrap.hidden = true;
+    embed.removeAttribute("src");
+    applyRsvpLinks("");
   }
-  if (optYes) optYes.textContent = tr.placeholders.yes;
-  if (optNo) optNo.textContent = tr.placeholders.no;
-  if (optShuttle1330) optShuttle1330.textContent = tr.placeholders.shuttle1330;
-  if (optShuttle1400) optShuttle1400.textContent = tr.placeholders.shuttle1400;
-  if (optShuttleNo) optShuttleNo.textContent = tr.placeholders.shuttleNo;
-
-  document.getElementById("rsvp-dietary").placeholder = tr.placeholders.dietary;
-  document.getElementById("rsvp-message-field").placeholder = tr.placeholders.message;
 }
 
 function renderContact() {
@@ -390,56 +419,6 @@ function initLangSwitch() {
   });
 }
 
-function initRsvpForm() {
-  const form = document.getElementById("rsvp-form");
-  const feedback = document.getElementById("rsvp-feedback");
-  const submitBtn = document.getElementById("rsvp-submit");
-  if (!form || form.dataset.rsvpBound) return;
-
-  form.dataset.rsvpBound = "true";
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const tr = t().rsvp;
-    const scriptUrl = siteConfig.rsvp?.googleScriptUrl?.trim();
-
-    feedback.hidden = true;
-    feedback.classList.remove("is-error");
-
-    if (!scriptUrl) {
-      feedback.textContent = tr.notConfiguredMessage;
-      feedback.classList.add("is-error");
-      feedback.hidden = false;
-      return;
-    }
-
-    const defaultLabel = submitBtn.textContent;
-    submitBtn.disabled = true;
-    submitBtn.textContent = tr.sendingMessage;
-
-    try {
-      const payload = { ...readRsvpForm(form), locale: getLocale() };
-      const result = await submitRsvp(scriptUrl, payload);
-
-      if (!result.ok) {
-        throw new Error(result.error || "submit_failed");
-      }
-
-      feedback.textContent = tr.successMessage;
-      feedback.hidden = false;
-      form.reset();
-    } catch {
-      feedback.textContent = tr.errorMessage;
-      feedback.classList.add("is-error");
-      feedback.hidden = false;
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = defaultLabel;
-    }
-  });
-}
-
 function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -460,7 +439,6 @@ function init() {
   initCountdown();
   initNav();
   initLangSwitch();
-  initRsvpForm();
   initScrollReveal();
   initEasterEggs(buildEasterEggConfig());
   onLocaleChange(renderPage);

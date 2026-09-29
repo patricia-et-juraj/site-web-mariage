@@ -55,11 +55,12 @@ export const siteConfig = {
   },
 
   /**
-   * RSVP → Google Sheets (voir google-apps-script/Code.gs).
-   * Collez l’URL de déploiement « Application web » (/exec) une fois configurée.
+   * RSVP via Google Form — lien « envoyer le formulaire » (URL se terminant par /viewform).
+   * Dans Google Forms : Réponses → lien Google Sheets pour consulter sur téléphone.
    */
   rsvp: {
-    googleScriptUrl: "",
+    googleFormUrl: "",
+    embedForm: true,
   },
 
   easterEggs: {

@@ -194,32 +194,11 @@ export const translations = {
     rsvp: {
       deadline: "1er février 2027",
       message: "Merci de confirmer votre présence avant le {deadline}.",
-      successMessage: "Merci ! Votre réponse a bien été enregistrée.",
-      sendingMessage: "Envoi en cours…",
-      errorMessage:
-        "Une erreur est survenue. Réessayez ou contactez-nous par email ou téléphone.",
+      formCta: "Répondre au formulaire Google",
+      formHint:
+        "Remplissez le formulaire ci-dessous ou ouvrez-le dans un nouvel onglet. Vos réponses seront enregistrées automatiquement.",
       notConfiguredMessage:
-        "Le formulaire n’est pas encore connecté. Merci de nous écrire par email en attendant.",
-      labels: {
-        name: "Nom complet",
-        email: "Email",
-        attendance: "Présence",
-        guests: "Nombre de personnes",
-        shuttle: "Navette depuis la gare",
-        dietary: "Allergies / régime alimentaire",
-        message: "Message (optionnel)",
-        submit: "Envoyer",
-      },
-      placeholders: {
-        choose: "— Choisir —",
-        yes: "Oui, je serai présent(e)",
-        no: "Non, je ne pourrai pas venir",
-        shuttle1330: "Oui — départ 13h30",
-        shuttle1400: "Oui — départ 14h00",
-        shuttleNo: "Non merci",
-        dietary: "Végétarien, sans gluten, allergies…",
-        message: "Un mot pour les mariés…",
-      },
+        "Le formulaire sera bientôt en ligne. En attendant, contactez-nous par email ou téléphone.",
     },
     contact: {
       emailLabel: "email",
@@ -455,32 +434,11 @@ export const translations = {
     rsvp: {
       deadline: "1. februára 2027",
       message: "Prosíme o potvrdenie účasti do {deadline}.",
-      successMessage: "Ďakujeme! Vaša odpoveď bola zaznamenaná.",
-      sendingMessage: "Odosiela sa…",
-      errorMessage:
-        "Vyskytla sa chyba. Skúste to znova alebo nás kontaktujte emailom či telefónom.",
+      formCta: "Odpovedať cez Google Formulár",
+      formHint:
+        "Vyplňte formulár nižšie alebo ho otvorte v novom okne. Odpovede sa uložia automaticky.",
       notConfiguredMessage:
-        "Formulár ešte nie je pripojený. Napíšte nám prosím emailom.",
-      labels: {
-        name: "Celé meno",
-        email: "Email",
-        attendance: "Účasť",
-        guests: "Počet osôb",
-        shuttle: "Kyvadlová doprava zo stanice",
-        dietary: "Alergie / stravovací režim",
-        message: "Správa (voliteľné)",
-        submit: "Odoslať",
-      },
-      placeholders: {
-        choose: "— Vyberte —",
-        yes: "Áno, prídem",
-        no: "Nie, nemôžem prísť",
-        shuttle1330: "Áno — odchod 13:30",
-        shuttle1400: "Áno — odchod 14:00",
-        shuttleNo: "Nie, ďakujem",
-        dietary: "Vegetariánske, bez lepku, alergie…",
-        message: "Pár slov pre mladomanželov…",
-      },
+        "Formulár bude čoskoro online. Medzitým nás kontaktujte emailom alebo telefónom.",
     },
     contact: {
       emailLabel: "email",

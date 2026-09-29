@@ -900,7 +900,39 @@ h3 {
 .rsvp-message {
   text-align: center;
   color: var(--color-text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rsvp-hint {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.rsvp-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-embed-wrap {
+  margin-top: 0.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--color-surface);
+  border: 1px solid rgba(var(--bordeaux-rgb), 0.12);
+}
+
+.rsvp-embed {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  height: min(75vh, 900px);
+  border: 0;
 }
 
 .rsvp-form {
