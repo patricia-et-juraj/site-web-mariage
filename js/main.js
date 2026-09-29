@@ -2,6 +2,7 @@ import { siteConfig } from "./config.js";
 import { getTranslations, getLocale, setLocale, onLocaleChange, initLocale, formatTemplate } from "./locale.js";
 import { initGallery } from "./gallery.js";
 import { initEasterEggs, updateEasterEggMessages } from "./easter-eggs.js";
+import { submitRsvp, readRsvpForm } from "./rsvp.js";
 
 const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs } = siteConfig;
 
@@ -392,13 +393,50 @@ function initLangSwitch() {
 function initRsvpForm() {
   const form = document.getElementById("rsvp-form");
   const feedback = document.getElementById("rsvp-feedback");
-  if (!form) return;
+  const submitBtn = document.getElementById("rsvp-submit");
+  if (!form || form.dataset.rsvpBound) return;
 
-  form.addEventListener("submit", (e) => {
+  form.dataset.rsvpBound = "true";
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    feedback.textContent = t().rsvp.successMessage;
-    feedback.hidden = false;
-    form.reset();
+
+    const tr = t().rsvp;
+    const scriptUrl = siteConfig.rsvp?.googleScriptUrl?.trim();
+
+    feedback.hidden = true;
+    feedback.classList.remove("is-error");
+
+    if (!scriptUrl) {
+      feedback.textContent = tr.notConfiguredMessage;
+      feedback.classList.add("is-error");
+      feedback.hidden = false;
+      return;
+    }
+
+    const defaultLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = tr.sendingMessage;
+
+    try {
+      const payload = { ...readRsvpForm(form), locale: getLocale() };
+      const result = await submitRsvp(scriptUrl, payload);
+
+      if (!result.ok) {
+        throw new Error(result.error || "submit_failed");
+      }
+
+      feedback.textContent = tr.successMessage;
+      feedback.hidden = false;
+      form.reset();
+    } catch {
+      feedback.textContent = tr.errorMessage;
+      feedback.classList.add("is-error");
+      feedback.hidden = false;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = defaultLabel;
+    }
   });
 }
 

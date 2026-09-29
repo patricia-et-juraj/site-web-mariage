@@ -54,6 +54,14 @@ export const siteConfig = {
     phone: "+41 76 737 40 42",
   },
 
+  /**
+   * RSVP → Google Sheets (voir google-apps-script/Code.gs).
+   * Collez l’URL de déploiement « Application web » (/exec) une fois configurée.
+   */
+  rsvp: {
+    googleScriptUrl: "",
+  },
+
   easterEggs: {
     konami: { enabled: true },
     ampersand: { enabled: true },

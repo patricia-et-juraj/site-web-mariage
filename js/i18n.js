@@ -194,7 +194,12 @@ export const translations = {
     rsvp: {
       deadline: "1er février 2027",
       message: "Merci de confirmer votre présence avant le {deadline}.",
-      successMessage: "Merci ! Votre réponse a bien été enregistrée (démo locale).",
+      successMessage: "Merci ! Votre réponse a bien été enregistrée.",
+      sendingMessage: "Envoi en cours…",
+      errorMessage:
+        "Une erreur est survenue. Réessayez ou contactez-nous par email ou téléphone.",
+      notConfiguredMessage:
+        "Le formulaire n’est pas encore connecté. Merci de nous écrire par email en attendant.",
       labels: {
         name: "Nom complet",
         email: "Email",
@@ -450,7 +455,12 @@ export const translations = {
     rsvp: {
       deadline: "1. februára 2027",
       message: "Prosíme o potvrdenie účasti do {deadline}.",
-      successMessage: "Ďakujeme! Vaša odpoveď bola zaznamenaná (lokálna ukážka).",
+      successMessage: "Ďakujeme! Vaša odpoveď bola zaznamenaná.",
+      sendingMessage: "Odosiela sa…",
+      errorMessage:
+        "Vyskytla sa chyba. Skúste to znova alebo nás kontaktujte emailom či telefónom.",
+      notConfiguredMessage:
+        "Formulár ešte nie je pripojený. Napíšte nám prosím emailom.",
       labels: {
         name: "Celé meno",
         email: "Email",
