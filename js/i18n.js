@@ -31,14 +31,14 @@ export const translations = {
     hero: {
       eyebrow: "Nous nous marions",
       tagline: "Nous avons hâte de célébrer ce jour avec vous",
-      dateDisplay: "Samedi 21 mars 2027",
+      dateDisplay: "Samedi 20 mars 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Confirmer ma présence",
       ctaSaveTheDate: "Voir le Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Date", value: "21 mars 2027" },
-      { icon: "⏰", label: "Heure", value: "15h00 — cérémonie" },
+      { icon: "📅", label: "Date", value: "20 mars 2027" },
+      { icon: "⏰", label: "Heure", value: "15h30 — cérémonie" },
       { icon: "📍", label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
       { icon: "👔", label: "Tenue", value: "Chic décontracté — pas de blanc" },
       { icon: "✉️", label: "RSVP avant le", value: "1er février 2027" },
@@ -46,49 +46,41 @@ export const translations = {
     ],
     saveTheDate: {
       intro:
-        "Revivez notre annonce en images et en vidéo. Merci d'être à nos côtés pour cette aventure !",
-      media: [
-        { caption: "Notre vidéo Save the Date" },
-        { caption: "L'annonce — photo 1" },
-        { caption: "L'annonce — photo 2" },
-      ],
+        "Revivez notre Save the Date en vidéo. Merci d'être à nos côtés pour cette aventure !",
+      media: [{ caption: "Notre vidéo Save the Date" }],
     },
     events: [
       {
-        time: "14h30",
         title: "Accueil des invités",
         description: "Arrivée et installation. Un verre de bienvenue vous attend.",
         location: "Ranch des Rochettes",
       },
       {
-        time: "15h00",
+        time: "15h30",
         title: "Cérémonie",
         description: "Cérémonie au Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
-        time: "17h00",
         title: "Vin d'honneur",
         description: "Cocktail et apéritif dans la cour.",
         location: "Cour du ranch",
       },
       {
-        time: "19h30",
         title: "Dîner",
         description: "Repas assis en plusieurs services.",
         location: "Grange",
       },
       {
-        time: "22h00",
         title: "Soirée dansante",
         description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
         location: "Grange",
       },
       {
-        time: "01h00",
-        title: "Fin de soirée",
-        description: "Dernière danse et départ des invités.",
-        location: "—",
+        time: "Dimanche 10h",
+        title: "Brunch",
+        description: "Brunch du lendemain pour prolonger les retrouvailles.",
+        location: "Ranch des Rochettes",
       },
     ],
     details: [
@@ -101,13 +93,18 @@ export const translations = {
       {
         icon: "🚗",
         title: "Accès & parking",
-        content: "Parking gratuit sur place.\nCovoiturage vivement encouragé !",
+        content: "Parking gratuit sur place.",
+      },
+      {
+        icon: "🛏️",
+        title: "Hébergement",
+        content: "Nous vous accueillons sur place au Ranch des Rochettes pour la nuit du mariage.",
       },
       {
         icon: "🚆",
         title: "Transports",
         content:
-          "Gare de Bourg-en-Bresse à environ 20 min.\nNavette possible sur demande (précisez dans le RSVP).",
+          "Gare de Bourg-en-Bresse à environ 20 min en voiture.\nPas de navette : sans voiture, contactez-nous ou précisez-le dans le RSVP — nous vous mettrons en relation avec d'autres invités.",
       },
       {
         icon: "👗",
@@ -178,12 +175,13 @@ export const translations = {
       },
       {
         question: "Jusqu'à quelle heure dure la fête ?",
-        answer: "La soirée se termine vers 1h du matin.",
+        answer:
+          "Il n'y a pas d'heure de fin — profitez de la soirée et dansez tant que vous en avez envie !",
       },
       {
         question: "Y a-t-il une navette ?",
         answer:
-          "Une navette peut être organisée depuis la gare — précisez-le dans votre RSVP pour réserver une place.",
+          "Non, il n'y a pas de navette. Si vous n'avez pas de voiture, écrivez-nous ou indiquez-le dans le RSVP : nous ferons le lien avec d'autres invités pour le trajet.",
       },
       {
         question: "Puis-je prendre des photos pendant la cérémonie ?",
@@ -194,27 +192,11 @@ export const translations = {
     rsvp: {
       deadline: "1er février 2027",
       message: "Merci de confirmer votre présence avant le {deadline}.",
-      successMessage: "Merci ! Votre réponse a bien été enregistrée (démo locale).",
-      labels: {
-        name: "Nom complet",
-        email: "Email",
-        attendance: "Présence",
-        guests: "Nombre de personnes",
-        shuttle: "Navette depuis la gare",
-        dietary: "Allergies / régime alimentaire",
-        message: "Message (optionnel)",
-        submit: "Envoyer",
-      },
-      placeholders: {
-        choose: "— Choisir —",
-        yes: "Oui, je serai présent(e)",
-        no: "Non, je ne pourrai pas venir",
-        shuttle1330: "Oui — départ 13h30",
-        shuttle1400: "Oui — départ 14h00",
-        shuttleNo: "Non merci",
-        dietary: "Végétarien, sans gluten, allergies…",
-        message: "Un mot pour les mariés…",
-      },
+      formCta: "Répondre au formulaire Google",
+      formHint:
+        "Remplissez le formulaire ci-dessous ou ouvrez-le dans un nouvel onglet. Vos réponses seront enregistrées automatiquement.",
+      notConfiguredMessage:
+        "Le formulaire sera bientôt en ligne. En attendant, contactez-nous par email ou téléphone.",
     },
     contact: {
       emailLabel: "email",
@@ -251,7 +233,7 @@ export const translations = {
         "C'est ici, entre nos deux prénoms, que tout a commencé — un sourire, une rencontre, et le reste…",
       logoClicks:
         "Psst… Juraj a mis du temps à choisir la bague. Patricia a dit oui avant qu'il finisse sa phrase.",
-      secretWord: "💍 21 · 03 · 27 — marquez la date, on a hâte de vous voir !",
+      secretWord: "💍 20 · 03 · 27 — marquez la date, on a hâte de vous voir !",
       footerHearts: "Merci d'être dans notre vie ❤️",
       countdown100: "Plus que 100 jours… le stress monte, l'excitation aussi !",
     },
@@ -287,14 +269,14 @@ export const translations = {
     hero: {
       eyebrow: "Berieme sa",
       tagline: "Tešíme sa, že tento deň oslávime spolu s vami",
-      dateDisplay: "Sobota 21. marca 2027",
+      dateDisplay: "Sobota 20. marca 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Potvrdiť účasť",
       ctaSaveTheDate: "Pozrieť Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Dátum", value: "21. marca 2027" },
-      { icon: "⏰", label: "Čas", value: "15:00 — obrad" },
+      { icon: "📅", label: "Dátum", value: "20. marca 2027" },
+      { icon: "⏰", label: "Čas", value: "15:30 — obrad" },
       { icon: "📍", label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
       { icon: "👔", label: "Oblečenie", value: "Elegantné casual — nie biela" },
       { icon: "✉️", label: "RSVP do", value: "1. februára 2027" },
@@ -302,49 +284,41 @@ export const translations = {
     ],
     saveTheDate: {
       intro:
-        "Prežite znova naše oznámenie vo fotografiách a videu. Ďakujeme, že ste súčasťou nášho príbehu!",
-      media: [
-        { caption: "Naše Save the Date video" },
-        { caption: "Oznámenie — fotografia 1" },
-        { caption: "Oznámenie — fotografia 2" },
-      ],
+        "Prežite znova naše Save the Date vo videu. Ďakujeme, že ste súčasťou nášho príbehu!",
+      media: [{ caption: "Naše Save the Date video" }],
     },
     events: [
       {
-        time: "14:30",
         title: "Príchod hostí",
         description: "Príchod a ubytovanie sa. Na privítanie vás čaká drink.",
         location: "Ranch des Rochettes",
       },
       {
-        time: "15:00",
+        time: "15:30",
         title: "Obrad",
         description: "Svadobný obrad v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
-        time: "17:00",
         title: "Prípitok",
         description: "Koktail a aperitív na dvore.",
         location: "Dvorec ranchu",
       },
       {
-        time: "19:30",
         title: "Večera",
         description: "Slávnostná večera v niekoľkých chodoch.",
         location: "Stodola",
       },
       {
-        time: "22:00",
         title: "Zábava",
         description: "Otvorenie tanca a párty až do neskorej noci!",
         location: "Stodola",
       },
       {
-        time: "01:00",
-        title: "Koniec večera",
-        description: "Posledný tanec a odchod hostí.",
-        location: "—",
+        time: "Nedeľa 10:00",
+        title: "Brunch",
+        description: "Brunch na druhý deň na pokračovanie oslavy.",
+        location: "Ranch des Rochettes",
       },
     ],
     details: [
@@ -357,13 +331,18 @@ export const translations = {
       {
         icon: "🚗",
         title: "Prístup a parkovanie",
-        content: "Bezplatné parkovanie na mieste.\nSpolujazda je vítaná!",
+        content: "Bezplatné parkovanie na mieste.",
+      },
+      {
+        icon: "🛏️",
+        title: "Ubytovanie",
+        content: "Počas svadobnej noci vás ubytujeme priamo v Ranch des Rochettes.",
       },
       {
         icon: "🚆",
         title: "Doprava",
         content:
-          "Stanica Bourg-en-Bresse cca 20 min autom.\nKyvadlová doprava možná na požiadanie (uveďte v RSVP).",
+          "Stanica Bourg-en-Bresse cca 20 min autom.\nBez kyvadlovej dopravy: ak nemáte auto, kontaktujte nás alebo uveďte to v RSVP — spojíme vás s inými hosťami.",
       },
       {
         icon: "👗",
@@ -434,12 +413,13 @@ export const translations = {
       },
       {
         question: "Do kedy trvá oslava?",
-        answer: "Večer sa končí okolo 1:00 ráno.",
+        answer:
+          "Oslava nemá stanovený koniec — tancujte, kým vás to baví!",
       },
       {
         question: "Je k dispozícii kyvadlová doprava?",
         answer:
-          "Kyvadlová doprava zo stanice môže byť zorganizovaná — uveďte to vo vašom RSVP na rezerváciu miesta.",
+          "Nie, kyvadlová doprava nebude. Ak nemáte auto, napíšte nám alebo uveďte to v RSVP — spojíme vás s inými hosťami na cestu.",
       },
       {
         question: "Môžem fotiť počas obradu?",
@@ -450,27 +430,11 @@ export const translations = {
     rsvp: {
       deadline: "1. februára 2027",
       message: "Prosíme o potvrdenie účasti do {deadline}.",
-      successMessage: "Ďakujeme! Vaša odpoveď bola zaznamenaná (lokálna ukážka).",
-      labels: {
-        name: "Celé meno",
-        email: "Email",
-        attendance: "Účasť",
-        guests: "Počet osôb",
-        shuttle: "Kyvadlová doprava zo stanice",
-        dietary: "Alergie / stravovací režim",
-        message: "Správa (voliteľné)",
-        submit: "Odoslať",
-      },
-      placeholders: {
-        choose: "— Vyberte —",
-        yes: "Áno, prídem",
-        no: "Nie, nemôžem prísť",
-        shuttle1330: "Áno — odchod 13:30",
-        shuttle1400: "Áno — odchod 14:00",
-        shuttleNo: "Nie, ďakujem",
-        dietary: "Vegetariánske, bez lepku, alergie…",
-        message: "Pár slov pre mladomanželov…",
-      },
+      formCta: "Odpovedať cez Google Formulár",
+      formHint:
+        "Vyplňte formulár nižšie alebo ho otvorte v novom okne. Odpovede sa uložia automaticky.",
+      notConfiguredMessage:
+        "Formulár bude čoskoro online. Medzitým nás kontaktujte emailom alebo telefónom.",
     },
     contact: {
       emailLabel: "email",
@@ -507,7 +471,7 @@ export const translations = {
         "Tu, medzi našimi menami, sa všetko začalo — úsmev, stretnutie a zvyšok príbehu…",
       logoClicks:
         "Psst… Juraj dlho vyberal prsteň. Patrícia povedala áno skôr, než dohovoril.",
-      secretWord: "💍 21 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
+      secretWord: "💍 20 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
       footerHearts: "Ďakujeme, že ste v našich životoch ❤️",
       countdown100: "Už len 100 dní… stres rastie, ale aj vzrušenie!",
     },

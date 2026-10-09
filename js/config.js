@@ -8,19 +8,19 @@ export const siteConfig = {
   },
 
   wedding: {
-    date: "2027-03-21T15:00:00",
+    date: "2027-03-20T15:30:00",
     mapsUrl: "https://maps.app.goo.gl/UHJKb2dV2LsLW7pU8",
   },
 
   theme: {
     colors: {
-      background: "#f7f4fa",
-      surface: "#ffffff",
-      text: "#2e1520",
-      textMuted: "#6e5a72",
-      accent: "#9b87b8",
-      accentDark: "#722f37",
-      gold: "#a04558",
+      background: "#f4efe6",
+      surface: "#fffcf7",
+      text: "#4a1a20",
+      textMuted: "#7a5055",
+      accent: "#6b2830",
+      accentDark: "#4a1a20",
+      gold: "#8f3d45",
     },
   },
 
@@ -30,7 +30,7 @@ export const siteConfig = {
     saveTheDate: { enabled: true, id: "save-the-date" },
     events: { enabled: true, id: "programme" },
     details: { enabled: true, id: "infos" },
-    accommodation: { enabled: true, id: "hebergement" },
+    accommodation: { enabled: false, id: "hebergement" },
     faq: { enabled: true, id: "faq" },
     rsvp: { enabled: true, id: "rsvp" },
     contact: { enabled: true, id: "contact" },
@@ -44,8 +44,6 @@ export const siteConfig = {
         poster: "assets/save-the-date/video-poster.svg",
         placeholder: true,
       },
-      { type: "image", src: "assets/save-the-date/photo-1.svg" },
-      { type: "image", src: "assets/save-the-date/photo-2.svg" },
     ],
   },
 
@@ -54,11 +52,20 @@ export const siteConfig = {
     phone: "+41 76 737 40 42",
   },
 
+  /**
+   * RSVP via Google Form — lien « envoyer le formulaire » (URL se terminant par /viewform).
+   * Dans Google Forms : Réponses → lien Google Sheets pour consulter sur téléphone.
+   */
+  rsvp: {
+    googleFormUrl: "",
+    embedForm: true,
+  },
+
   easterEggs: {
     konami: { enabled: true },
     ampersand: { enabled: true },
     logoClicks: { enabled: true, requiredClicks: 5 },
-    secretWord: { enabled: true, word: "210327" },
+    secretWord: { enabled: true, word: "200327" },
     footerHearts: { enabled: true },
     countdown100: { enabled: true },
   },
