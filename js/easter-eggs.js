@@ -227,7 +227,7 @@ function launchHearts() {
     setTimeout(() => {
       const heart = document.createElement("span");
       heart.className = "floating-heart";
-      heart.textContent = "❤";
+      heart.setAttribute("aria-hidden", "true");
       heart.style.left = `${10 + Math.random() * 80}vw`;
       heart.style.animationDuration = `${2 + Math.random() * 2}s`;
       document.body.appendChild(heart);

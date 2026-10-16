@@ -37,12 +37,12 @@ export const translations = {
       ctaSaveTheDate: "Voir le Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Date", value: "20 mars 2027" },
-      { icon: "⏰", label: "Heure", value: "15h30 — cérémonie" },
-      { icon: "📍", label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
-      { icon: "👔", label: "Tenue", value: "Chic décontracté — pas de blanc" },
-      { icon: "✉️", label: "RSVP avant le", value: "1er février 2027" },
-      { icon: "🎁", label: "Cadeaux", value: "Votre présence suffit" },
+      { label: "Date", value: "20 mars 2027" },
+      { label: "Heure", value: "15h30 — cérémonie" },
+      { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
+      { label: "Tenue", value: "Chic décontracté — pas de blanc" },
+      { label: "RSVP avant le", value: "1er février 2027" },
+      { label: "Cadeaux", value: "Votre présence suffit" },
     ],
     saveTheDate: {
       intro:
@@ -85,52 +85,43 @@ export const translations = {
     ],
     details: [
       {
-        icon: "📍",
         title: "Adresse",
         content: "Ranch des Rochettes\n01350 Ceyzériat",
         link: { label: "Ouvrir dans Google Maps" },
       },
       {
-        icon: "🚗",
         title: "Accès & parking",
         content: "Parking gratuit sur place.",
       },
       {
-        icon: "🛏️",
         title: "Hébergement",
         content: "Nous vous accueillons sur place au Ranch des Rochettes pour la nuit du mariage.",
       },
       {
-        icon: "🚆",
         title: "Transports",
         content:
           "Gare de Bourg-en-Bresse à environ 20 min en voiture.\nPas de navette : sans voiture, contactez-nous ou précisez-le dans le RSVP — nous vous mettrons en relation avec d'autres invités.",
       },
       {
-        icon: "👗",
         title: "Tenue",
         content:
           "Tenue de cérémonie souhaitée — chic décontracté.\nMerci d'éviter le blanc.",
       },
       {
-        icon: "👶",
         title: "Enfants",
         content: "Les enfants sont les bienvenus !",
       },
       {
-        icon: "🍽️",
         title: "Régimes alimentaires",
         content:
           "Indiquez vos allergies ou régimes (végétarien, sans gluten…) dans le formulaire RSVP.",
       },
       {
-        icon: "🎁",
         title: "Cadeaux",
         content:
           "Votre présence est notre plus beau cadeau.\nUne urne discrète sera disponible sur place si vous le souhaitez.",
       },
       {
-        icon: "📸",
         title: "Photos",
         content:
           "Un photographe professionnel sera présent. Partagez vos photos avec #PatriciaEtJuraj2027.",
@@ -228,13 +219,13 @@ export const translations = {
       enlarge: "Agrandir",
     },
     easterEggs: {
-      konami: "🎉 Vous avez trouvé le code secret ! On compte sur vous pour faire danser tout le monde.",
+      konami: "Vous avez trouvé le code secret ! On compte sur vous pour faire danser tout le monde.",
       ampersand:
         "C'est ici, entre nos deux prénoms, que tout a commencé — un sourire, une rencontre, et le reste…",
       logoClicks:
         "Psst… Juraj a mis du temps à choisir la bague. Patricia a dit oui avant qu'il finisse sa phrase.",
-      secretWord: "💍 20 · 03 · 27 — marquez la date, on a hâte de vous voir !",
-      footerHearts: "Merci d'être dans notre vie ❤️",
+      secretWord: "20 · 03 · 27 — marquez la date, on a hâte de vous voir !",
+      footerHearts: "Merci d'être dans notre vie",
       countdown100: "Plus que 100 jours… le stress monte, l'excitation aussi !",
     },
   },
@@ -275,12 +266,12 @@ export const translations = {
       ctaSaveTheDate: "Pozrieť Save the Date",
     },
     essentials: [
-      { icon: "📅", label: "Dátum", value: "20. marca 2027" },
-      { icon: "⏰", label: "Čas", value: "15:30 — obrad" },
-      { icon: "📍", label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
-      { icon: "👔", label: "Oblečenie", value: "Elegantné casual — nie biela" },
-      { icon: "✉️", label: "RSVP do", value: "1. februára 2027" },
-      { icon: "🎁", label: "Darčeky", value: "Vaša prítomnosť nám stačí" },
+      { label: "Dátum", value: "20. marca 2027" },
+      { label: "Čas", value: "15:30 — obrad" },
+      { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
+      { label: "Oblečenie", value: "Elegantné casual — nie biela" },
+      { label: "RSVP do", value: "1. februára 2027" },
+      { label: "Darčeky", value: "Vaša prítomnosť nám stačí" },
     ],
     saveTheDate: {
       intro:
@@ -323,52 +314,43 @@ export const translations = {
     ],
     details: [
       {
-        icon: "📍",
         title: "Adresa",
         content: "Ranch des Rochettes\n01350 Ceyzériat",
         link: { label: "Otvoriť v Google Maps" },
       },
       {
-        icon: "🚗",
         title: "Prístup a parkovanie",
         content: "Bezplatné parkovanie na mieste.",
       },
       {
-        icon: "🛏️",
         title: "Ubytovanie",
         content: "Počas svadobnej noci vás ubytujeme priamo v Ranch des Rochettes.",
       },
       {
-        icon: "🚆",
         title: "Doprava",
         content:
           "Stanica Bourg-en-Bresse cca 20 min autom.\nBez kyvadlovej dopravy: ak nemáte auto, kontaktujte nás alebo uveďte to v RSVP — spojíme vás s inými hosťami.",
       },
       {
-        icon: "👗",
         title: "Oblečenie",
         content:
           "Slávnostné oblečenie — elegantné casual.\nProsíme, vyhnite sa bielej farbe.",
       },
       {
-        icon: "👶",
         title: "Deti",
         content: "Deti sú vítané!",
       },
       {
-        icon: "🍽️",
         title: "Stravovacie obmedzenia",
         content:
           "Uveďte alergie alebo režim (vegetariánske, bez lepku…) vo formulári RSVP.",
       },
       {
-        icon: "🎁",
         title: "Darčeky",
         content:
           "Vaša prítomnosť je pre nás ten najkrajší darček.\nDiskrétna urna bude k dispozícii, ak budete chcieť.",
       },
       {
-        icon: "📸",
         title: "Fotografie",
         content:
           "Profesionálny fotograf bude prítomný. Zdieľajte fotky s #PatriciaEtJuraj2027.",
@@ -466,13 +448,13 @@ export const translations = {
       enlarge: "Zväčšiť",
     },
     easterEggs: {
-      konami: "🎉 Našli ste tajný kód! Počítame s vami, že roztočíte parket.",
+      konami: "Našli ste tajný kód! Počítame s vami, že roztočíte parket.",
       ampersand:
         "Tu, medzi našimi menami, sa všetko začalo — úsmev, stretnutie a zvyšok príbehu…",
       logoClicks:
         "Psst… Juraj dlho vyberal prsteň. Patrícia povedala áno skôr, než dohovoril.",
-      secretWord: "💍 20 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
-      footerHearts: "Ďakujeme, že ste v našich životoch ❤️",
+      secretWord: "20 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
+      footerHearts: "Ďakujeme, že ste v našich životoch",
       countdown100: "Už len 100 dní… stres rastie, ale aj vzrušenie!",
     },
   },

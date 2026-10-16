@@ -128,7 +128,6 @@ function renderEssentials() {
     .map(
       (e) => `
       <article class="essential-card">
-        <span class="essential-icon" aria-hidden="true">${e.icon}</span>
         <p class="essential-label">${e.label}</p>
         <p class="essential-value">${e.value}</p>
       </article>`
@@ -187,7 +186,6 @@ function renderDetails() {
         : "";
       return `
       <article class="detail-card">
-        <span class="detail-icon" aria-hidden="true">${d.icon}</span>
         <h3>${d.title}</h3>
         <p>${d.content.replace(/\n/g, "<br>")}</p>
         ${link}
@@ -217,9 +215,9 @@ function renderAccommodation() {
       <article class="hotel-card">
         <h3>${h.name}</h3>
         <ul class="hotel-meta">
-          <li>📍 ${h.distance}</li>
-          <li>💶 ${h.price}</li>
-          <li>📞 <a href="tel:${h.phone.replace(/\s/g, "")}">${h.phone}</a></li>
+          <li>${h.distance}</li>
+          <li>${h.price}</li>
+          <li><a href="tel:${h.phone.replace(/\s/g, "")}">${h.phone}</a></li>
         </ul>
         ${h.link ? `<a href="${h.link}" target="_blank" rel="noopener" class="detail-link">${tr.accommodation.book}</a>` : ""}
       </article>`
