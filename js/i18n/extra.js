@@ -54,7 +54,7 @@ export const cs = {
     { title: "Adresa", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Otevřít v Google Maps" } },
     { title: "Příjezd a parkování", content: "Parkování je zahrnuté, hned vedle." },
     { title: "Ubytování", content: "V noci svatby vás ubytujeme přímo v Ranch des Rochettes." },
-    { title: "Doprava", content: "Nádraží Bourg-en-Bresse cca 20 min autem.\nBez kyvadlové dopravy: nemáte-li auto, kontaktujte nás nebo uveďte to v RSVP — propojíme vás s ostatními hosty." },
+    { title: "Doprava", content: "Nejjednodušší a nepraktičtější je přijet autem.\nPokud to není možné, napište nám — najdeme řešení." },
     { title: "Děti", content: "Děti jsou vítány!" },
     { title: "Stravovací omezení", content: "Uveďte alergie nebo režim (vegetariánské, bez lepku…) ve formuláři RSVP." },
     { title: "Dárky", content: "Vaše přítomnost je pro nás ten nejkrásnější dárek.\nDiskrétní urna bude k dispozici, pokud budete chtít." },
@@ -73,7 +73,7 @@ export const cs = {
   faq: [
     { question: "Mohu přijít s doprovodem?", answer: "Každé pozvání je osobní. Pokud je doprovod plánován, je uveden na vaší pozvánce. Jinak nás prosím kontaktujte." },
     { question: "Do kdy trvá oslava?", answer: "Oslava nemá stanovený konec — tančete, dokud vás to baví!" },
-    { question: "Je k dispozici kyvadlová doprava?", answer: "Ne, kyvadlová doprava nebude. Nemáte-li auto, napište nám nebo uveďte to v RSVP — propojíme vás s ostatními hosty na cestu." },
+    { question: "Je k dispozici kyvadlová doprava?", answer: "Nejjednodušší a nepraktičtější je přijet autem. Pokud to není možné, napište nám — najdeme řešení." },
     { question: "Mohu fotit během obřadu?", answer: "O fotografie z obřadu se postará profesionální fotograf. Užijte si chvíli!" },
   ],
   rsvp: {
@@ -159,7 +159,7 @@ export const en = {
     { title: "Address", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Open in Google Maps" } },
     { title: "Access & parking", content: "Parking is included, right next door." },
     { title: "Accommodation", content: "We are hosting everyone on site at Ranch des Rochettes for the wedding night." },
-    { title: "Transport", content: "Bourg-en-Bresse station approx. 20 min by car.\nNo shuttle: if you don't have a car, contact us or note it in your RSVP — we'll connect you with other guests." },
+    { title: "Transport", content: "The simplest and most practical option is to come by car.\nIf that is not possible, write to us and we will find a solution." },
     { title: "Children", content: "Children are welcome!" },
     { title: "Dietary requirements", content: "Please indicate allergies or diets (vegetarian, gluten-free…) in the RSVP form." },
     { title: "Gifts", content: "Your presence is our greatest gift.\nA discreet wishing well will be available if you wish." },
@@ -178,7 +178,7 @@ export const en = {
   faq: [
     { question: "Can I bring a guest?", answer: "Each invitation is personal. If a plus-one is included, it will be noted on your invitation. Otherwise, please contact us." },
     { question: "How late does the party go?", answer: "There's no set end time — dance and celebrate for as long as you like!" },
-    { question: "Is there a shuttle?", answer: "No, there is no shuttle. If you don't have a car, email us or mention it in your RSVP — we'll put you in touch with other guests for a ride." },
+    { question: "Is there a shuttle?", answer: "The simplest and most practical option is to come by car. If that is not possible, write to us and we will find a solution." },
     { question: "Can I take photos during the ceremony?", answer: "A professional photographer will take care of the ceremony photos. Enjoy the moment!" },
   ],
   rsvp: {
@@ -264,7 +264,7 @@ export const es = {
     { title: "Dirección", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Abrir en Google Maps" } },
     { title: "Cómo llegar y parqueo", content: "Hay parqueo incluido, justo al lado." },
     { title: "Alojamiento", content: "Los hospedamos en el Ranch des Rochettes la noche de la boda." },
-    { title: "Transporte", content: "Estación de Bourg-en-Bresse a unos 20 min en auto.\nNo hay bus: si no tienen auto, contáctennos o indíquenlo en el RSVP — los pondremos en contacto con otros invitados." },
+    { title: "Transporte", content: "Lo más simple y práctico es venir en auto.\nSi no es posible, escríbannos para encontrar una solución." },
     { title: "Niños", content: "¡Los niños son bienvenidos!" },
     { title: "Restricciones alimentarias", content: "Indiquen alergias o dietas (vegetariano, sin gluten…) en el formulario de RSVP." },
     { title: "Regalos", content: "Su presencia es nuestro mejor regalo.\nHabrá una urna discreta si desean dejar algo." },
@@ -283,7 +283,7 @@ export const es = {
   faq: [
     { question: "¿Puedo ir con acompañante?", answer: "Cada invitación es personal. Si hay acompañante, va a aparecer en su invitación. Si no, contáctennos." },
     { question: "¿Hasta qué hora dura la fiesta?", answer: "No hay hora de cierre — ¡bailen y disfruten todo lo que quieran!" },
-    { question: "¿Hay bus?", answer: "No, no va a haber bus. Si no tienen auto, escríbannos o indíquenlo en el RSVP — los vamos a conectar con otros invitados para el trayecto." },
+    { question: "¿Hay bus?", answer: "Lo más simple y práctico es venir en auto. Si no es posible, escríbannos para encontrar una solución." },
     { question: "¿Puedo sacar fotos durante la ceremonia?", answer: "Un fotógrafo profesional se encargará de las fotos de la ceremonia. ¡Disfruten el momento!" },
   ],
   rsvp: {

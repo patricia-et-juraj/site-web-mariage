@@ -93,7 +93,7 @@ export const translations = {
       {
         title: "Transports",
         content:
-          "Gare de Bourg-en-Bresse à environ 20 min en voiture.\nPas de navette : sans voiture, contactez-nous ou précisez-le dans le RSVP — nous vous mettrons en relation avec d'autres invités.",
+          "Le plus simple et le plus pratique est de venir en voiture.\nSi ce n'est pas possible, écrivez-nous : nous trouverons une solution.",
       },
       {
         title: "Enfants",
@@ -160,7 +160,7 @@ export const translations = {
       {
         question: "Y a-t-il une navette ?",
         answer:
-          "Non, il n'y a pas de navette. Si vous n'avez pas de voiture, écrivez-nous ou indiquez-le dans le RSVP : nous ferons le lien avec d'autres invités pour le trajet.",
+          "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous : nous trouverons une solution.",
       },
       {
         question: "Puis-je prendre des photos pendant la cérémonie ?",
@@ -310,7 +310,7 @@ export const translations = {
       {
         title: "Doprava",
         content:
-          "Stanica Bourg-en-Bresse cca 20 min autom.\nBez kyvadlovej dopravy: ak nemáte auto, kontaktujte nás alebo uveďte to v RSVP — spojíme vás s inými hosťami.",
+          "Najjednoduchšie a najpraktickejšie je prísť autom.\nAk to nie je možné, napíšte nám — nájdeme riešenie.",
       },
       {
         title: "Deti",
@@ -377,7 +377,7 @@ export const translations = {
       {
         question: "Je k dispozícii kyvadlová doprava?",
         answer:
-          "Nie, kyvadlová doprava nebude. Ak nemáte auto, napíšte nám alebo uveďte to v RSVP — spojíme vás s inými hosťami na cestu.",
+          "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám — nájdeme riešenie.",
       },
       {
         question: "Môžem fotiť počas obradu?",
