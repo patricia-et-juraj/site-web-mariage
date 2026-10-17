@@ -1046,6 +1046,11 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+span.contact-link {
+  color: inherit;
+  cursor: default;
+}
+
 /* ── Footer ── */
 .footer {
   text-align: center;

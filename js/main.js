@@ -206,7 +206,7 @@ function renderAccommodation() {
         <ul class="hotel-meta">
           <li>${h.distance}</li>
           <li>${h.price}</li>
-          <li><a href="tel:${h.phone.replace(/\s/g, "")}">${h.phone}</a></li>
+          <li>${h.phone}</li>
         </ul>
         ${h.link ? `<a href="${h.link}" target="_blank" rel="noopener" class="detail-link">${tr.accommodation.book}</a>` : ""}
       </article>`
@@ -287,7 +287,6 @@ function renderContact() {
   document.getElementById("contact-title").textContent = tr.sections.contact;
   document.getElementById("contact-email").href = `mailto:${contact.email}`;
   document.getElementById("contact-email").textContent = contact.email;
-  document.getElementById("contact-phone").href = `tel:${contact.phone.replace(/\s/g, "")}`;
   document.getElementById("contact-phone").textContent = contact.phone;
 
   const witnessesEl = document.getElementById("contact-witnesses");
@@ -297,7 +296,7 @@ function renderContact() {
         (w) => `
         <div class="witness-card">
           <span>${w.name}</span>
-          <a href="tel:${w.phone.replace(/\s/g, "")}">${w.phone}</a>
+          <span>${w.phone}</span>
         </div>`
       )
       .join("");
