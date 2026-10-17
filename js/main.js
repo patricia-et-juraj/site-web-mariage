@@ -153,11 +153,10 @@ function renderEvents() {
     .map((e) => {
       const hasTime = Boolean(e.time?.trim());
       const timeHtml = hasTime ? `<time class="event-time">${e.time}</time>` : "";
-      const cardClass = hasTime ? "event-card" : "event-card event-card--no-time";
       return `
-      <article class="${cardClass}">
-        ${timeHtml}
+      <article class="event-card">
         <div class="event-body">
+          ${timeHtml}
           <h3>${e.title}</h3>
           <p>${e.description}</p>
           <span class="event-location">${e.location}</span>
