@@ -45,7 +45,7 @@ export const cs = {
   events: [
     { title: "Příjezd hostů", description: "Příjezd a ubytování. Na uvítanou vás čeká drink.", location: "Ranch des Rochettes" },
     { time: "15:00", title: "Obřad", description: "Svatební obřad v Ranch des Rochettes.", location: "Ranch des Rochettes" },
-    { title: "Přípitek", description: "Koktejl a aperitiv na dvoře.", location: "Dvůr ranchu" },
+    { title: "Přípitek", description: "Koktejl a aperitiv na dvoře — zároveň i čas na společné focení.", location: "Dvůr ranchu" },
     { title: "Večeře", description: "Slavnostní večeře v několika chodech.", location: "Stodola" },
     { title: "Zábava", description: "Otevření tance a párty až do pozdních hodin!", location: "Stodola" },
     { time: "Neděle 10:00", title: "Brunch", description: "Brunch druhý den pro pokračování oslav.", location: "Ranch des Rochettes" },
@@ -150,7 +150,7 @@ export const en = {
   events: [
     { title: "Guest arrival", description: "Arrival and settling in. A welcome drink awaits.", location: "Ranch des Rochettes" },
     { time: "3:00 PM", title: "Ceremony", description: "Wedding ceremony at Ranch des Rochettes.", location: "Ranch des Rochettes" },
-    { title: "Cocktail hour", description: "Drinks and appetizers in the courtyard.", location: "Ranch courtyard" },
+    { title: "Cocktail hour", description: "Drinks and appetizers in the courtyard — this is also when the photo session takes place.", location: "Ranch courtyard" },
     { title: "Dinner", description: "Seated dinner with multiple courses.", location: "Barn" },
     { title: "Party", description: "First dance and celebration until late!", location: "Barn" },
     { time: "Sunday 10 AM", title: "Brunch", description: "Sunday brunch to keep the celebration going.", location: "Ranch des Rochettes" },
@@ -255,7 +255,7 @@ export const es = {
   events: [
     { title: "Llegada de invitados", description: "Llegada y acomodación. Los espera una copa de bienvenida.", location: "Ranch des Rochettes" },
     { time: "15:00", title: "Ceremonia", description: "Ceremonia en Ranch des Rochettes.", location: "Ranch des Rochettes" },
-    { title: "Cóctel", description: "Cóctel y bocaditos en el patio.", location: "Patio del ranch" },
+    { title: "Cóctel", description: "Cóctel y bocaditos en el patio — también es el momento de la sesión de fotos.", location: "Patio del ranch" },
     { title: "Cena", description: "Cena sentados, de varios platos.", location: "Granero" },
     { title: "Fiesta", description: "Primer baile y fiesta hasta tarde.", location: "Granero" },
     { time: "Domingo 10:00", title: "Brunch", description: "Brunch al día siguiente para seguir celebrando.", location: "Ranch des Rochettes" },

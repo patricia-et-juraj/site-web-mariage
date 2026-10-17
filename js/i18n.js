@@ -62,7 +62,7 @@ export const translations = {
       },
       {
         title: "Vin d'honneur",
-        description: "Cocktail et apéritif dans la cour.",
+        description: "Cocktail et apéritif dans la cour — c'est aussi le moment de la séance photo.",
         location: "Cour du ranch",
       },
       {
@@ -285,7 +285,7 @@ export const translations = {
       },
       {
         title: "Prípitok",
-        description: "Koktail a aperitív na dvore.",
+        description: "Koktail a aperitív na dvore — zároveň aj čas na spoločné fotenie.",
         location: "Dvorec ranchu",
       },
       {
