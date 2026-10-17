@@ -25,12 +25,6 @@ function getGoogleFormUrl() {
   return siteConfig.rsvp?.googleFormUrl?.trim() || "";
 }
 
-function toGoogleFormEmbedUrl(url) {
-  if (!url) return "";
-  if (url.includes("embedded=true")) return url;
-  return url.includes("?") ? `${url}&embedded=true` : `${url}?embedded=true`;
-}
-
 function applyRsvpLinks(formUrl) {
   const heroCta = document.getElementById("hero-cta-rsvp");
   const formLink = document.getElementById("rsvp-form-link");
@@ -251,28 +245,15 @@ function renderRsvp() {
   formLink.textContent = tr.formCta;
 
   const notConfigured = document.getElementById("rsvp-not-configured");
-  const embedWrap = document.getElementById("rsvp-embed-wrap");
-  const embed = document.getElementById("rsvp-embed");
 
   if (formUrl) {
     notConfigured.hidden = true;
     formLink.hidden = false;
     applyRsvpLinks(formUrl);
-
-    if (siteConfig.rsvp?.embedForm !== false) {
-      embed.src = toGoogleFormEmbedUrl(formUrl);
-      embed.title = tr.formCta;
-      embedWrap.hidden = false;
-    } else {
-      embedWrap.hidden = true;
-      embed.removeAttribute("src");
-    }
   } else {
     notConfigured.textContent = tr.notConfiguredMessage;
     notConfigured.hidden = false;
     formLink.hidden = true;
-    embedWrap.hidden = true;
-    embed.removeAttribute("src");
     applyRsvpLinks("");
   }
 }

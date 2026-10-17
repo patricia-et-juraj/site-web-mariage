@@ -931,24 +931,6 @@ h3 {
 .rsvp-actions {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.rsvp-embed-wrap {
-  margin-top: 0.5rem;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  background: var(--color-surface);
-  border: 1px solid rgba(var(--bordeaux-rgb), 0.12);
-}
-
-.rsvp-embed {
-  display: block;
-  width: 100%;
-  min-height: 520px;
-  height: min(75vh, 900px);
-  border: 0;
 }
 
 .rsvp-form {

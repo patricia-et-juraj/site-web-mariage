@@ -173,7 +173,7 @@ export const translations = {
       message: "Merci de confirmer votre présence avant le {deadline}. Merci de remplir le formulaire une fois pour chaque personne.",
       formCta: "Répondre au formulaire Google",
       formHint:
-        "Une réponse par personne. Remplissez le formulaire ci-dessous ou ouvrez-le dans un nouvel onglet.",
+        "Une réponse par personne. Le formulaire s'ouvre dans une nouvelle fenêtre.",
       notConfiguredMessage:
         "Le formulaire sera bientôt en ligne. En attendant, contactez-nous par email ou téléphone.",
     },
@@ -390,7 +390,7 @@ export const translations = {
       message: "Prosíme o potvrdenie účasti do {deadline}. Formulár vyplňte raz za každú osobu.",
       formCta: "Odpovedať cez Google Formulár",
       formHint:
-        "Jedna odpoveď za osobu. Vyplňte formulár nižšie alebo ho otvorte v novom okne.",
+        "Jedna odpoveď za osobu. Formulár sa otvorí v novom okne.",
       notConfiguredMessage:
         "Formulár bude čoskoro online. Medzitým nás kontaktujte emailom alebo telefónom.",
     },

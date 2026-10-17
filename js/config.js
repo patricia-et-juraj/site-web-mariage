@@ -52,13 +52,8 @@ export const siteConfig = {
     phone: "+41 76 737 40 42",
   },
 
-  /**
-   * RSVP via Google Form — lien « envoyer le formulaire » (URL se terminant par /viewform).
-   * Dans Google Forms : Réponses → lien Google Sheets pour consulter sur téléphone.
-   */
   rsvp: {
-    googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSePdMCaeFrAVOo72JkzuEdXtVoeikAk3MjieNxJpJxCiC7Tqw/viewform",
-    embedForm: true,
+    googleFormUrl: "https://forms.gle/LcBeSZZspYXHG2uT9",
   },
 
   easterEggs: {
