@@ -40,7 +40,6 @@ export const translations = {
       { label: "Date", value: "20 mars 2027" },
       { label: "Heure", value: "15h30 — cérémonie" },
       { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "Tenue", value: "Chic décontracté — pas de blanc" },
       { label: "RSVP avant le", value: "1er février 2027" },
       { label: "Cadeaux", value: "Votre présence suffit" },
     ],
@@ -101,11 +100,6 @@ export const translations = {
         title: "Transports",
         content:
           "Gare de Bourg-en-Bresse à environ 20 min en voiture.\nPas de navette : sans voiture, contactez-nous ou précisez-le dans le RSVP — nous vous mettrons en relation avec d'autres invités.",
-      },
-      {
-        title: "Tenue",
-        content:
-          "Tenue de cérémonie souhaitée — chic décontracté.\nMerci d'éviter le blanc.",
       },
       {
         title: "Enfants",
@@ -269,7 +263,6 @@ export const translations = {
       { label: "Dátum", value: "20. marca 2027" },
       { label: "Čas", value: "15:30 — obrad" },
       { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "Oblečenie", value: "Elegantné casual — nie biela" },
       { label: "RSVP do", value: "1. februára 2027" },
       { label: "Darčeky", value: "Vaša prítomnosť nám stačí" },
     ],
@@ -330,11 +323,6 @@ export const translations = {
         title: "Doprava",
         content:
           "Stanica Bourg-en-Bresse cca 20 min autom.\nBez kyvadlovej dopravy: ak nemáte auto, kontaktujte nás alebo uveďte to v RSVP — spojíme vás s inými hosťami.",
-      },
-      {
-        title: "Oblečenie",
-        content:
-          "Slávnostné oblečenie — elegantné casual.\nProsíme, vyhnite sa bielej farbe.",
       },
       {
         title: "Deti",
