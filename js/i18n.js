@@ -41,7 +41,6 @@ export const translations = {
       { label: "Heure", value: "15h — cérémonie" },
       { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
       { label: "RSVP avant le", value: "1er février 2027" },
-      { label: "Cadeaux", value: "Votre présence suffit" },
     ],
     saveTheDate: {
       intro:
@@ -259,7 +258,6 @@ export const translations = {
       { label: "Čas", value: "15:00 — obrad" },
       { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
       { label: "RSVP do", value: "1. februára 2027" },
-      { label: "Darčeky", value: "Vaša prítomnosť nám stačí" },
     ],
     saveTheDate: {
       intro:

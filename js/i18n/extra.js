@@ -36,7 +36,6 @@ export const cs = {
     { label: "Čas", value: "15:00 — obřad" },
     { label: "Místo", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP do", value: "1. února 2027" },
-    { label: "Dárky", value: "Vaše přítomnost nám stačí" },
   ],
   saveTheDate: {
     intro: "Zažijte znovu naše Save the Date ve videu. Děkujeme, že jste součástí našeho příběhu!",
@@ -142,7 +141,6 @@ export const en = {
     { label: "Time", value: "3:00 PM — ceremony" },
     { label: "Venue", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP by", value: "February 1, 2027" },
-    { label: "Gifts", value: "Your presence is enough" },
   ],
   saveTheDate: {
     intro: "Watch our Save the Date video again. Thank you for being part of our journey!",
@@ -248,7 +246,6 @@ export const es = {
     { label: "Hora", value: "15:00 — ceremonia" },
     { label: "Lugar", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP hasta el", value: "1 de febrero de 2027" },
-    { label: "Regalos", value: "Su presencia nos basta" },
   ],
   saveTheDate: {
     intro: "Revivan nuestro Save the Date en video. ¡Gracias por ser parte de nuestra aventura!",
