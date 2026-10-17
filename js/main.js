@@ -61,13 +61,9 @@ function renderNav() {
   if (!nav) return;
 
   const tr = t();
-  const logoShort = document.getElementById("nav-logo-short");
-  const logoFull = document.getElementById("nav-logo-full");
-  if (logoShort) {
-    logoShort.textContent = `${couple.person1.charAt(0)} & ${couple.person2.charAt(0)}`;
-  }
-  if (logoFull) {
-    logoFull.textContent = `${couple.person1} & ${couple.person2}`;
+  const logo = document.getElementById("nav-logo");
+  if (logo) {
+    logo.textContent = `${couple.person1.charAt(0)} & ${couple.person2.charAt(0)}`;
   }
 
   nav.innerHTML = Object.entries(sections)
