@@ -97,7 +97,7 @@ export const translations = {
       },
       {
         title: "Enfants",
-        content: "Les enfants sont les bienvenus !",
+        content: "Les personnes invitées figurent sur les invitations.",
       },
       {
         title: "Régimes alimentaires",
@@ -150,7 +150,7 @@ export const translations = {
       {
         question: "Puis-je venir accompagné(e) ?",
         answer:
-          "Chaque invitation est nominative. Si un +1 est prévu, il est mentionné sur votre faire-part. Sinon, merci de nous contacter.",
+          "Les personnes invitées figurent sur les invitations.",
       },
       {
         question: "Jusqu'à quelle heure dure la fête ?",
@@ -314,7 +314,7 @@ export const translations = {
       },
       {
         title: "Deti",
-        content: "Deti sú vítané!",
+        content: "Na pozvánkach je uvedené, kto je pozvaný.",
       },
       {
         title: "Stravovacie obmedzenia",
@@ -367,7 +367,7 @@ export const translations = {
       {
         question: "Môžem prísť s doprovodom?",
         answer:
-          "Každé pozvanie je osobné. Ak je doprovod plánovaný, je uvedený na vašej pozvánke. Inak nás prosím kontaktujte.",
+          "Na pozvánkach je uvedené, kto je pozvaný.",
       },
       {
         question: "Do kedy trvá oslava?",
