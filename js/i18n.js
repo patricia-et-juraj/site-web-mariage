@@ -182,8 +182,8 @@ export const translations = {
       emailLabel: "email",
       phoneLabel: "téléphone",
       witnesses: [
-        { name: "Marina (témoin de Patricia)", phone: "+33 6 11 11 11 11" },
-        { name: "Adrien (témoin de Juraj)", phone: "+33 6 22 22 22 22" },
+        { name: "Marina (témoin de Patricia)", phone: "+41 78 793 49 81" },
+        { name: "Adrien (témoin de Juraj)", phone: "+41 78 815 30 33" },
       ],
     },
     footer: {
@@ -400,8 +400,8 @@ export const translations = {
       emailLabel: "email",
       phoneLabel: "telefón",
       witnesses: [
-        { name: "Marina (svedkyňa Patrície)", phone: "+33 6 11 11 11 11" },
-        { name: "Adrien (svedok Juraja)", phone: "+33 6 22 22 22 22" },
+        { name: "Marina (svedkyňa Patrície)", phone: "+41 78 793 49 81" },
+        { name: "Adrien (svedok Juraja)", phone: "+41 78 815 30 33" },
       ],
     },
     footer: {
