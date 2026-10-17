@@ -79,9 +79,9 @@ export const cs = {
   ],
   rsvp: {
     deadline: "1. února 2027",
-    message: "Prosíme o potvrzení účasti do {deadline}.",
+    message: "Prosíme o potvrzení účasti do {deadline}. Formulář vyplňte jednou za každou osobu.",
     formCta: "Vyplnit Google formulář",
-    formHint: "Vyplňte formulář níže nebo ho otevřete v novém okně. Odpovědi se uloží automaticky.",
+    formHint: "Jedna odpověď za osobu. Vyplňte formulář níže nebo ho otevřete v novém okně.",
     notConfiguredMessage: "Formulář bude brzy online. Mezitím nás kontaktujte emailem nebo telefonem.",
   },
   contact: {
@@ -185,9 +185,9 @@ export const en = {
   ],
   rsvp: {
     deadline: "February 1, 2027",
-    message: "Please confirm your attendance by {deadline}.",
+    message: "Please confirm your attendance by {deadline}. Please fill in the form once for each person.",
     formCta: "Open the Google Form",
-    formHint: "Fill in the form below or open it in a new tab. Your answers are saved automatically.",
+    formHint: "One response per person. Fill in the form below or open it in a new tab.",
     notConfiguredMessage: "The form will be online soon. Please contact us by email or phone in the meantime.",
   },
   contact: {
@@ -291,9 +291,9 @@ export const es = {
   ],
   rsvp: {
     deadline: "1 de febrero de 2027",
-    message: "Por favor, confirmen su asistencia antes del {deadline}.",
+    message: "Por favor, confirmen su asistencia antes del {deadline}. Completen el formulario una vez por cada persona.",
     formCta: "Responder en Google Forms",
-    formHint: "Completen el formulario abajo o ábranlo en una pestaña nueva. Las respuestas se guardan solas.",
+    formHint: "Una respuesta por persona. Completen el formulario abajo o ábranlo en una pestaña nueva.",
     notConfiguredMessage: "El formulario va a estar pronto en línea. Mientras tanto, contáctennos por correo o teléfono.",
   },
   contact: {
