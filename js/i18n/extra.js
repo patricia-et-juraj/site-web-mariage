@@ -88,8 +88,8 @@ export const cs = {
     emailLabel: "email",
     phoneLabel: "telefon",
     witnesses: [
-      { name: "Sophie (svědkyně Patricie)", phone: "+33 6 11 11 11 11" },
-      { name: "Lucas (svědek Juraje)", phone: "+33 6 22 22 22 22" },
+      { name: "Marina (svědkyně Patricie)", phone: "+33 6 11 11 11 11" },
+      { name: "Adrien (svědek Juraje)", phone: "+33 6 22 22 22 22" },
     ],
   },
   footer: { text: "S láskou, {person1} & {person2}" },
@@ -194,8 +194,8 @@ export const en = {
     emailLabel: "email",
     phoneLabel: "phone",
     witnesses: [
-      { name: "Sophie (Patricia's witness)", phone: "+33 6 11 11 11 11" },
-      { name: "Lucas (Juraj's witness)", phone: "+33 6 22 22 22 22" },
+      { name: "Marina (Patricia's witness)", phone: "+33 6 11 11 11 11" },
+      { name: "Adrien (Juraj's witness)", phone: "+33 6 22 22 22 22" },
     ],
   },
   footer: { text: "With love, {person1} & {person2}" },
@@ -300,8 +300,8 @@ export const es = {
     emailLabel: "correo",
     phoneLabel: "teléfono",
     witnesses: [
-      { name: "Sophie (testigo de Patricia)", phone: "+33 6 11 11 11 11" },
-      { name: "Lucas (testigo de Juraj)", phone: "+33 6 22 22 22 22" },
+      { name: "Marina (testigo de Patricia)", phone: "+33 6 11 11 11 11" },
+      { name: "Adrien (testigo de Juraj)", phone: "+33 6 22 22 22 22" },
     ],
   },
   footer: { text: "Con cariño, {person1} y {person2}" },

@@ -803,12 +803,19 @@ h3 {
   font-family: var(--font-heading);
   font-style: italic;
   font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-  color: var(--color-surface);
-  background: var(--color-accent);
-  padding: 0.4rem 1.2rem;
-  border-radius: 8px;
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.event-day-label::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 1px;
+  margin: 0.55rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
 }
 
 .event-card {
@@ -1231,7 +1238,7 @@ h3 {
   }
 
   .event-day-label {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
   }
 
   .media-grid {
