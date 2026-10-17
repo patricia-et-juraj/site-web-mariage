@@ -56,18 +56,18 @@ export const translations = {
       },
       {
         title: "Vin d'honneur",
-        description: "Cocktail et apéritif dans la cour — c'est aussi le moment de la séance photo.",
-        location: "Cour du ranch",
+        description: "Cocktail et apéritif dans la cour du Ranch des Rochettes — c'est aussi le moment de la séance photo.",
+        location: "Ranch des Rochettes",
       },
       {
         title: "Dîner",
         description: "Repas assis en plusieurs services.",
-        location: "Grange",
+        location: "Ranch des Rochettes",
       },
       {
         title: "Soirée dansante",
         description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
-        location: "Grange",
+        location: "Ranch des Rochettes",
       },
       { kind: "day", label: "Dimanche 9h30" },
       {
@@ -273,18 +273,18 @@ export const translations = {
       },
       {
         title: "Prípitok",
-        description: "Koktail a aperitív na dvore — zároveň aj čas na spoločné fotenie.",
-        location: "Dvorec ranchu",
+        description: "Koktail a aperitív na dvore Ranch des Rochettes — zároveň aj čas na spoločné fotenie.",
+        location: "Ranch des Rochettes",
       },
       {
         title: "Večera",
         description: "Slávnostná večera v niekoľkých chodoch.",
-        location: "Stodola",
+        location: "Ranch des Rochettes",
       },
       {
         title: "Zábava",
         description: "Otvorenie tanca a párty až do neskorej noci!",
-        location: "Stodola",
+        location: "Ranch des Rochettes",
       },
       { kind: "day", label: "Nedeľa 9:30" },
       {
