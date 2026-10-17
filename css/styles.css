@@ -608,18 +608,6 @@ h3 {
   box-sizing: border-box;
 }
 
-.map-links {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.map-links .detail-maps-btn {
-  width: auto;
-  min-width: min(22rem, 100%);
-}
 
 /* ── Accommodation ── */
 .accommodation-list {

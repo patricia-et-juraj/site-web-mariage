@@ -187,12 +187,6 @@ function renderDetails() {
       </article>`;
     })
     .join("");
-
-  const mapLinks = document.getElementById("map-links");
-  if (mapLinks) {
-    mapLinks.innerHTML = `
-      <a href="${wedding.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary detail-maps-btn">${tr.maps.google}</a>`;
-  }
 }
 
 function renderAccommodation() {
