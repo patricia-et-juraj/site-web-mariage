@@ -59,7 +59,7 @@ export const cs = {
     { title: "Děti", content: "Děti jsou vítány!" },
     { title: "Stravovací omezení", content: "Uveďte alergie nebo režim (vegetariánské, bez lepku…) ve formuláři RSVP." },
     { title: "Dárky", content: "Vaše přítomnost je pro nás ten nejkrásnější dárek.\nDiskrétní urna bude k dispozici, pokud budete chtít." },
-    { title: "Fotografie", content: "Profesionální fotograf bude přítomen. Sdílejte fotky s #PatriciaEtJuraj2027." },
+    { title: "Fotografie", content: "Profesionální fotograf bude přítomen. Právě on se postará o fotografie z obřadu." },
   ],
   maps: { google: "Google Maps" },
   accommodation: {
@@ -75,7 +75,7 @@ export const cs = {
     { question: "Mohu přijít s doprovodem?", answer: "Každé pozvání je osobní. Pokud je doprovod plánován, je uveden na vaší pozvánce. Jinak nás prosím kontaktujte." },
     { question: "Do kdy trvá oslava?", answer: "Oslava nemá stanovený konec — tančete, dokud vás to baví!" },
     { question: "Je k dispozici kyvadlová doprava?", answer: "Ne, kyvadlová doprava nebude. Nemáte-li auto, napište nám nebo uveďte to v RSVP — propojíme vás s ostatními hosty na cestu." },
-    { question: "Mohu fotit během obřadu?", answer: "Prosíme o unplugged obřad — odložte telefony a užijte si moment. O fotografie se postará náš fotograf!" },
+    { question: "Mohu fotit během obřadu?", answer: "O fotografie z obřadu se postará profesionální fotograf. Užijte si chvíli!" },
   ],
   rsvp: {
     deadline: "1. února 2027",
@@ -165,7 +165,7 @@ export const en = {
     { title: "Children", content: "Children are welcome!" },
     { title: "Dietary requirements", content: "Please indicate allergies or diets (vegetarian, gluten-free…) in the RSVP form." },
     { title: "Gifts", content: "Your presence is our greatest gift.\nA discreet wishing well will be available if you wish." },
-    { title: "Photos", content: "A professional photographer will be present. Share your photos with #PatriciaEtJuraj2027." },
+    { title: "Photos", content: "A professional photographer will be there. They will be in charge of taking photos of the ceremony." },
   ],
   maps: { google: "Google Maps" },
   accommodation: {
@@ -181,7 +181,7 @@ export const en = {
     { question: "Can I bring a guest?", answer: "Each invitation is personal. If a plus-one is included, it will be noted on your invitation. Otherwise, please contact us." },
     { question: "How late does the party go?", answer: "There's no set end time — dance and celebrate for as long as you like!" },
     { question: "Is there a shuttle?", answer: "No, there is no shuttle. If you don't have a car, email us or mention it in your RSVP — we'll put you in touch with other guests for a ride." },
-    { question: "Can I take photos during the ceremony?", answer: "We ask for an unplugged ceremony — put away your phones and enjoy the moment. Our photographer has it covered!" },
+    { question: "Can I take photos during the ceremony?", answer: "A professional photographer will take care of the ceremony photos. Enjoy the moment!" },
   ],
   rsvp: {
     deadline: "February 1, 2027",
@@ -271,7 +271,7 @@ export const es = {
     { title: "Niños", content: "¡Los niños son bienvenidos!" },
     { title: "Restricciones alimentarias", content: "Indiquen alergias o dietas (vegetariano, sin gluten…) en el formulario de RSVP." },
     { title: "Regalos", content: "Su presencia es nuestro mejor regalo.\nHabrá una urna discreta si desean dejar algo." },
-    { title: "Fotos", content: "Habrá un fotógrafo profesional. Compartan fotos con #PatriciaEtJuraj2027." },
+    { title: "Fotos", content: "Habrá un fotógrafo profesional. Esa persona se encargará de las fotos de la ceremonia." },
   ],
   maps: { google: "Google Maps" },
   accommodation: {
@@ -287,7 +287,7 @@ export const es = {
     { question: "¿Puedo ir con acompañante?", answer: "Cada invitación es personal. Si hay acompañante, va a aparecer en su invitación. Si no, contáctennos." },
     { question: "¿Hasta qué hora dura la fiesta?", answer: "No hay hora de cierre — ¡bailen y disfruten todo lo que quieran!" },
     { question: "¿Hay bus?", answer: "No, no va a haber bus. Si no tienen auto, escríbannos o indíquenlo en el RSVP — los vamos a conectar con otros invitados para el trayecto." },
-    { question: "¿Puedo sacar fotos durante la ceremonia?", answer: "Pedimos una ceremonia sin celulares — guarden los teléfonos y disfruten el momento. ¡El fotógrafo se encarga del resto!" },
+    { question: "¿Puedo sacar fotos durante la ceremonia?", answer: "Un fotógrafo profesional se encargará de las fotos de la ceremonia. ¡Disfruten el momento!" },
   ],
   rsvp: {
     deadline: "1 de febrero de 2027",

@@ -113,7 +113,7 @@ export const translations = {
       {
         title: "Photos",
         content:
-          "Un photographe professionnel sera présent. Partagez vos photos avec #PatriciaEtJuraj2027.",
+          "Un photographe professionnel sera présent. C'est lui qui prendra les photos de la cérémonie.",
       },
     ],
     maps: {
@@ -166,7 +166,7 @@ export const translations = {
       {
         question: "Puis-je prendre des photos pendant la cérémonie ?",
         answer:
-          "Nous vous demandons une cérémonie unplugged — gardez vos téléphones et profitez du moment. Le photographe s'occupe du reste !",
+          "Un photographe professionnel s'occupera des photos de la cérémonie. Profitez du moment !",
       },
     ],
     rsvp: {
@@ -331,7 +331,7 @@ export const translations = {
       {
         title: "Fotografie",
         content:
-          "Profesionálny fotograf bude prítomný. Zdieľajte fotky s #PatriciaEtJuraj2027.",
+          "Profesionálny fotograf bude prítomný. On sa postará o fotografie z obradu.",
       },
     ],
     maps: {
@@ -384,7 +384,7 @@ export const translations = {
       {
         question: "Môžem fotiť počas obradu?",
         answer:
-          "Prosíme o unplugged obrad — odložte telefóny a užite si moment. O fotografie sa postará náš fotograf!",
+          "O fotografie z obradu sa postará profesionálny fotograf. Užite si chvíľu!",
       },
     ],
     rsvp: {
