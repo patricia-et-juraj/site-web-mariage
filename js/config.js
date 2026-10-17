@@ -57,7 +57,7 @@ export const siteConfig = {
    * Dans Google Forms : Réponses → lien Google Sheets pour consulter sur téléphone.
    */
   rsvp: {
-    googleFormUrl: "",
+    googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSePdMCaeFrAVOo72JkzuEdXtVoeikAk3MjieNxJpJxCiC7Tqw/viewform",
     embedForm: true,
   },
 
