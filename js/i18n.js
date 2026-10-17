@@ -49,13 +49,8 @@ export const translations = {
       media: [{ caption: "Notre vidéo Save the Date" }],
     },
     events: [
+      { kind: "day", label: "Samedi 15h" },
       {
-        title: "Accueil des invités",
-        description: "Arrivée et installation. Un verre de bienvenue vous attend.",
-        location: "Ranch des Rochettes",
-      },
-      {
-        time: "15h",
         title: "Cérémonie",
         description: "Cérémonie au Ranch des Rochettes.",
         location: "Ranch des Rochettes",
@@ -75,10 +70,10 @@ export const translations = {
         description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
         location: "Grange",
       },
+      { kind: "day", label: "Dimanche 9h30" },
       {
-        time: "Dimanche 10h",
         title: "Brunch",
-        description: "Brunch du lendemain pour prolonger les retrouvailles.",
+        description: "Brunch de 3 heures pour prolonger les retrouvailles.",
         location: "Ranch des Rochettes",
       },
     ],
@@ -272,13 +267,8 @@ export const translations = {
       media: [{ caption: "Naše Save the Date video" }],
     },
     events: [
+      { kind: "day", label: "Sobota 15:00" },
       {
-        title: "Príchod hostí",
-        description: "Príchod a ubytovanie sa. Na privítanie vás čaká drink.",
-        location: "Ranch des Rochettes",
-      },
-      {
-        time: "15:00",
         title: "Obrad",
         description: "Svadobný obrad v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
@@ -298,10 +288,10 @@ export const translations = {
         description: "Otvorenie tanca a párty až do neskorej noci!",
         location: "Stodola",
       },
+      { kind: "day", label: "Nedeľa 9:30" },
       {
-        time: "Nedeľa 10:00",
         title: "Brunch",
-        description: "Brunch na druhý deň na pokračovanie oslavy.",
+        description: "Trojhodinový brunch na pokračovanie oslavy.",
         location: "Ranch des Rochettes",
       },
     ],

@@ -151,12 +151,12 @@ function renderEvents() {
   document.getElementById("events-title").textContent = t().sections.events;
   document.getElementById("events-list").innerHTML = t().events
     .map((e) => {
-      const hasTime = Boolean(e.time?.trim());
-      const timeHtml = hasTime ? `<time class="event-time">${e.time}</time>` : "";
+      if (e.kind === "day") {
+        return `<div class="event-day"><p class="event-day-label">${e.label}</p></div>`;
+      }
       return `
       <article class="event-card">
         <div class="event-body">
-          ${timeHtml}
           <h3>${e.title}</h3>
           <p>${e.description}</p>
           <span class="event-location">${e.location}</span>

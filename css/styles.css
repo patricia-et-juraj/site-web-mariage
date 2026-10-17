@@ -790,23 +790,33 @@ h3 {
   margin-inline: auto;
 }
 
+.event-day {
+  display: flex;
+  justify-content: center;
+}
+
+.event-card + .event-day {
+  margin-top: 1.25rem;
+}
+
+.event-day-label {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: var(--color-surface);
+  background: var(--color-accent);
+  padding: 0.4rem 1.2rem;
+  border-radius: 8px;
+}
+
 .event-card {
   background: var(--color-surface);
   padding: 1.75rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border-left: 3px solid var(--color-gold);
-}
-
-.event-time {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-style: italic;
-  font-weight: 500;
-  color: var(--color-gold);
-  letter-spacing: 0.06em;
-  margin-bottom: 0.35rem;
 }
 
 .event-body h3 {
@@ -1220,8 +1230,8 @@ h3 {
     padding: 2rem 2.25rem;
   }
 
-  .event-time {
-    font-size: 1.15rem;
+  .event-day-label {
+    font-size: 1.2rem;
   }
 
   .media-grid {
