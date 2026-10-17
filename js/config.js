@@ -8,7 +8,7 @@ export const siteConfig = {
   },
 
   wedding: {
-    date: "2027-03-20T15:30:00",
+    date: "2027-03-20T15:00:00",
     mapsUrl: "https://maps.app.goo.gl/UHJKb2dV2LsLW7pU8",
   },
 

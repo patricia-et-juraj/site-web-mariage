@@ -33,7 +33,7 @@ export const cs = {
   },
   essentials: [
     { label: "Datum", value: "20. března 2027" },
-    { label: "Čas", value: "15:30 — obřad" },
+    { label: "Čas", value: "15:00 — obřad" },
     { label: "Místo", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP do", value: "1. února 2027" },
     { label: "Dárky", value: "Vaše přítomnost nám stačí" },
@@ -44,7 +44,7 @@ export const cs = {
   },
   events: [
     { title: "Příjezd hostů", description: "Příjezd a ubytování. Na uvítanou vás čeká drink.", location: "Ranch des Rochettes" },
-    { time: "15:30", title: "Obřad", description: "Svatební obřad v Ranch des Rochettes.", location: "Ranch des Rochettes" },
+    { time: "15:00", title: "Obřad", description: "Svatební obřad v Ranch des Rochettes.", location: "Ranch des Rochettes" },
     { title: "Přípitek", description: "Koktejl a aperitiv na dvoře.", location: "Dvůr ranchu" },
     { title: "Večeře", description: "Slavnostní večeře v několika chodech.", location: "Stodola" },
     { title: "Zábava", description: "Otevření tance a párty až do pozdních hodin!", location: "Stodola" },
@@ -138,7 +138,7 @@ export const en = {
   },
   essentials: [
     { label: "Date", value: "March 20, 2027" },
-    { label: "Time", value: "3:30 PM — ceremony" },
+    { label: "Time", value: "3:00 PM — ceremony" },
     { label: "Venue", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP by", value: "February 1, 2027" },
     { label: "Gifts", value: "Your presence is enough" },
@@ -149,7 +149,7 @@ export const en = {
   },
   events: [
     { title: "Guest arrival", description: "Arrival and settling in. A welcome drink awaits.", location: "Ranch des Rochettes" },
-    { time: "3:30 PM", title: "Ceremony", description: "Wedding ceremony at Ranch des Rochettes.", location: "Ranch des Rochettes" },
+    { time: "3:00 PM", title: "Ceremony", description: "Wedding ceremony at Ranch des Rochettes.", location: "Ranch des Rochettes" },
     { title: "Cocktail hour", description: "Drinks and appetizers in the courtyard.", location: "Ranch courtyard" },
     { title: "Dinner", description: "Seated dinner with multiple courses.", location: "Barn" },
     { title: "Party", description: "First dance and celebration until late!", location: "Barn" },
@@ -243,7 +243,7 @@ export const es = {
   },
   essentials: [
     { label: "Fecha", value: "20 de marzo de 2027" },
-    { label: "Hora", value: "15:30 — ceremonia" },
+    { label: "Hora", value: "15:00 — ceremonia" },
     { label: "Lugar", value: "Ranch des Rochettes, Ceyzériat" },
     { label: "RSVP hasta el", value: "1 de febrero de 2027" },
     { label: "Regalos", value: "Su presencia nos basta" },
@@ -254,7 +254,7 @@ export const es = {
   },
   events: [
     { title: "Llegada de invitados", description: "Llegada y acomodación. Los espera una copa de bienvenida.", location: "Ranch des Rochettes" },
-    { time: "15:30", title: "Ceremonia", description: "Ceremonia en Ranch des Rochettes.", location: "Ranch des Rochettes" },
+    { time: "15:00", title: "Ceremonia", description: "Ceremonia en Ranch des Rochettes.", location: "Ranch des Rochettes" },
     { title: "Cóctel", description: "Cóctel y bocaditos en el patio.", location: "Patio del ranch" },
     { title: "Cena", description: "Cena sentados, de varios platos.", location: "Granero" },
     { title: "Fiesta", description: "Primer baile y fiesta hasta tarde.", location: "Granero" },

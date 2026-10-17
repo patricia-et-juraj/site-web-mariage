@@ -38,7 +38,7 @@ export const translations = {
     },
     essentials: [
       { label: "Date", value: "20 mars 2027" },
-      { label: "Heure", value: "15h30 — cérémonie" },
+      { label: "Heure", value: "15h — cérémonie" },
       { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
       { label: "RSVP avant le", value: "1er février 2027" },
       { label: "Cadeaux", value: "Votre présence suffit" },
@@ -55,7 +55,7 @@ export const translations = {
         location: "Ranch des Rochettes",
       },
       {
-        time: "15h30",
+        time: "15h",
         title: "Cérémonie",
         description: "Cérémonie au Ranch des Rochettes.",
         location: "Ranch des Rochettes",
@@ -261,7 +261,7 @@ export const translations = {
     },
     essentials: [
       { label: "Dátum", value: "20. marca 2027" },
-      { label: "Čas", value: "15:30 — obrad" },
+      { label: "Čas", value: "15:00 — obrad" },
       { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
       { label: "RSVP do", value: "1. februára 2027" },
       { label: "Darčeky", value: "Vaša prítomnosť nám stačí" },
@@ -278,7 +278,7 @@ export const translations = {
         location: "Ranch des Rochettes",
       },
       {
-        time: "15:30",
+        time: "15:00",
         title: "Obrad",
         description: "Svadobný obrad v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
