@@ -52,7 +52,7 @@ export const cs = {
   ],
   details: [
     { title: "Adresa", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Otevřít v Google Maps" } },
-    { title: "Příjezd a parkování", content: "Bezplatné parkování na místě." },
+    { title: "Příjezd a parkování", content: "Parkování je zahrnuté, hned vedle." },
     { title: "Ubytování", content: "V noci svatby vás ubytujeme přímo v Ranch des Rochettes." },
     { title: "Doprava", content: "Nádraží Bourg-en-Bresse cca 20 min autem.\nBez kyvadlové dopravy: nemáte-li auto, kontaktujte nás nebo uveďte to v RSVP — propojíme vás s ostatními hosty." },
     { title: "Děti", content: "Děti jsou vítány!" },
@@ -157,7 +157,7 @@ export const en = {
   ],
   details: [
     { title: "Address", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Open in Google Maps" } },
-    { title: "Access & parking", content: "Free parking on site." },
+    { title: "Access & parking", content: "Parking is included, right next door." },
     { title: "Accommodation", content: "We are hosting everyone on site at Ranch des Rochettes for the wedding night." },
     { title: "Transport", content: "Bourg-en-Bresse station approx. 20 min by car.\nNo shuttle: if you don't have a car, contact us or note it in your RSVP — we'll connect you with other guests." },
     { title: "Children", content: "Children are welcome!" },
@@ -262,7 +262,7 @@ export const es = {
   ],
   details: [
     { title: "Dirección", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Abrir en Google Maps" } },
-    { title: "Cómo llegar y parqueo", content: "Parqueo gratuito en el lugar." },
+    { title: "Cómo llegar y parqueo", content: "Hay parqueo incluido, justo al lado." },
     { title: "Alojamiento", content: "Los hospedamos en el Ranch des Rochettes la noche de la boda." },
     { title: "Transporte", content: "Estación de Bourg-en-Bresse a unos 20 min en auto.\nNo hay bus: si no tienen auto, contáctennos o indíquenlo en el RSVP — los pondremos en contacto con otros invitados." },
     { title: "Niños", content: "¡Los niños son bienvenidos!" },

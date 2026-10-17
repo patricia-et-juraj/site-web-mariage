@@ -84,7 +84,7 @@ export const translations = {
       },
       {
         title: "Accès & parking",
-        content: "Parking gratuit sur place.",
+        content: "Un parking est inclus, juste à côté.",
       },
       {
         title: "Hébergement",
@@ -301,7 +301,7 @@ export const translations = {
       },
       {
         title: "Prístup a parkovanie",
-        content: "Bezplatné parkovanie na mieste.",
+        content: "Parkovanie je zahrnuté, hneď vedľa.",
       },
       {
         title: "Ubytovanie",
