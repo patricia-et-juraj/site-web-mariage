@@ -40,9 +40,9 @@ export const siteConfig = {
     media: [
       {
         type: "video",
-        src: "assets/save-the-date/video.mp4",
-        poster: "assets/save-the-date/video-poster.svg",
-        placeholder: true,
+        src: "assets/save-the-date/save-the-date.mp4",
+        poster: "assets/save-the-date/video-poster.jpg",
+        placeholder: false,
       },
     ],
   },

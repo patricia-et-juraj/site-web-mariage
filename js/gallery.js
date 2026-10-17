@@ -22,14 +22,28 @@ export function initGallery(mediaItems, ui) {
 
 function renderMediaItem(item, index) {
   if (item.type === "video") {
-    const isPlaceholder = item.placeholder;
-    return `
-      <figure class="media-card media-card--video" data-index="${index}">
+    if (item.placeholder) {
+      return `
+      <figure class="media-card media-card--video media-card--vertical" data-index="${index}">
         <button class="media-trigger" data-lightbox data-index="${index}" aria-label="${galleryUi.playVideo}: ${item.caption}">
           <img src="${item.poster}" alt="" loading="lazy" class="media-thumb" />
           <span class="media-play" aria-hidden="true">▶</span>
-          ${isPlaceholder ? `<span class="media-badge">${galleryUi.videoBadge}</span>` : ""}
+          <span class="media-badge">${galleryUi.videoBadge}</span>
         </button>
+        <figcaption>${item.caption}</figcaption>
+      </figure>`;
+    }
+
+    const posterAttr = item.poster ? ` poster="${item.poster}"` : "";
+    return `
+      <figure class="media-card media-card--video media-card--vertical">
+        <video
+          class="media-video"
+          src="${item.src}"${posterAttr}
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
         <figcaption>${item.caption}</figcaption>
       </figure>`;
   }
