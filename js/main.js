@@ -177,7 +177,7 @@ function renderDetails() {
   document.getElementById("details-grid").innerHTML = tr.details
     .map((d) => {
       const link = d.link
-        ? `<a href="${wedding.mapsUrl}" target="_blank" rel="noopener" class="detail-link">${d.link.label}</a>`
+        ? `<a href="${wedding.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary detail-maps-btn">${d.link.label}</a>`
         : "";
       return `
       <article class="detail-card">
@@ -191,7 +191,7 @@ function renderDetails() {
   const mapLinks = document.getElementById("map-links");
   if (mapLinks) {
     mapLinks.innerHTML = `
-      <a href="${wedding.mapsUrl}" target="_blank" rel="noopener" class="btn btn-outline">${tr.maps.google}</a>`;
+      <a href="${wedding.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary detail-maps-btn">${tr.maps.google}</a>`;
   }
 }
 
