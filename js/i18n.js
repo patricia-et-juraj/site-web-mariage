@@ -40,7 +40,7 @@ export const translations = {
       { label: "Date", value: "20 mars 2027" },
       { label: "Heure", value: "15h — cérémonie" },
       { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "RSVP avant le", value: "1er février 2027" },
+      { label: "Répondre avant le", value: "1er février 2027" },
     ],
     saveTheDate: {
       intro:
@@ -102,7 +102,7 @@ export const translations = {
       {
         title: "Régimes alimentaires",
         content:
-          "Indiquez vos allergies ou régimes (végétarien, sans gluten…) dans le formulaire RSVP.",
+          "Indiquez vos allergies ou régimes (végétarien, sans gluten…) dans le formulaire de confirmation.",
       },
       {
         title: "Cadeaux",
@@ -257,7 +257,7 @@ export const translations = {
       { label: "Dátum", value: "20. marca 2027" },
       { label: "Čas", value: "15:00 — obrad" },
       { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "RSVP do", value: "1. februára 2027" },
+      { label: "Potvrdiť do", value: "1. februára 2027" },
     ],
     saveTheDate: {
       intro:
@@ -319,7 +319,7 @@ export const translations = {
       {
         title: "Stravovacie obmedzenia",
         content:
-          "Uveďte alergie alebo režim (vegetariánske, bez lepku…) vo formulári RSVP.",
+          "Uveďte alergie alebo režim (vegetariánske, bez lepku…) vo formulári na potvrdenie.",
       },
       {
         title: "Darčeky",
