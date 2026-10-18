@@ -54,7 +54,7 @@ export const cs = {
     { title: "Adresa", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Otevřít v Google Maps" } },
     { title: "Příjezd a parkování", content: "Parkování je zahrnuté, hned vedle." },
     { title: "Ubytování", content: "V noci svatby vás ubytujeme přímo v Ranch des Rochettes." },
-    { title: "Doprava", content: "Nejjednodušší a nepraktičtější je přijet autem.\nPokud to není možné, napište nám — najdeme alternativu." },
+    { title: "Doprava", content: "Nejjednodušší a nepraktičtější je přijet autem." },
     { title: "Děti", content: "Na pozvánkách je uvedeno, kdo je pozván." },
     { title: "Stravovací omezení", content: "Uveďte alergie nebo režim (vegetariánské, bez lepku…) ve formuláři RSVP." },
     { title: "Dárky", content: "Vaše přítomnost je pro nás ten nejkrásnější dárek.\nDiskrétní urna bude k dispozici, pokud budete chtít." },
@@ -73,7 +73,7 @@ export const cs = {
   faq: [
     { question: "Mohu přijít s doprovodem?", answer: "Na pozvánkách je uvedeno, kdo je pozván." },
     { question: "Do kdy trvá oslava?", answer: "Oslava nemá stanovený konec — tančete, dokud vás to baví!" },
-    { question: "Je k dispozici kyvadlová doprava?", answer: "Nejjednodušší a nepraktičtější je přijet autem. Pokud to není možné, napište nám — najdeme alternativu." },
+    { question: "Je k dispozici kyvadlová doprava?", answer: "Nejjednodušší a nepraktičtější je přijet autem." },
     { question: "Mohu fotit během obřadu?", answer: "O fotografie z obřadu se postará profesionální fotograf. Užijte si chvíli!" },
   ],
   rsvp: {
@@ -159,7 +159,7 @@ export const en = {
     { title: "Address", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Open in Google Maps" } },
     { title: "Access & parking", content: "Parking is included, right next door." },
     { title: "Accommodation", content: "We are hosting everyone on site at Ranch des Rochettes for the wedding night." },
-    { title: "Transport", content: "The simplest and most practical option is to come by car.\nIf that is not possible, write to us and we will find an alternative." },
+    { title: "Transport", content: "The simplest and most practical option is to come by car." },
     { title: "Children", content: "The invitations list who is invited." },
     { title: "Dietary requirements", content: "Please indicate allergies or diets (vegetarian, gluten-free…) in the RSVP form." },
     { title: "Gifts", content: "Your presence is our greatest gift.\nA discreet wishing well will be available if you wish." },
@@ -178,7 +178,7 @@ export const en = {
   faq: [
     { question: "Can I bring a guest?", answer: "The invitations list who is invited." },
     { question: "How late does the party go?", answer: "There's no set end time — dance and celebrate for as long as you like!" },
-    { question: "Is there a shuttle?", answer: "The simplest and most practical option is to come by car. If that is not possible, write to us and we will find an alternative." },
+    { question: "Is there a shuttle?", answer: "The simplest and most practical option is to come by car." },
     { question: "Can I take photos during the ceremony?", answer: "A professional photographer will take care of the ceremony photos. Enjoy the moment!" },
   ],
   rsvp: {
@@ -264,7 +264,7 @@ export const es = {
     { title: "Dirección", content: "Ranch des Rochettes\n01350 Ceyzériat", link: { label: "Abrir en Google Maps" } },
     { title: "Cómo llegar y parqueo", content: "Hay parqueo incluido, justo al lado." },
     { title: "Alojamiento", content: "Los hospedamos en el Ranch des Rochettes la noche de la boda." },
-    { title: "Transporte", content: "Lo más simple y práctico es venir en auto.\nSi no es posible, escríbannos para encontrar una alternativa." },
+    { title: "Transporte", content: "Lo más simple y práctico es venir en auto." },
     { title: "Niños", content: "En las invitaciones está escrito quién está invitado." },
     { title: "Restricciones alimentarias", content: "Indiquen alergias o dietas (vegetariano, sin gluten…) en el formulario de RSVP." },
     { title: "Regalos", content: "Su presencia es nuestro mejor regalo.\nHabrá una urna discreta si desean dejar algo." },
@@ -283,7 +283,7 @@ export const es = {
   faq: [
     { question: "¿Puedo ir con acompañante?", answer: "En las invitaciones está escrito quién está invitado." },
     { question: "¿Hasta qué hora dura la fiesta?", answer: "No hay hora de cierre — ¡bailen y disfruten todo lo que quieran!" },
-    { question: "¿Hay bus?", answer: "Lo más simple y práctico es venir en auto. Si no es posible, escríbannos para encontrar una alternativa." },
+    { question: "¿Hay bus?", answer: "Lo más simple y práctico es venir en auto." },
     { question: "¿Puedo sacar fotos durante la ceremonia?", answer: "Un fotógrafo profesional se encargará de las fotos de la ceremonia. ¡Disfruten el momento!" },
   ],
   rsvp: {

@@ -93,7 +93,7 @@ export const translations = {
       {
         title: "Transports",
         content:
-          "Le plus simple et le plus pratique est de venir en voiture.\nSi ce n'est pas possible, écrivez-nous : nous trouverons une alternative.",
+          "Le plus simple et le plus pratique est de venir en voiture.",
       },
       {
         title: "Enfants",
@@ -160,7 +160,7 @@ export const translations = {
       {
         question: "Y a-t-il une navette ?",
         answer:
-          "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous : nous trouverons une alternative.",
+          "Le plus simple et le plus pratique est de venir en voiture.",
       },
       {
         question: "Puis-je prendre des photos pendant la cérémonie ?",
@@ -310,7 +310,7 @@ export const translations = {
       {
         title: "Doprava",
         content:
-          "Najjednoduchšie a najpraktickejšie je prísť autom.\nAk to nie je možné, napíšte nám — nájdeme alternatívu.",
+          "Najjednoduchšie a najpraktickejšie je prísť autom.",
       },
       {
         title: "Deti",
@@ -377,7 +377,7 @@ export const translations = {
       {
         question: "Je k dispozícii kyvadlová doprava?",
         answer:
-          "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám — nájdeme alternatívu.",
+          "Najjednoduchšie a najpraktickejšie je prísť autom.",
       },
       {
         question: "Môžem fotiť počas obradu?",

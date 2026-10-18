@@ -132,7 +132,6 @@ function renderSaveTheDate() {
   }
 
   document.getElementById("save-the-date-title").textContent = t().sections.saveTheDate;
-  document.getElementById("save-the-date-intro").textContent = t().saveTheDate.intro;
   initGallery(mergeMediaWithCaptions(), t().gallery);
 }
 
@@ -244,15 +243,10 @@ function renderRsvp() {
   const formLink = document.getElementById("rsvp-form-link");
   formLink.textContent = tr.formCta;
 
-  const notConfigured = document.getElementById("rsvp-not-configured");
-
   if (formUrl) {
-    notConfigured.hidden = true;
     formLink.hidden = false;
     applyRsvpLinks(formUrl);
   } else {
-    notConfigured.textContent = tr.notConfiguredMessage;
-    notConfigured.hidden = false;
     formLink.hidden = true;
     applyRsvpLinks("");
   }
