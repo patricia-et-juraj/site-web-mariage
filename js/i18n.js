@@ -305,7 +305,7 @@ export const translations = {
       },
       {
         title: "Ubytovanie",
-        content: "Počas svadobnej noci vás ubytujeme priamo v Ranch des Rochettes.",
+        content: "Ubytovanie máte zabezpečené na mieste.",
       },
       {
         title: "Doprava",
