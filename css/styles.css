@@ -459,6 +459,11 @@ h3 {
   object-fit: cover;
 }
 
+.media-thumb--empty {
+  display: block;
+  background: #1a0a0c;
+}
+
 .media-card--vertical {
   width: min(22rem, 100%);
 }
@@ -539,6 +544,11 @@ h3 {
   align-items: center;
 }
 
+.lightbox-panel.is-video {
+  width: auto;
+  max-width: min(28rem, 92vw);
+}
+
 .lightbox-close {
   position: absolute;
   top: -2.5rem;
@@ -564,6 +574,19 @@ h3 {
   max-height: 75vh;
   object-fit: contain;
   display: block;
+}
+
+.lightbox-panel.is-video .lightbox-content {
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.lightbox-panel.is-video .lightbox-content video {
+  width: auto;
+  height: auto;
+  max-width: min(28rem, 92vw);
+  max-height: 88vh;
 }
 
 .lightbox-placeholder {

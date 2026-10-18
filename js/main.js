@@ -1,6 +1,6 @@
 import { siteConfig } from "./config.js";
 import { getTranslations, getLocale, setLocale, onLocaleChange, initLocale, formatTemplate } from "./locale.js";
-import { initGallery } from "./gallery.js";
+import { initGallery, openSaveTheDate } from "./gallery.js";
 import { initEasterEggs, updateEasterEggMessages } from "./easter-eggs.js";
 const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs } = siteConfig;
 
@@ -364,6 +364,13 @@ function initCountdown() {
   countdownInterval = setInterval(updateCountdown, 1000);
 }
 
+function closeMobileNav() {
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("nav-menu");
+  menu?.classList.remove("is-open");
+  toggle?.setAttribute("aria-expanded", "false");
+}
+
 function initNav() {
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("nav-menu");
@@ -375,9 +382,18 @@ function initNav() {
 
   menu?.addEventListener("click", (e) => {
     if (e.target.classList.contains("nav-link")) {
-      menu.classList.remove("is-open");
-      toggle?.setAttribute("aria-expanded", "false");
+      closeMobileNav();
     }
+  });
+}
+
+function initSaveTheDateClicks() {
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("#hero-cta-save-the-date, a.nav-link[href='#save-the-date']");
+    if (!trigger) return;
+    e.preventDefault();
+    closeMobileNav();
+    openSaveTheDate();
   });
 }
 
@@ -406,6 +422,7 @@ function init() {
   renderPage();
   initCountdown();
   initNav();
+  initSaveTheDateClicks();
   initLangSwitch();
   initScrollReveal();
   initEasterEggs(buildEasterEggConfig());

@@ -1,8 +1,10 @@
 let galleryUi = {};
 let lightboxInitialized = false;
+let currentMediaItems = [];
 
 export function initGallery(mediaItems, ui) {
   galleryUi = ui ?? {};
+  currentMediaItems = mediaItems ?? [];
   const grid = document.getElementById("media-grid");
   if (!grid || !mediaItems?.length) return;
 
@@ -20,6 +22,11 @@ export function initGallery(mediaItems, ui) {
   }
 }
 
+export function openSaveTheDate() {
+  const index = currentMediaItems.findIndex((item) => item.type === "video");
+  openLightbox(index >= 0 ? index : 0, currentMediaItems);
+}
+
 function renderMediaItem(item, index) {
   if (item.type === "video") {
     if (item.placeholder) {
@@ -34,16 +41,15 @@ function renderMediaItem(item, index) {
       </figure>`;
     }
 
-    const posterAttr = item.poster ? ` poster="${item.poster}"` : "";
+    const poster = item.poster
+      ? `<img src="${item.poster}" alt="" loading="lazy" class="media-thumb" />`
+      : `<span class="media-thumb media-thumb--empty"></span>`;
     return `
-      <figure class="media-card media-card--video media-card--vertical">
-        <video
-          class="media-video"
-          src="${item.src}"${posterAttr}
-          controls
-          playsinline
-          preload="metadata"
-        ></video>
+      <figure class="media-card media-card--video media-card--vertical" data-index="${index}">
+        <button class="media-trigger" data-lightbox data-index="${index}" aria-label="${galleryUi.playVideo}: ${item.caption}">
+          ${poster}
+          <span class="media-play" aria-hidden="true">▶</span>
+        </button>
         <figcaption>${item.caption}</figcaption>
       </figure>`;
   }
@@ -63,12 +69,20 @@ function initLightbox() {
 
   const closeBtn = lightbox.querySelector(".lightbox-close");
   const backdrop = lightbox.querySelector(".lightbox-backdrop");
+  const panel = lightbox.querySelector(".lightbox-panel");
   const content = lightbox.querySelector(".lightbox-content");
   const caption = lightbox.querySelector(".lightbox-caption");
 
   function close() {
+    const video = content.querySelector("video");
+    if (video) {
+      video.pause();
+      video.removeAttribute("src");
+      video.load();
+    }
     lightbox.hidden = true;
     content.innerHTML = "";
+    panel?.classList.remove("is-video");
     document.body.style.overflow = "";
   }
 
@@ -77,6 +91,7 @@ function initLightbox() {
     if (!item) return;
 
     content.innerHTML = "";
+    panel?.classList.toggle("is-video", item.type === "video");
 
     if (item.type === "video") {
       if (item.placeholder) {
@@ -93,6 +108,7 @@ function initLightbox() {
         video.playsInline = true;
         if (item.poster) video.poster = item.poster;
         content.appendChild(video);
+        video.play().catch(() => {});
       }
     } else {
       const img = document.createElement("img");
