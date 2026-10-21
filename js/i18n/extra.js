@@ -35,7 +35,7 @@ export const cs = {
     { label: "Datum", value: "20. března 2027" },
     { label: "Čas", value: "15:00 — obřad" },
     { label: "Místo", value: "Ranch des Rochettes, Ceyzériat" },
-    { label: "Potvrdit do", value: "1. února 2027" },
+    { label: "Potvrdit do", value: "31. ledna 2027" },
   ],
   saveTheDate: {
     intro: "Zažijte znovu naše Save the Date ve videu. Děkujeme, že jste součástí našeho příběhu!",
@@ -77,7 +77,7 @@ export const cs = {
     { question: "Mohu fotit během obřadu?", answer: "O fotografie z obřadu se postará profesionální fotograf. Užijte si chvíli!" },
   ],
   rsvp: {
-    deadline: "1. února 2027",
+    deadline: "31. ledna 2027",
     message: "Prosíme o potvrzení účasti do {deadline}. Formulář vyplňte jednou za každou osobu.",
     formCta: "Vyplnit Google formulář",
     formHint: "Jedna odpověď za osobu. Formulář se otevře v novém okně.",
@@ -140,7 +140,7 @@ export const en = {
     { label: "Date", value: "March 20, 2027" },
     { label: "Time", value: "3:00 PM — ceremony" },
     { label: "Venue", value: "Ranch des Rochettes, Ceyzériat" },
-    { label: "Reply by", value: "February 1, 2027" },
+    { label: "Reply by", value: "January 31, 2027" },
   ],
   saveTheDate: {
     intro: "Watch our Save the Date video again. Thank you for being part of our journey!",
@@ -182,7 +182,7 @@ export const en = {
     { question: "Can I take photos during the ceremony?", answer: "A professional photographer will take care of the ceremony photos. Enjoy the moment!" },
   ],
   rsvp: {
-    deadline: "February 1, 2027",
+    deadline: "January 31, 2027",
     message: "Please confirm your attendance by {deadline}. Please fill in the form once for each person.",
     formCta: "Open the Google Form",
     formHint: "One response per person. The form opens in a new window.",
@@ -245,7 +245,7 @@ export const es = {
     { label: "Fecha", value: "20 de marzo de 2027" },
     { label: "Hora", value: "15:00 — ceremonia" },
     { label: "Lugar", value: "Ranch des Rochettes, Ceyzériat" },
-    { label: "Confirmar hasta el", value: "1 de febrero de 2027" },
+    { label: "Confirmar hasta el", value: "31 de enero de 2027" },
   ],
   saveTheDate: {
     intro: "Revivan nuestro Save the Date en video. ¡Gracias por ser parte de nuestra aventura!",
@@ -287,7 +287,7 @@ export const es = {
     { question: "¿Puedo sacar fotos durante la ceremonia?", answer: "Un fotógrafo profesional se encargará de las fotos de la ceremonia. ¡Disfruten el momento!" },
   ],
   rsvp: {
-    deadline: "1 de febrero de 2027",
+    deadline: "31 de enero de 2027",
     message: "Por favor, confirmen su asistencia antes del {deadline}. Completen el formulario una vez por cada persona.",
     formCta: "Responder en Google Forms",
     formHint: "Una respuesta por persona. El formulario se abre en una ventana nueva.",

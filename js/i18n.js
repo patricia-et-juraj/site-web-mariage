@@ -40,7 +40,7 @@ export const translations = {
       { label: "Date", value: "20 mars 2027" },
       { label: "Heure", value: "15h — cérémonie" },
       { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "Répondre avant le", value: "1er février 2027" },
+      { label: "Répondre avant le", value: "31 janvier 2027" },
     ],
     saveTheDate: {
       intro:
@@ -169,7 +169,7 @@ export const translations = {
       },
     ],
     rsvp: {
-      deadline: "1er février 2027",
+      deadline: "31 janvier 2027",
       message: "Merci de confirmer votre présence avant le {deadline}. Merci de remplir le formulaire une fois pour chaque personne.",
       formCta: "Répondre au formulaire Google",
       formHint:
@@ -257,7 +257,7 @@ export const translations = {
       { label: "Dátum", value: "20. marca 2027" },
       { label: "Čas", value: "15:00 — obrad" },
       { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
-      { label: "Potvrdiť do", value: "1. februára 2027" },
+      { label: "Potvrdiť do", value: "31. januára 2027" },
     ],
     saveTheDate: {
       intro:
@@ -386,7 +386,7 @@ export const translations = {
       },
     ],
     rsvp: {
-      deadline: "1. februára 2027",
+      deadline: "31. januára 2027",
       message: "Prosíme o potvrdenie účasti do {deadline}. Formulár vyplňte raz za každú osobu.",
       formCta: "Odpovedať cez Google Formulár",
       formHint:
