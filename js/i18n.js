@@ -107,7 +107,7 @@ export const translations = {
       {
         title: "Cadeaux",
         content:
-          "Votre présence est notre plus beau cadeau.\nUne urne discrète sera disponible sur place si vous le souhaitez.",
+          "Votre présence est notre plus beau cadeau.\nUne urne sera disponible sur place : elle contribuera à notre voyage de noces.",
       },
       {
         title: "Photos",
@@ -324,7 +324,7 @@ export const translations = {
       {
         title: "Darčeky",
         content:
-          "Vaša prítomnosť je pre nás ten najkrajší darček.\nDiskrétna urna bude k dispozícii, ak budete chcieť.",
+          "Vaša prítomnosť je pre nás ten najkrajší darček.\nNa mieste bude urna: prispeje na našu svadobnú cestu.",
       },
       {
         title: "Fotografie",
