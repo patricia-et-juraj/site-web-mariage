@@ -106,7 +106,7 @@ export const translations = {
           "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous et nous essaierons de trouver une alternative.",
       },
       {
-        title: "Enfants",
+        title: "Enfants et conjoints",
         content: "Les personnes invitées figurent sur les invitations.",
       },
       {
@@ -333,7 +333,7 @@ export const translations = {
           "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám a pokúsime sa nájsť alternatívu.",
       },
       {
-        title: "Deti",
+        title: "Deti a partneri",
         content: "Na pozvánkach je uvedené, kto je pozvaný.",
       },
       {
