@@ -10,6 +10,14 @@ function t() {
   return getTranslations();
 }
 
+function venueLink(text) {
+  if (!text || !wedding.mapsUrl) return text ?? "";
+  return String(text).replaceAll(
+    "Ranch des Rochettes",
+    `<a href="${wedding.mapsUrl}" class="venue-link" target="_blank" rel="noopener noreferrer">Ranch des Rochettes</a>`
+  );
+}
+
 function applyTheme() {
   const root = document.documentElement;
   Object.entries(theme.colors).forEach(([key, value]) => {
@@ -95,7 +103,7 @@ function renderHero() {
   document.getElementById("hero-names").innerHTML =
     `${couple.person1} <span class="hero-amp" id="hero-amp" title="?">&</span> ${couple.person2}`;
   document.getElementById("hero-date").textContent = tr.hero.dateDisplay;
-  document.getElementById("hero-location").textContent = tr.hero.location;
+  document.getElementById("hero-location").innerHTML = venueLink(tr.hero.location);
   document.getElementById("hero-tagline").textContent = tr.hero.tagline;
 
   const ctaRsvp = document.getElementById("hero-cta-rsvp");
@@ -119,7 +127,7 @@ function renderEssentials() {
       (e) => `
       <article class="essential-card">
         <p class="essential-label">${e.label}</p>
-        <p class="essential-value">${e.value}</p>
+        <p class="essential-value">${venueLink(e.value)}</p>
       </article>`
     )
     .join("");
@@ -150,9 +158,9 @@ function renderEvents() {
       return `
       <article class="event-card">
         <div class="event-body">
-          <h3>${e.title}</h3>
-          <p>${e.description}</p>
-          <span class="event-location">${e.location}</span>
+          <h3>${e.time ? `<span class="event-time">${e.time}</span> ` : ""}${e.title}</h3>
+          <p>${venueLink(e.description)}</p>
+          <span class="event-location">${venueLink(e.location)}</span>
         </div>
       </article>`;
     })
@@ -175,7 +183,7 @@ function renderDetails() {
       return `
       <article class="detail-card">
         <h3>${d.title}</h3>
-        <p>${d.content.replace(/\n/g, "<br>")}</p>
+        <p>${venueLink(d.content.replace(/\n/g, "<br>"))}</p>
         ${link}
       </article>`;
     })

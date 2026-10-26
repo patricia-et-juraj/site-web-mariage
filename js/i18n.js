@@ -37,9 +37,9 @@ export const translations = {
       ctaSaveTheDate: "Voir le Save the Date",
     },
     essentials: [
-      { label: "Date", value: "20 mars 2027" },
+      { label: "Date", value: "20 et 21 mars 2027" },
       { label: "Heure", value: "15h — cérémonie" },
-      { label: "Lieu", value: "Ranch des Rochettes, Ceyzériat" },
+      { label: "Lieu", value: "Ranch des Rochettes, 01250 Ceyzériat" },
       { label: "Répondre avant le", value: "31 janvier 2027" },
     ],
     saveTheDate: {
@@ -50,28 +50,38 @@ export const translations = {
     events: [
       { kind: "day", label: "Samedi 15h" },
       {
+        time: "15h",
         title: "Cérémonie",
         description: "Cérémonie au Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
+        time: "~16h",
         title: "Vin d'honneur",
         description: "Cocktail et apéritif dans la cour du Ranch des Rochettes — c'est aussi le moment de la séance photo.",
         location: "Ranch des Rochettes",
       },
       {
-        title: "Dîner",
-        description: "Repas assis en plusieurs services.",
+        time: "~19h",
+        title: "Repas",
+        description: "Repas assis en plusieurs services au Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
+        time: "~21h",
         title: "Soirée dansante",
         description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
         location: "Ranch des Rochettes",
       },
+      {
+        title: "Nuit sur place",
+        description: "Incluse dans l'invitation, au Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
       { kind: "day", label: "Dimanche 9h30" },
       {
-        title: "Brunch",
+        time: "9h30 – 12h30",
+        title: "Brunch du lendemain",
         description: "Brunch de 3 heures pour prolonger les retrouvailles.",
         location: "Ranch des Rochettes",
       },
@@ -79,7 +89,7 @@ export const translations = {
     details: [
       {
         title: "Adresse",
-        content: "Ranch des Rochettes\n01350 Ceyzériat",
+        content: "Ranch des Rochettes\n01250 Ceyzériat",
         link: { label: "Ouvrir dans Google Maps" },
       },
       {
@@ -254,9 +264,9 @@ export const translations = {
       ctaSaveTheDate: "Pozrieť Save the Date",
     },
     essentials: [
-      { label: "Dátum", value: "20. marca 2027" },
+      { label: "Dátum", value: "20. a 21. marca 2027" },
       { label: "Čas", value: "15:00 — obrad" },
-      { label: "Miesto", value: "Ranch des Rochettes, Ceyzériat" },
+      { label: "Miesto", value: "Ranch des Rochettes, 01250 Ceyzériat" },
       { label: "Potvrdiť do", value: "31. januára 2027" },
     ],
     saveTheDate: {
@@ -267,28 +277,38 @@ export const translations = {
     events: [
       { kind: "day", label: "Sobota 15:00" },
       {
+        time: "15:00",
         title: "Obrad",
         description: "Svadobný obrad v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
+        time: "~16:00",
         title: "Prípitok",
         description: "Koktail a aperitív na dvore Ranch des Rochettes — zároveň aj čas na spoločné fotenie.",
         location: "Ranch des Rochettes",
       },
       {
+        time: "~19:00",
         title: "Večera",
-        description: "Slávnostná večera v niekoľkých chodoch.",
+        description: "Slávnostná večera v niekoľkých chodoch v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       {
-        title: "Zábava",
+        time: "~21:00",
+        title: "Tanečná zábava",
         description: "Otvorenie tanca a párty až do neskorej noci!",
+        location: "Ranch des Rochettes",
+      },
+      {
+        title: "Noc na mieste",
+        description: "Zahrnutá v pozvánke, v Ranch des Rochettes.",
         location: "Ranch des Rochettes",
       },
       { kind: "day", label: "Nedeľa 9:30" },
       {
-        title: "Brunch",
+        time: "9:30 – 12:30",
+        title: "Brunch na druhý deň",
         description: "Trojhodinový brunch na pokračovanie oslavy.",
         location: "Ranch des Rochettes",
       },
@@ -296,7 +316,7 @@ export const translations = {
     details: [
       {
         title: "Adresa",
-        content: "Ranch des Rochettes\n01350 Ceyzériat",
+        content: "Ranch des Rochettes\n01250 Ceyzériat",
         link: { label: "Otvoriť v Google Maps" },
       },
       {
