@@ -260,9 +260,20 @@ function renderContact() {
 
   const tr = t();
   document.getElementById("contact-title").textContent = tr.sections.contact;
-  document.getElementById("contact-email").href = `mailto:${contact.email}`;
-  document.getElementById("contact-email").textContent = contact.email;
-  document.getElementById("contact-phone").textContent = contact.phone;
+
+  const peopleEl = document.getElementById("contact-people");
+  if (peopleEl) {
+    peopleEl.innerHTML = (contact.people ?? [])
+      .map(
+        (p) => `
+        <div class="contact-person">
+          <span class="contact-person-name">${p.name}</span>
+          <a class="contact-person-email" href="mailto:${p.email}">${p.email}</a>
+          <span class="contact-person-phone">${p.phone}</span>
+        </div>`
+      )
+      .join("");
+  }
 
   const witnessesEl = document.getElementById("contact-witnesses");
   if (witnessesEl && tr.contact.witnesses?.length) {
