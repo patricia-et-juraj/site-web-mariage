@@ -181,10 +181,8 @@ export const translations = {
     ],
     rsvp: {
       deadline: "31 janvier 2027",
-      message: "Merci de confirmer votre présence avant le {deadline}. Merci de remplir le formulaire une fois pour chaque personne.",
+      message: "Merci de confirmer votre présence avant le {deadline}.",
       formCta: "Répondre au formulaire Google",
-      formHint:
-        "Une réponse par personne. Le formulaire s'ouvre dans une nouvelle fenêtre.",
       notConfiguredMessage:
         "Le formulaire sera bientôt en ligne. En attendant, contactez-nous par email ou téléphone.",
     },
@@ -409,10 +407,8 @@ export const translations = {
     ],
     rsvp: {
       deadline: "31. januára 2027",
-      message: "Prosíme o potvrdenie účasti do {deadline}. Formulár vyplňte raz za každú osobu.",
+      message: "Prosíme o potvrdenie účasti do {deadline}.",
       formCta: "Odpovedať cez Google Formulár",
-      formHint:
-        "Jedna odpoveď za osobu. Formulár sa otvorí v novom okne.",
       notConfiguredMessage:
         "Formulár bude čoskoro online. Medzitým nás kontaktujte emailom alebo telefónom.",
     },

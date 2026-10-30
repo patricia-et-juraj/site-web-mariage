@@ -248,7 +248,7 @@ function renderRsvp() {
   document.getElementById("rsvp-message").textContent = formatTemplate(tr.message, {
     deadline: tr.deadline,
   });
-  document.getElementById("rsvp-hint").textContent = tr.formHint;
+  document.getElementById("rsvp-hint").textContent = t().hero.ctaRsvpHint;
 
   const formLink = document.getElementById("rsvp-form-link");
   formLink.textContent = tr.formCta;

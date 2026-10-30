@@ -80,9 +80,8 @@ export const cs = {
   ],
   rsvp: {
     deadline: "31. ledna 2027",
-    message: "Prosíme o potvrzení účasti do {deadline}. Formulář vyplňte jednou za každou osobu.",
+    message: "Prosíme o potvrzení účasti do {deadline}.",
     formCta: "Vyplnit Google formulář",
-    formHint: "Jedna odpověď za osobu. Formulář se otevře v novém okně.",
     notConfiguredMessage: "Formulář bude brzy online. Mezitím nás kontaktujte emailem nebo telefonem.",
   },
   contact: {
@@ -187,9 +186,8 @@ export const en = {
   ],
   rsvp: {
     deadline: "January 31, 2027",
-    message: "Please confirm your attendance by {deadline}. Please fill in the form once for each person.",
+    message: "Please confirm your attendance by {deadline}.",
     formCta: "Open the Google Form",
-    formHint: "One response per person. The form opens in a new window.",
     notConfiguredMessage: "The form will be online soon. Please contact us by email or phone in the meantime.",
   },
   contact: {
@@ -294,9 +292,8 @@ export const es = {
   ],
   rsvp: {
     deadline: "31 de enero de 2027",
-    message: "Por favor, confirmen su asistencia antes del {deadline}. Completen el formulario una vez por cada persona.",
+    message: "Por favor, confirmen su asistencia antes del {deadline}.",
     formCta: "Responder en Google Forms",
-    formHint: "Una respuesta por persona. El formulario se abre en una ventana nueva.",
     notConfiguredMessage: "El formulario va a estar pronto en línea. Mientras tanto, contáctennos por correo o teléfono.",
   },
   contact: {
