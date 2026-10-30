@@ -1,6 +1,11 @@
 let galleryUi = {};
 let lightboxInitialized = false;
 let currentMediaItems = [];
+let lightboxVolumeFade = null;
+
+const STD_VOLUME_START = 0.2;
+const STD_VOLUME_END = 0.8;
+const STD_VOLUME_FADE_MS = 3000;
 
 export function initGallery(mediaItems, ui) {
   galleryUi = ui ?? {};
@@ -73,10 +78,37 @@ function initLightbox() {
   const content = lightbox.querySelector(".lightbox-content");
   const caption = lightbox.querySelector(".lightbox-caption");
 
+  function stopVolumeFade() {
+    if (lightboxVolumeFade != null) {
+      cancelAnimationFrame(lightboxVolumeFade);
+      lightboxVolumeFade = null;
+    }
+  }
+
+  function fadeVideoVolume(video, from, to, durationMs) {
+    stopVolumeFade();
+    video.volume = from;
+    const started = performance.now();
+
+    function tick(now) {
+      const t = Math.min(1, (now - started) / durationMs);
+      video.volume = from + (to - from) * t;
+      if (t < 1) {
+        lightboxVolumeFade = requestAnimationFrame(tick);
+      } else {
+        lightboxVolumeFade = null;
+      }
+    }
+
+    lightboxVolumeFade = requestAnimationFrame(tick);
+  }
+
   function close() {
+    stopVolumeFade();
     const video = content.querySelector("video");
     if (video) {
       video.pause();
+      video.volume = STD_VOLUME_START;
       video.removeAttribute("src");
       video.load();
     }
@@ -90,6 +122,7 @@ function initLightbox() {
     const item = mediaItems[Number(index)];
     if (!item) return;
 
+    stopVolumeFade();
     content.innerHTML = "";
     panel?.classList.toggle("is-video", item.type === "video");
 
@@ -106,8 +139,10 @@ function initLightbox() {
         video.controls = true;
         video.autoplay = true;
         video.playsInline = true;
+        video.volume = STD_VOLUME_START;
         if (item.poster) video.poster = item.poster;
         content.appendChild(video);
+        fadeVideoVolume(video, STD_VOLUME_START, STD_VOLUME_END, STD_VOLUME_FADE_MS);
         video.play().catch(() => {});
       }
     } else {
