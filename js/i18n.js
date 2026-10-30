@@ -34,6 +34,7 @@ export const translations = {
       dateDisplay: "Samedi 20 mars 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Confirmer ma présence",
+      ctaRsvpHint: "Merci de remplir le formulaire une fois par personne.",
       ctaSaveTheDate: "Voir le Save the Date",
     },
     essentials: [
@@ -261,6 +262,7 @@ export const translations = {
       dateDisplay: "Sobota 20. marca 2027",
       location: "Ranch des Rochettes, Ceyzériat",
       ctaRsvp: "Potvrdiť účasť",
+      ctaRsvpHint: "Formulár vyplňte raz za každú osobu.",
       ctaSaveTheDate: "Pozrieť Save the Date",
     },
     essentials: [

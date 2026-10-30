@@ -29,6 +29,7 @@ export const cs = {
     dateDisplay: "Sobota 20. března 2027",
     location: "Ranch des Rochettes, Ceyzériat",
     ctaRsvp: "Potvrdit účast",
+    ctaRsvpHint: "Formulář vyplňte jednou za každou osobu.",
     ctaSaveTheDate: "Zobrazit Save the Date",
   },
   essentials: [
@@ -135,6 +136,7 @@ export const en = {
     dateDisplay: "Saturday, March 20, 2027",
     location: "Ranch des Rochettes, Ceyzériat",
     ctaRsvp: "Confirm my attendance",
+    ctaRsvpHint: "Please fill out the form once per person.",
     ctaSaveTheDate: "View the Save the Date",
   },
   essentials: [
@@ -241,6 +243,7 @@ export const es = {
     dateDisplay: "Sábado 20 de marzo de 2027",
     location: "Ranch des Rochettes, Ceyzériat",
     ctaRsvp: "Confirmar mi asistencia",
+    ctaRsvpHint: "Completen el formulario una vez por persona.",
     ctaSaveTheDate: "Ver el Save the Date",
   },
   essentials: [

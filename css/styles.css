@@ -344,6 +344,23 @@ h3 {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-cta-rsvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.hero-cta-hint {
+  margin: 0;
+  max-width: 22rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 .hero-amp {
@@ -1114,6 +1131,14 @@ h3 {
   .hero-cta {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .hero-cta-rsvp {
+    align-items: stretch;
+  }
+
+  .hero-cta-hint {
+    max-width: none;
   }
 
   .hero-cta .btn {

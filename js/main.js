@@ -107,8 +107,10 @@ function renderHero() {
   document.getElementById("hero-tagline").textContent = tr.hero.tagline;
 
   const ctaRsvp = document.getElementById("hero-cta-rsvp");
+  const ctaRsvpHint = document.getElementById("hero-cta-rsvp-hint");
   const ctaStd = document.getElementById("hero-cta-save-the-date");
   if (ctaRsvp) ctaRsvp.textContent = tr.hero.ctaRsvp;
+  if (ctaRsvpHint) ctaRsvpHint.textContent = tr.hero.ctaRsvpHint;
   if (ctaStd) ctaStd.textContent = tr.hero.ctaSaveTheDate;
 
   document.title = `${couple.person1} & ${couple.person2} — ${tr.meta.titleSuffix}`;
