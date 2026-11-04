@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mariage de Patricia et Juraj" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Patricia & Juraj — test</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <p class="test-banner">Version test — ce n’est pas encore le site définitif</p>
+    <header class="header">
+      <nav class="nav container" aria-label="Navigation principale">
+        <a href="#accueil" class="nav-logo" id="nav-logo"></a>
+
+        <ul id="nav-menu" class="nav-menu"></ul>
+
+        <div class="nav-actions">
+          <div id="lang-switch" class="lang-switch" role="group" aria-label="Changer la langue">
+            <button type="button" class="lang-btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+            <button type="button" class="lang-btn" data-lang="sk" aria-pressed="false">SK</button>
+            <button type="button" class="lang-btn" data-lang="cs" aria-pressed="false">CZ</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+            <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+
+          <button
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="accueil" class="hero">
+        <div class="hero-content reveal">
+          <h1 id="hero-names" class="hero-names"></h1>
+          <p id="hero-date" class="hero-date"></p>
+          <p id="hero-location" class="hero-location"></p>
+          <p id="hero-tagline" class="hero-tagline"></p>
+
+          <div id="countdown" class="countdown" aria-live="polite"></div>
+
+          <div class="hero-cta">
+            <div class="hero-cta-rsvp">
+              <p id="hero-cta-rsvp-hint" class="hero-cta-hint"></p>
+              <a href="#rsvp" id="hero-cta-rsvp" class="btn btn-primary"></a>
+            </div>
+            <a href="#save-the-date" id="hero-cta-save-the-date" class="btn btn-outline"></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="essentiel" class="section section--compact">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="essentials-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="essentials-grid" class="essentials-grid"></div>
+        </div>
+      </section>
+
+      <section id="save-the-date" class="section section--media">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="save-the-date-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="media-grid" class="media-grid"></div>
+        </div>
+      </section>
+
+      <section id="programme" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="events-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="events-list" class="events-list"></div>
+        </div>
+      </section>
+
+      <section id="infos" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="details-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="details-grid" class="details-grid"></div>
+        </div>
+      </section>
+
+      <section id="hebergement" class="section section--alt">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="accommodation-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+            <p id="accommodation-intro" class="section-intro"></p>
+          </header>
+          <div id="accommodation-list" class="accommodation-list"></div>
+        </div>
+      </section>
+
+      <section id="faq" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="faq-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="faq-list" class="faq-list"></div>
+        </div>
+      </section>
+
+      <section id="rsvp" class="section rsvp-section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="rsvp-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div class="rsvp-wrapper">
+            <p id="rsvp-message" class="rsvp-message"></p>
+            <p id="rsvp-hint" class="rsvp-hint"></p>
+            <div class="rsvp-actions">
+              <a
+                id="rsvp-form-link"
+                class="btn btn-primary"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container reveal">
+          <header class="section-header">
+            <h2 id="contact-title" class="section-title"></h2>
+            <div class="section-divider"></div>
+          </header>
+          <div id="contact-people" class="contact-people"></div>
+          <div id="contact-witnesses" class="contact-witnesses"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p id="footer-text" class="footer-text container"></p>
+    </footer>
+
+    <div id="gifts-overlay" class="gifts-overlay" hidden>
+      <div class="gifts-overlay-backdrop"></div>
+      <div class="gifts-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="gifts-title">
+        <button type="button" class="gifts-overlay-close" aria-label="Fermer">&times;</button>
+        <div class="urn" aria-hidden="true">
+          <div class="urn-glow"></div>
+          <div class="urn-lid">
+            <span class="urn-knob"></span>
+            <span class="urn-lid-plate"></span>
+          </div>
+          <div class="urn-body">
+            <span class="urn-rim"></span>
+            <span class="urn-belly"></span>
+            <span class="urn-foot"></span>
+          </div>
+        </div>
+        <div class="gifts-overlay-content">
+          <h2 id="gifts-title" class="gifts-overlay-title"></h2>
+          <p id="gifts-intro" class="gifts-overlay-intro"></p>
+          <div id="gifts-list" class="gifts-list"></div>
+          <p id="gifts-note" class="gifts-note"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true">
+      <div class="lightbox-backdrop"></div>
+      <div class="lightbox-panel">
+        <button class="lightbox-close" aria-label="Fermer">&times;</button>
+        <div class="lightbox-content"></div>
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,487 @@
+import { cs, en, es } from "./i18n/extra.js";
+
+export const translations = {
+  fr: {
+    meta: {
+      description: "Mariage de Patricia et Juraj — rejoignez-nous pour célébrer notre union.",
+      titleSuffix: "Mariage",
+    },
+    nav: {
+      aria: "Navigation principale",
+      openMenu: "Ouvrir le menu",
+    },
+    lang: {
+      switch: "Changer la langue",
+      fr: "Français",
+      sk: "Slovaque",
+      cs: "Tchèque",
+      en: "Anglais",
+      es: "Espagnol",
+    },
+    sections: {
+      essentials: "L'essentiel",
+      saveTheDate: "Save the Date",
+      events: "Le programme",
+      details: "Infos pratiques",
+      accommodation: "Hébergement",
+      gifts: "Liste de mariage",
+      faq: "Questions fréquentes",
+      rsvp: "Confirmer votre présence",
+      contact: "Contact",
+    },
+    hero: {
+      eyebrow: "Nous nous marions",
+      tagline: "Nous avons hâte de célébrer ce jour avec vous",
+      dateDisplay: "Samedi 20 mars 2027",
+      location: "Ranch des Rochettes, Ceyzériat",
+      ctaRsvp: "Confirmer ma présence",
+      ctaRsvpHint: "Merci de remplir le formulaire une fois par personne.",
+      ctaSaveTheDate: "Voir le Save the Date",
+    },
+    essentials: [
+      { label: "Date", value: "20 et 21 mars 2027" },
+      { label: "Heure", value: "15h — cérémonie" },
+      { label: "Lieu", value: "Ranch des Rochettes, 01250 Ceyzériat" },
+      { label: "Répondre avant le", value: "31 janvier 2027" },
+    ],
+    saveTheDate: {
+      intro:
+        "Revivez notre Save the Date en vidéo. Merci d'être à nos côtés pour cette aventure !",
+      media: [{ caption: "Notre vidéo Save the Date" }],
+    },
+    events: [
+      { kind: "day", label: "Samedi 15h" },
+      {
+        time: "15h",
+        title: "Cérémonie",
+        description: "Cérémonie au Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~16h",
+        title: "Vin d'honneur",
+        description: "Cocktail et apéritif dans la cour du Ranch des Rochettes — c'est aussi le moment de la séance photo.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~19h",
+        title: "Repas",
+        description: "Repas assis en plusieurs services au Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~21h",
+        title: "Soirée dansante",
+        description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
+        location: "Ranch des Rochettes",
+      },
+      {
+        title: "Nuit sur place",
+        description: "Incluse dans l'invitation, au Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      { kind: "day", label: "Dimanche 9h30" },
+      {
+        time: "9h30 – 12h30",
+        title: "Brunch du lendemain",
+        description: "Brunch de 3 heures pour prolonger les retrouvailles.",
+        location: "Ranch des Rochettes",
+      },
+    ],
+    details: [
+      {
+        title: "Adresse",
+        content: "Ranch des Rochettes\n01250 Ceyzériat",
+        link: { label: "Ouvrir dans Google Maps" },
+      },
+      {
+        title: "Accès & parking",
+        content: "Un parking est inclus, juste à côté.",
+      },
+      {
+        title: "Hébergement",
+        content: "Nous vous accueillons sur place au Ranch des Rochettes pour la nuit du mariage.",
+      },
+      {
+        title: "Transports",
+        content:
+          "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous et nous essaierons de trouver une alternative.",
+      },
+      {
+        title: "Enfants et conjoints",
+        content: "Les personnes invitées figurent sur les invitations.",
+      },
+      {
+        title: "Régimes alimentaires",
+        content:
+          "Indiquez vos allergies ou régimes (végétarien, sans gluten…) dans le formulaire de confirmation.",
+      },
+      {
+        title: "Cadeaux",
+        content: "Votre présence est notre plus beau cadeau.",
+        more: true,
+      },
+      {
+        title: "Photos",
+        content:
+          "Un photographe professionnel sera présent. C'est lui qui prendra les photos de la cérémonie.",
+      },
+    ],
+    maps: {
+      google: "Google Maps",
+    },
+    gifts: {
+      seeMore: "Voir plus",
+      intro:
+        "Votre présence est notre plus beau cadeau. Si vous souhaitez aussi nous gâter, voici à quoi votre attention contribuerait.",
+      note: "Une urne sera disponible sur place le jour J.",
+      wishes: [
+        {
+          kicker: "Notre souhait",
+          title: "Le voyage de noces",
+          text: "Après le mariage, nous partons célébrer ce nouveau chapitre. Une contribution, même petite, nous aidera à en faire un souvenir encore plus beau.",
+        },
+      ],
+    },
+    accommodation: {
+      intro:
+        "Quelques hébergements à proximité — pensez à réserver tôt, le printemps est une période chargée.",
+      book: "Réserver",
+      hotels: [
+        {
+          name: "Hôtel Le Ceyzériat",
+          distance: "5 min en voiture",
+          price: "À partir de 80 € / nuit",
+          phone: "+33 4 00 00 00 01",
+          link: "https://example.com",
+        },
+        {
+          name: "Chambre d'hôtes du Bugey",
+          distance: "10 min en voiture",
+          price: "À partir de 70 € / nuit",
+          phone: "+33 4 00 00 00 02",
+          link: "https://example.com",
+        },
+        {
+          name: "Bourg-en-Bresse centre",
+          distance: "25 min en voiture",
+          price: "À partir de 60 € / nuit",
+          phone: "+33 4 00 00 00 03",
+          link: "https://example.com",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Puis-je venir accompagné(e) ?",
+        answer:
+          "Les personnes invitées figurent sur les invitations.",
+      },
+      {
+        question: "Jusqu'à quelle heure dure la fête ?",
+        answer:
+          "Il n'y a pas d'heure de fin — profitez de la soirée et dansez tant que vous en avez envie !",
+      },
+      {
+        question: "Y a-t-il une navette ?",
+        answer:
+          "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous et nous essaierons de trouver une alternative.",
+      },
+      {
+        question: "Puis-je prendre des photos pendant la cérémonie ?",
+        answer:
+          "Un photographe professionnel s'occupera des photos de la cérémonie. Profitez du moment !",
+      },
+    ],
+    rsvp: {
+      deadline: "31 janvier 2027",
+      message: "Merci de confirmer votre présence avant le {deadline}.",
+      formCta: "Répondre au formulaire Google",
+      notConfiguredMessage:
+        "Le formulaire sera bientôt en ligne. En attendant, contactez-nous par email ou téléphone.",
+    },
+    contact: {
+      emailLabel: "email",
+      phoneLabel: "téléphone",
+      witnesses: [
+        { name: "Marina (témoin de Patricia)", phone: "+41 78 793 49 81" },
+        { name: "Adrien (témoin de Juraj)", phone: "+41 78 815 30 33" },
+      ],
+    },
+    footer: {
+      text: "Avec amour, {person1} & {person2}",
+    },
+    countdown: {
+      days: "jours",
+      hours: "heures",
+      min: "min",
+      sec: "sec",
+      today: "C'est aujourd'hui !",
+      hint: "Psst… un secret se cache peut-être ici le jour J − 100",
+    },
+    gallery: {
+      videoBadge: "Vidéo à ajouter",
+      placeholderLine1: "Ajoutez votre vidéo dans",
+      placeholderLine2: "Puis mettez",
+      placeholderLine2b: "dans config.js",
+      close: "Fermer",
+      lightboxAria: "Média agrandi",
+      playVideo: "Lire la vidéo",
+      enlarge: "Agrandir",
+    },
+    easterEggs: {
+      konami: "Vous avez trouvé le code secret ! On compte sur vous pour faire danser tout le monde.",
+      ampersand:
+        "C'est ici, entre nos deux prénoms, que tout a commencé — un sourire, une rencontre, et le reste…",
+      logoClicks:
+        "Psst… Juraj a mis du temps à choisir la bague. Patricia a dit oui avant qu'il finisse sa phrase.",
+      secretWord: "20 · 03 · 27 — marquez la date, on a hâte de vous voir !",
+      footerHearts: "Merci d'être dans notre vie",
+      countdown100: "Plus que 100 jours… le stress monte, l'excitation aussi !",
+    },
+  },
+
+  sk: {
+    meta: {
+      description: "Svadba Patrície a Juraja — pripojte sa k nám a oslávte s nami náš veľký deň.",
+      titleSuffix: "Svadba",
+    },
+    nav: {
+      aria: "Hlavná navigácia",
+      openMenu: "Otvoriť menu",
+    },
+    lang: {
+      switch: "Zmeniť jazyk",
+      fr: "Francúzština",
+      sk: "Slovenčina",
+      cs: "Čeština",
+      en: "Angličtina",
+      es: "Španielčina",
+    },
+    sections: {
+      essentials: "To najdôležitejšie",
+      saveTheDate: "Save the Date",
+      events: "Program",
+      details: "Praktické informácie",
+      accommodation: "Ubytovanie",
+      gifts: "Svadebný zoznam",
+      faq: "Často kladené otázky",
+      rsvp: "Potvrďte svoju účasť",
+      contact: "Kontakt",
+    },
+    hero: {
+      eyebrow: "Berieme sa",
+      tagline: "Tešíme sa, že tento deň oslávime spolu s vami",
+      dateDisplay: "Sobota 20. marca 2027",
+      location: "Ranch des Rochettes, Ceyzériat",
+      ctaRsvp: "Potvrdiť účasť",
+      ctaRsvpHint: "Formulár vyplňte raz za každú osobu.",
+      ctaSaveTheDate: "Pozrieť Save the Date",
+    },
+    essentials: [
+      { label: "Dátum", value: "20. a 21. marca 2027" },
+      { label: "Čas", value: "15:00 — obrad" },
+      { label: "Miesto", value: "Ranch des Rochettes, 01250 Ceyzériat" },
+      { label: "Potvrdiť do", value: "31. januára 2027" },
+    ],
+    saveTheDate: {
+      intro:
+        "Prežite znova naše Save the Date vo videu. Ďakujeme, že ste súčasťou nášho príbehu!",
+      media: [{ caption: "Naše Save the Date video" }],
+    },
+    events: [
+      { kind: "day", label: "Sobota 15:00" },
+      {
+        time: "15:00",
+        title: "Obrad",
+        description: "Svadobný obrad v Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~16:00",
+        title: "Prípitok",
+        description: "Koktail a aperitív na dvore Ranch des Rochettes — zároveň aj čas na spoločné fotenie.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~19:00",
+        title: "Večera",
+        description: "Slávnostná večera v niekoľkých chodoch v Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      {
+        time: "~21:00",
+        title: "Tanečná zábava",
+        description: "Otvorenie tanca a párty až do neskorej noci!",
+        location: "Ranch des Rochettes",
+      },
+      {
+        title: "Noc na mieste",
+        description: "Zahrnutá v pozvánke, v Ranch des Rochettes.",
+        location: "Ranch des Rochettes",
+      },
+      { kind: "day", label: "Nedeľa 9:30" },
+      {
+        time: "9:30 – 12:30",
+        title: "Brunch na druhý deň",
+        description: "Trojhodinový brunch na pokračovanie oslavy.",
+        location: "Ranch des Rochettes",
+      },
+    ],
+    details: [
+      {
+        title: "Adresa",
+        content: "Ranch des Rochettes\n01250 Ceyzériat",
+        link: { label: "Otvoriť v Google Maps" },
+      },
+      {
+        title: "Prístup a parkovanie",
+        content: "Parkovanie je zahrnuté, hneď vedľa.",
+      },
+      {
+        title: "Ubytovanie",
+        content: "Ubytovanie máte zabezpečené na mieste.",
+      },
+      {
+        title: "Doprava",
+        content:
+          "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám a pokúsime sa nájsť alternatívu.",
+      },
+      {
+        title: "Deti a partneri",
+        content: "Na pozvánkach je uvedené, kto je pozvaný.",
+      },
+      {
+        title: "Stravovacie obmedzenia",
+        content:
+          "Uveďte alergie alebo režim (vegetariánske, bez lepku…) vo formulári na potvrdenie.",
+      },
+      {
+        title: "Darčeky",
+        content: "Vaša prítomnosť je pre nás ten najkrajší darček.",
+        more: true,
+      },
+      {
+        title: "Fotografie",
+        content:
+          "Profesionálny fotograf bude prítomný. On sa postará o fotografie z obradu.",
+      },
+    ],
+    maps: {
+      google: "Google Maps",
+    },
+    gifts: {
+      seeMore: "Zobraziť viac",
+      intro:
+        "Vaša prítomnosť je pre nás ten najkrajší darček. Ak nás chcete aj obdarovať, tu je, na čo by vaša pozornosť prispela.",
+      note: "V deň svadby bude na mieste urna.",
+      wishes: [
+        {
+          kicker: "Naše želanie",
+          title: "Svadobná cesta",
+          text: "Po svadbe odchádzame osláviť túto novú kapitolu. Aj malý príspevok nám pomôže premeniť ju na ešte krajšiu spomienku.",
+        },
+      ],
+    },
+    accommodation: {
+      intro:
+        "Niekoľko ubytovaní v okolí — rezervujte včas, jar býva rušná sezóna.",
+      book: "Rezervovať",
+      hotels: [
+        {
+          name: "Hôtel Le Ceyzériat",
+          distance: "5 min autom",
+          price: "Od 80 € / noc",
+          phone: "+33 4 00 00 00 01",
+          link: "https://example.com",
+        },
+        {
+          name: "Chambre d'hôtes du Bugey",
+          distance: "10 min autom",
+          price: "Od 70 € / noc",
+          phone: "+33 4 00 00 00 02",
+          link: "https://example.com",
+        },
+        {
+          name: "Bourg-en-Bresse centrum",
+          distance: "25 min autom",
+          price: "Od 60 € / noc",
+          phone: "+33 4 00 00 00 03",
+          link: "https://example.com",
+        },
+      ],
+    },
+    faq: [
+      {
+        question: "Môžem prísť s doprovodom?",
+        answer:
+          "Na pozvánkach je uvedené, kto je pozvaný.",
+      },
+      {
+        question: "Do kedy trvá oslava?",
+        answer:
+          "Oslava nemá stanovený koniec — tancujte, kým vás to baví!",
+      },
+      {
+        question: "Je k dispozícii kyvadlová doprava?",
+        answer:
+          "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám a pokúsime sa nájsť alternatívu.",
+      },
+      {
+        question: "Môžem fotiť počas obradu?",
+        answer:
+          "O fotografie z obradu sa postará profesionálny fotograf. Užite si chvíľu!",
+      },
+    ],
+    rsvp: {
+      deadline: "31. januára 2027",
+      message: "Prosíme o potvrdenie účasti do {deadline}.",
+      formCta: "Odpovedať cez Google Formulár",
+      notConfiguredMessage:
+        "Formulár bude čoskoro online. Medzitým nás kontaktujte emailom alebo telefónom.",
+    },
+    contact: {
+      emailLabel: "email",
+      phoneLabel: "telefón",
+      witnesses: [
+        { name: "Marina (svedkyňa Patrície)", phone: "+41 78 793 49 81" },
+        { name: "Adrien (svedok Juraja)", phone: "+41 78 815 30 33" },
+      ],
+    },
+    footer: {
+      text: "S láskou, {person1} & {person2}",
+    },
+    countdown: {
+      days: "dní",
+      hours: "hodín",
+      min: "min",
+      sec: "sek",
+      today: "Je to dnes!",
+      hint: "Psst… možno sa tu skrýva tajomstvo 100 dní pred svadbou",
+    },
+    gallery: {
+      videoBadge: "Video bude doplnené",
+      placeholderLine1: "Pridajte video do",
+      placeholderLine2: "Potom nastavte",
+      placeholderLine2b: "v config.js",
+      close: "Zavrieť",
+      lightboxAria: "Zväčšené médium",
+      playVideo: "Prehrať video",
+      enlarge: "Zväčšiť",
+    },
+    easterEggs: {
+      konami: "Našli ste tajný kód! Počítame s vami, že roztočíte parket.",
+      ampersand:
+        "Tu, medzi našimi menami, sa všetko začalo — úsmev, stretnutie a zvyšok príbehu…",
+      logoClicks:
+        "Psst… Juraj dlho vyberal prsteň. Patrícia povedala áno skôr, než dohovoril.",
+      secretWord: "20 · 03 · 27 — poznačte si dátum, tešíme sa na vás!",
+      footerHearts: "Ďakujeme, že ste v našich životoch",
+      countdown100: "Už len 100 dní… stres rastie, ale aj vzrušenie!",
+    },
+  },
+
+  cs,
+  en,
+  es,
+};
