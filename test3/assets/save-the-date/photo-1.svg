@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf8f5"/>
+      <stop offset="100%" style="stop-color:#e8e4dc"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#8b9a7a">Save the Date</text>
+  <text x="400" y="530" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#c4a574">Photo 1  remplacez-moi</text>
+  <text x="400" y="580" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#6b6560">assets/save-the-date/photo-1.jpg</text>
+</svg>

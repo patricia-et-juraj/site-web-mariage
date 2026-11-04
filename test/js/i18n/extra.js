@@ -74,6 +74,11 @@ export const cs = {
         title: "Svatební cesta",
         text: "Po svatbě odjíždíme oslavit tuto novou kapitolu. I malý příspěvek nám pomůže udělat z ní ještě krásnější vzpomínku.",
       },
+      {
+        kicker: "Jediný fyzický dárek",
+        title: "Plyšáci",
+        text: "Pokud chcete darovat nějaký předmět, jediný fyzický dárek, který si přejeme, jsou plyšáci.",
+      },
     ],
   },
   accommodation: {
@@ -193,6 +198,11 @@ export const en = {
         title: "The honeymoon",
         text: "After the wedding we are leaving to celebrate this new chapter. A contribution, even a small one, will help us turn it into an even lovelier memory.",
       },
+      {
+        kicker: "The only physical gift",
+        title: "Stuffed animals",
+        text: "If you would like to give us something tangible, the only physical gift we would love is stuffed animals.",
+      },
     ],
   },
   accommodation: {
@@ -311,6 +321,11 @@ export const es = {
         kicker: "Nuestro deseo",
         title: "El viaje de novios",
         text: "Después de la boda nos vamos a celebrar este nuevo capítulo. Un aporte, aunque sea pequeño, nos ayudará a convertirlo en un recuerdo todavía más lindo.",
+      },
+      {
+        kicker: "El único regalo físico",
+        title: "Peluches",
+        text: "Si desean darnos un objeto, el único regalo físico que nos gustaría recibir son peluches.",
       },
     ],
   },

@@ -141,6 +141,11 @@ export const translations = {
           title: "Le voyage de noces",
           text: "Après le mariage, nous partons célébrer ce nouveau chapitre. Une contribution, même petite, nous aidera à en faire un souvenir encore plus beau.",
         },
+        {
+          kicker: "Le seul cadeau physique",
+          title: "Des peluches",
+          text: "Si vous souhaitez offrir un objet, le seul cadeau physique que nous aimerions recevoir, ce sont des peluches.",
+        },
       ],
     },
     accommodation: {
@@ -380,6 +385,11 @@ export const translations = {
           kicker: "Naše želanie",
           title: "Svadobná cesta",
           text: "Po svadbe odchádzame osláviť túto novú kapitolu. Aj malý príspevok nám pomôže premeniť ju na ešte krajšiu spomienku.",
+        },
+        {
+          kicker: "Jediný fyzický darček",
+          title: "Plyšové hračky",
+          text: "Ak chcete darovať predmet, jediný fyzický darček, ktorý si želáme, sú plyšové hračky.",
         },
       ],
     },
