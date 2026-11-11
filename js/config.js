@@ -31,7 +31,7 @@ export const siteConfig = {
     events: { enabled: true, id: "programme" },
     details: { enabled: true, id: "infos" },
     accommodation: { enabled: false, id: "hebergement" },
-    faq: { enabled: true, id: "faq" },
+    faq: { enabled: false, id: "faq" },
     rsvp: { enabled: true, id: "rsvp" },
     contact: { enabled: true, id: "contact" },
   },
