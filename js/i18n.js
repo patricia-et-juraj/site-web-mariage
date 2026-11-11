@@ -24,6 +24,7 @@ export const translations = {
       events: "Le programme",
       details: "Infos pratiques",
       accommodation: "Hébergement",
+      gifts: "Cadeaux",
       faq: "Questions fréquentes",
       rsvp: "Confirmer votre présence",
       contact: "Contact",
@@ -117,8 +118,8 @@ export const translations = {
       },
       {
         title: "Cadeaux",
-        content:
-          "Votre présence est notre plus beau cadeau.\nUne urne sera disponible sur place : elle contribuera à notre voyage de noces.",
+        content: "Votre présence est notre plus beau cadeau.",
+        more: true,
       },
       {
         title: "Photos",
@@ -128,6 +129,12 @@ export const translations = {
     ],
     maps: {
       google: "Google Maps",
+    },
+    gifts: {
+      seeMore: "Voir plus",
+      intro:
+        "Nous avons décidé de ne pas faire une liste de mariage. Si vous souhaitez contribuer à notre voyage de noces, une urne sera disponible le jour J, ou alors via notre IBAN.",
+      ibanCta: "IBAN",
     },
     accommodation: {
       intro:
@@ -250,6 +257,7 @@ export const translations = {
       events: "Program",
       details: "Praktické informácie",
       accommodation: "Ubytovanie",
+      gifts: "Darčeky",
       faq: "Často kladené otázky",
       rsvp: "Potvrďte svoju účasť",
       contact: "Kontakt",
@@ -343,8 +351,8 @@ export const translations = {
       },
       {
         title: "Darčeky",
-        content:
-          "Vaša prítomnosť je pre nás ten najkrajší darček.\nNa mieste bude urna: prispeje na našu svadobnú cestu.",
+        content: "Vaša prítomnosť je pre nás ten najkrajší darček.",
+        more: true,
       },
       {
         title: "Fotografie",
@@ -354,6 +362,12 @@ export const translations = {
     ],
     maps: {
       google: "Google Maps",
+    },
+    gifts: {
+      seeMore: "Zobraziť viac",
+      intro:
+        "Rozhodli sme sa nerobiť svadobný zoznam. Ak chcete prispieť na našu svadobnú cestu, v deň svadby bude k dispozícii urna, alebo cez náš IBAN.",
+      ibanCta: "IBAN",
     },
     accommodation: {
       intro:

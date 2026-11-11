@@ -2,7 +2,7 @@ import { siteConfig } from "./config.js";
 import { getTranslations, getLocale, setLocale, onLocaleChange, initLocale, formatTemplate } from "./locale.js";
 import { initGallery, openSaveTheDate } from "./gallery.js";
 import { initEasterEggs, updateEasterEggMessages } from "./easter-eggs.js";
-const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs } = siteConfig;
+const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs, bank } = siteConfig;
 
 let countdownInterval;
 
@@ -69,7 +69,7 @@ function renderNav() {
   }
 
   nav.innerHTML = Object.entries(sections)
-    .filter(([, s]) => s.enabled && s.id !== "accueil")
+    .filter(([, s]) => s.enabled && s.nav !== false && s.id !== "accueil")
     .map(([key, s]) => {
       const title = tr.sections[key] ?? s.id;
       return `<li><a href="#${s.id}" class="nav-link">${title}</a></li>`;
@@ -182,14 +182,48 @@ function renderDetails() {
       const link = d.link
         ? `<a href="${wedding.mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary detail-maps-btn">${d.link.label}</a>`
         : "";
+      const more =
+        d.more && sections.gifts?.enabled
+          ? `<button type="button" class="btn btn-primary detail-maps-btn" data-open-gifts>${tr.gifts.seeMore}</button>`
+          : "";
+      const packId = d.more && sections.gifts?.enabled ? ` id="gift-pack"` : "";
       return `
-      <article class="detail-card">
+      <article class="detail-card"${packId}>
         <h3>${d.title}</h3>
         <p>${venueLink(d.content.replace(/\n/g, "<br>"))}</p>
-        ${link}
+        ${link}${more}
       </article>`;
     })
     .join("");
+}
+
+function renderGifts() {
+  const overlay = document.getElementById("gifts-overlay");
+  if (!sections.gifts.enabled) {
+    overlay?.setAttribute("hidden", "");
+    return;
+  }
+  if (!document.getElementById("gifts-title")) return;
+
+  const tr = t().gifts;
+  const label = tr.ibanCta || "IBAN";
+  document.getElementById("gifts-title").textContent = t().sections.gifts;
+  const intro = document.getElementById("gifts-intro");
+  if (intro) {
+    intro.innerHTML = tr.intro.replace(
+      /IBAN/g,
+      `<button type="button" class="iban-inline" data-toggle-iban aria-expanded="false" aria-controls="gifts-iban">${label}</button>`
+    );
+  }
+  const ibanBox = document.getElementById("gifts-iban");
+  if (ibanBox && bank) {
+    ibanBox.innerHTML = `
+      <p class="bank-name">${bank.accountName}</p>
+      <p class="bank-iban">${bank.iban}</p>
+      <p>${bank.bic}</p>
+      <p>${bank.bankName}</p>
+      <p>${bank.address.replace(/\n/g, "<br>")}</p>`;
+  }
 }
 
 function renderAccommodation() {
@@ -311,6 +345,8 @@ function renderLightboxAria() {
   const closeBtn = lightbox?.querySelector(".lightbox-close");
   if (lightbox) lightbox.setAttribute("aria-label", t().gallery.lightboxAria);
   if (closeBtn) closeBtn.setAttribute("aria-label", t().gallery.close);
+  const giftsClose = document.querySelector(".gifts-overlay-close");
+  if (giftsClose) giftsClose.setAttribute("aria-label", t().gallery.close);
 }
 
 function renderPage() {
@@ -320,6 +356,7 @@ function renderPage() {
   renderSaveTheDate();
   renderEvents();
   renderDetails();
+  renderGifts();
   renderAccommodation();
   renderFaq();
   renderRsvp();
@@ -418,6 +455,106 @@ function initSaveTheDateClicks() {
   });
 }
 
+function initGiftsOverlay() {
+  const overlay = document.getElementById("gifts-overlay");
+  if (!overlay) return;
+
+  const scene = overlay.querySelector(".gift-scene");
+  let timers = [];
+
+  function clearTimers() {
+    timers.forEach((id) => clearTimeout(id));
+    timers = [];
+  }
+
+  function placeOverCard() {
+    const card = document.getElementById("gift-pack");
+    if (!card || !scene) return;
+    const rect = card.getBoundingClientRect();
+    scene.style.top = `${rect.top}px`;
+    scene.style.left = `${rect.left}px`;
+    scene.style.width = `${rect.width}px`;
+    scene.style.height = `${rect.height}px`;
+  }
+
+  function close() {
+    clearTimers();
+    overlay.classList.remove("is-dim", "is-center", "is-lid", "is-full", "is-reveal");
+    overlay.hidden = true;
+    const ibanBox = document.getElementById("gifts-iban");
+    if (ibanBox) ibanBox.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  function open() {
+    if (!sections.gifts.enabled || !overlay.hidden) return;
+    clearTimers();
+    overlay.classList.remove("is-dim", "is-center", "is-lid", "is-full", "is-reveal");
+    placeOverCard();
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      scene.style.top = "";
+      scene.style.left = "";
+      scene.style.width = "";
+      scene.style.height = "";
+      overlay.classList.add("is-dim", "is-full", "is-reveal");
+      return;
+    }
+
+    void scene.offsetWidth;
+    overlay.classList.add("is-dim");
+    scene.style.top = "";
+    scene.style.left = "";
+    scene.style.width = "";
+    scene.style.height = "";
+    overlay.classList.add("is-center");
+    timers.push(setTimeout(() => overlay.classList.add("is-lid"), 560));
+    timers.push(setTimeout(() => overlay.classList.add("is-full"), 1180));
+    timers.push(setTimeout(() => overlay.classList.add("is-reveal"), 1880));
+  }
+
+  function toggleIban(trigger) {
+    const box = document.getElementById("gifts-iban");
+    if (!box) return;
+    const isOpen = !box.classList.contains("is-open");
+    box.classList.toggle("is-open", isOpen);
+    overlay.querySelectorAll("[data-toggle-iban]").forEach((el) => {
+      el.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    if (trigger) trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  }
+
+  overlay.addEventListener("click", (e) => {
+    const ibanTrigger = e.target.closest("[data-toggle-iban]");
+    if (ibanTrigger) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleIban(ibanTrigger);
+      return;
+    }
+    if (e.target.closest("[data-close-gifts]")) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-close-gifts]")) {
+      e.preventDefault();
+      close();
+      return;
+    }
+    if (e.target.closest("[data-toggle-iban]")) return;
+    if (e.target.closest("[data-open-gifts], #gift-pack")) open();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !overlay.hidden) close();
+  });
+}
+
 function initLangSwitch() {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => setLocale(btn.dataset.lang));
@@ -444,6 +581,7 @@ function init() {
   initCountdown();
   initNav();
   initSaveTheDateClicks();
+  initGiftsOverlay();
   initLangSwitch();
   initScrollReveal();
   initEasterEggs(buildEasterEggConfig());

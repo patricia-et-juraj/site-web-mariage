@@ -19,7 +19,7 @@ export const cs = {
     events: "Program",
     details: "Praktické informace",
     accommodation: "Ubytování",
-    gifts: "Svatební seznam",
+    gifts: "Dárky",
     faq: "Často kladené otázky",
     rsvp: "Potvrďte svou účast",
     contact: "Kontakt",
@@ -66,20 +66,8 @@ export const cs = {
   maps: { google: "Google Maps" },
   gifts: {
     seeMore: "Zobrazit více",
-    intro: "Vaše přítomnost je pro nás ten nejkrásnější dárek. Pokud nás chcete také obdarovat, tady je, k čemu by vaše pozornost přispěla.",
-    note: "V den svatby bude na místě urna.",
-    wishes: [
-      {
-        kicker: "Naše přání",
-        title: "Svatební cesta",
-        text: "Po svatbě odjíždíme oslavit tuto novou kapitolu. I malý příspěvek nám pomůže udělat z ní ještě krásnější vzpomínku.",
-      },
-      {
-        kicker: "Naše sbírka",
-        title: "Plyšáci",
-        text: "Plyšáci jsou vítáni, ať rozšíří naši sbírku.",
-      },
-    ],
+    intro: "Rozhodli jsme se nedělat svatební seznam. Pokud chcete přispět na naši svatební cestu, v den svatby bude k dispozici urna, nebo přes náš IBAN.",
+    ibanCta: "IBAN",
   },
   accommodation: {
     intro: "Několik ubytování v okolí — rezervujte včas, jaro bývá rušná sezóna.",
@@ -143,7 +131,7 @@ export const en = {
     events: "Schedule",
     details: "Practical info",
     accommodation: "Accommodation",
-    gifts: "Wedding list",
+    gifts: "Gifts",
     faq: "Frequently asked questions",
     rsvp: "Confirm your attendance",
     contact: "Contact",
@@ -190,20 +178,8 @@ export const en = {
   maps: { google: "Google Maps" },
   gifts: {
     seeMore: "See more",
-    intro: "Your presence is our greatest gift. If you also wish to treat us, here is what your kindness would go towards.",
-    note: "An urn will be available on the day.",
-    wishes: [
-      {
-        kicker: "Our wish",
-        title: "The honeymoon",
-        text: "After the wedding we are leaving to celebrate this new chapter. A contribution, even a small one, will help us turn it into an even lovelier memory.",
-      },
-      {
-        kicker: "Our collection",
-        title: "Stuffed animals",
-        text: "Stuffed animals are welcome to grow our collection.",
-      },
-    ],
+    intro: "We have decided not to have a wedding list. If you would like to contribute to our honeymoon, an urn will be available on the day, or via our IBAN.",
+    ibanCta: "IBAN",
   },
   accommodation: {
     intro: "A few nearby places to stay — book early, spring is a busy season.",
@@ -267,7 +243,7 @@ export const es = {
     events: "Programa",
     details: "Información práctica",
     accommodation: "Alojamiento",
-    gifts: "Lista de boda",
+    gifts: "Regalos",
     faq: "Preguntas frecuentes",
     rsvp: "Confirmar asistencia",
     contact: "Contacto",
@@ -314,20 +290,8 @@ export const es = {
   maps: { google: "Google Maps" },
   gifts: {
     seeMore: "Ver más",
-    intro: "Su presencia es nuestro mejor regalo. Si también desean consentirnos, esto es a lo que contribuiría su gesto.",
-    note: "Habrá una urna el día de la boda.",
-    wishes: [
-      {
-        kicker: "Nuestro deseo",
-        title: "El viaje de novios",
-        text: "Después de la boda nos vamos a celebrar este nuevo capítulo. Un aporte, aunque sea pequeño, nos ayudará a convertirlo en un recuerdo todavía más lindo.",
-      },
-      {
-        kicker: "Nuestra colección",
-        title: "Peluches",
-        text: "Los peluches son bienvenidos para ampliar nuestra colección.",
-      },
-    ],
+    intro: "Decidimos no hacer una lista de boda. Si desean contribuir a nuestro viaje de novios, habrá una urna el día de la boda, o a través de nuestro IBAN.",
+    ibanCta: "IBAN",
   },
   accommodation: {
     intro: "Algunos alojamientos cerca — reserven pronto, la primavera es temporada alta.",

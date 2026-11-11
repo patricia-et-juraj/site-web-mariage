@@ -24,7 +24,7 @@ export const translations = {
       events: "Le programme",
       details: "Infos pratiques",
       accommodation: "Hébergement",
-      gifts: "Liste de mariage",
+      gifts: "Cadeaux",
       faq: "Questions fréquentes",
       rsvp: "Confirmer votre présence",
       contact: "Contact",
@@ -133,20 +133,8 @@ export const translations = {
     gifts: {
       seeMore: "Voir plus",
       intro:
-        "Votre présence est notre plus beau cadeau. Si vous souhaitez aussi nous gâter, voici à quoi votre attention contribuerait.",
-      note: "Une urne sera disponible sur place le jour J.",
-      wishes: [
-        {
-          kicker: "Notre souhait",
-          title: "Le voyage de noces",
-          text: "Après le mariage, nous partons célébrer ce nouveau chapitre. Une contribution, même petite, nous aidera à en faire un souvenir encore plus beau.",
-        },
-        {
-          kicker: "Notre collection",
-          title: "Des peluches",
-          text: "Les peluches sont les bienvenues pour étendre notre collection.",
-        },
-      ],
+        "Nous avons décidé de ne pas faire une liste de mariage. Si vous souhaitez contribuer à notre voyage de noces, une urne sera disponible le jour J, ou alors via notre IBAN.",
+      ibanCta: "IBAN",
     },
     accommodation: {
       intro:
@@ -269,7 +257,7 @@ export const translations = {
       events: "Program",
       details: "Praktické informácie",
       accommodation: "Ubytovanie",
-      gifts: "Svadebný zoznam",
+      gifts: "Darčeky",
       faq: "Často kladené otázky",
       rsvp: "Potvrďte svoju účasť",
       contact: "Kontakt",
@@ -378,20 +366,8 @@ export const translations = {
     gifts: {
       seeMore: "Zobraziť viac",
       intro:
-        "Vaša prítomnosť je pre nás ten najkrajší darček. Ak nás chcete aj obdarovať, tu je, na čo by vaša pozornosť prispela.",
-      note: "V deň svadby bude na mieste urna.",
-      wishes: [
-        {
-          kicker: "Naše želanie",
-          title: "Svadobná cesta",
-          text: "Po svadbe odchádzame osláviť túto novú kapitolu. Aj malý príspevok nám pomôže premeniť ju na ešte krajšiu spomienku.",
-        },
-        {
-          kicker: "Naša zbierka",
-          title: "Plyšové hračky",
-          text: "Plyšové hračky sú vítané, aby rozšírili našu zbierku.",
-        },
-      ],
+        "Rozhodli sme sa nerobiť svadobný zoznam. Ak chcete prispieť na našu svadobnú cestu, v deň svadby bude k dispozícii urna, alebo cez náš IBAN.",
+      ibanCta: "IBAN",
     },
     accommodation: {
       intro:

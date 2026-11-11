@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mariage de Patricia et Juraj" />
     <meta name="robots" content="noindex, nofollow" />
-    <title>Patricia & Juraj — test 2</title>
+    <title>Patricia & Juraj - test 2</title>
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +19,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <p class="test-banner">Test 2 — la carte Cadeaux devient le cadeau</p>
+    <p class="test-banner">Test 2 — le cadeau s’ouvre en plein écran</p>
     <header class="header">
       <nav class="nav container" aria-label="Navigation principale">
         <a href="#accueil" class="nav-logo" id="nav-logo"></a>
@@ -62,7 +65,7 @@
               <p id="hero-cta-rsvp-hint" class="hero-cta-hint"></p>
               <a href="#rsvp" id="hero-cta-rsvp" class="btn btn-primary"></a>
             </div>
-            <a href="#save-the-date" id="hero-cta-save-the-date" class="btn btn-outline"></a>
+            <a href="#save-the-date" id="hero-cta-save-the-date" class="btn btn-primary"></a>
           </div>
         </div>
       </section>
@@ -165,6 +168,41 @@
     <footer class="footer">
       <p id="footer-text" class="footer-text container"></p>
     </footer>
+
+    <div id="gifts-overlay" class="gifts-overlay" hidden>
+      <div class="gifts-overlay-backdrop" data-close-gifts></div>
+      <div class="gift-scene">
+        <div class="gift-3d">
+          <div class="gift-3d-lid" aria-hidden="true">
+            <span class="gift-3d-band gift-3d-band--v"></span>
+            <span class="gift-3d-band gift-3d-band--h"></span>
+            <span class="gift-3d-bow">
+              <span class="gift-3d-loop gift-3d-loop--l"></span>
+              <span class="gift-3d-loop gift-3d-loop--r"></span>
+              <span class="gift-3d-tail gift-3d-tail--l"></span>
+              <span class="gift-3d-tail gift-3d-tail--r"></span>
+              <span class="gift-3d-knot"></span>
+            </span>
+          </div>
+          <div class="gift-3d-body">
+            <span class="gift-3d-band gift-3d-band--v"></span>
+            <span class="gift-3d-band gift-3d-band--h"></span>
+            <div class="gift-3d-inner">
+              <button type="button" class="gifts-overlay-close" data-close-gifts aria-label="Fermer">&times;</button>
+              <h2 id="gifts-title" class="gifts-overlay-title"></h2>
+              <p id="gifts-intro" class="gifts-overlay-intro"></p>
+              <div id="gifts-iban" class="bank-details">
+                <p class="bank-name">Patricia Maiz Calle</p>
+                <p class="bank-iban">CH71 0878 1000 2317 8220 0</p>
+                <p>SWQBCHZZXXX</p>
+                <p>Swissquote Bank SA</p>
+                <p>Chemin de la Crétaux 33 Case postale 319<br>1196 Gland<br>SWITZERLAND</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true">
       <div class="lightbox-backdrop"></div>

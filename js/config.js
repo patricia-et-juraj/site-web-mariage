@@ -30,6 +30,7 @@ export const siteConfig = {
     saveTheDate: { enabled: true, id: "save-the-date" },
     events: { enabled: true, id: "programme" },
     details: { enabled: true, id: "infos" },
+    gifts: { enabled: true, id: "liste-mariage", nav: false },
     accommodation: { enabled: false, id: "hebergement" },
     faq: { enabled: false, id: "faq" },
     rsvp: { enabled: true, id: "rsvp" },
@@ -64,6 +65,14 @@ export const siteConfig = {
 
   rsvp: {
     googleFormUrl: "https://forms.gle/LcBeSZZspYXHG2uT9",
+  },
+
+  bank: {
+    accountName: "Patricia Maiz Calle",
+    iban: "CH71 0878 1000 2317 8220 0",
+    bic: "SWQBCHZZXXX",
+    bankName: "Swissquote Bank SA",
+    address: "Chemin de la Crétaux 33 Case postale 319\n1196 Gland\nSWITZERLAND",
   },
 
   easterEggs: {

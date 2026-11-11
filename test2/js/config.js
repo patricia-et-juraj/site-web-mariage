@@ -67,6 +67,14 @@ export const siteConfig = {
     googleFormUrl: "https://forms.gle/LcBeSZZspYXHG2uT9",
   },
 
+  bank: {
+    accountName: "Patricia Maiz Calle",
+    iban: "CH71 0878 1000 2317 8220 0",
+    bic: "SWQBCHZZXXX",
+    bankName: "Swissquote Bank SA",
+    address: "Chemin de la Crétaux 33 Case postale 319\n1196 Gland\nSWITZERLAND",
+  },
+
   easterEggs: {
     konami: { enabled: true },
     ampersand: { enabled: true },

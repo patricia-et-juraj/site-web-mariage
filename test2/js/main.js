@@ -2,7 +2,7 @@ import { siteConfig } from "./config.js";
 import { getTranslations, getLocale, setLocale, onLocaleChange, initLocale, formatTemplate } from "./locale.js";
 import { initGallery, openSaveTheDate } from "./gallery.js";
 import { initEasterEggs, updateEasterEggMessages } from "./easter-eggs.js";
-const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs } = siteConfig;
+const { couple, wedding, theme, sections, saveTheDate, contact, easterEggs, bank } = siteConfig;
 
 let countdownInterval;
 
@@ -113,7 +113,7 @@ function renderHero() {
   if (ctaRsvpHint) ctaRsvpHint.textContent = tr.hero.ctaRsvpHint;
   if (ctaStd) ctaStd.textContent = tr.hero.ctaSaveTheDate;
 
-  document.title = `${couple.person1} & ${couple.person2} — ${tr.meta.titleSuffix}`;
+  document.title = `${couple.person1} & ${couple.person2} - ${tr.meta.titleSuffix}`;
   document.querySelector('meta[name="description"]')?.setAttribute("content", tr.meta.description);
 }
 
@@ -184,33 +184,11 @@ function renderDetails() {
         : "";
       const more =
         d.more && sections.gifts?.enabled
-          ? `<button type="button" class="btn btn-outline detail-maps-btn" data-open-gifts>${tr.gifts.seeMore}</button>`
+          ? `<button type="button" class="btn btn-primary detail-maps-btn" data-open-gifts>${tr.gifts.seeMore}</button>`
           : "";
-      if (d.more && sections.gifts?.enabled) {
-        return `
-      <article class="detail-card gift-pack" id="gift-pack">
-        <div class="gift-pack-lid" aria-hidden="true">
-          <span class="gift-pack-bow-l"></span>
-          <span class="gift-pack-bow-r"></span>
-          <span class="gift-pack-knot"></span>
-        </div>
-        <div class="gift-pack-ribbon" aria-hidden="true"></div>
-        <div class="gift-pack-front">
-          <h3>${d.title}</h3>
-          <p>${venueLink(d.content.replace(/\n/g, "<br>"))}</p>
-          ${more}
-        </div>
-        <div class="gift-pack-inside">
-          <button type="button" class="gifts-overlay-close" data-close-gifts aria-label="${t().gallery.close}">&times;</button>
-          <h2 id="gifts-title" class="gifts-overlay-title"></h2>
-          <p id="gifts-intro" class="gifts-overlay-intro"></p>
-          <div id="gifts-list" class="gifts-list"></div>
-          <p id="gifts-note" class="gifts-note"></p>
-        </div>
-      </article>`;
-      }
+      const packId = d.more && sections.gifts?.enabled ? ` id="gift-pack"` : "";
       return `
-      <article class="detail-card">
+      <article class="detail-card"${packId}>
         <h3>${d.title}</h3>
         <p>${venueLink(d.content.replace(/\n/g, "<br>"))}</p>
         ${link}${more}
@@ -220,23 +198,32 @@ function renderDetails() {
 }
 
 function renderGifts() {
-  if (!sections.gifts.enabled) return;
+  const overlay = document.getElementById("gifts-overlay");
+  if (!sections.gifts.enabled) {
+    overlay?.setAttribute("hidden", "");
+    return;
+  }
   if (!document.getElementById("gifts-title")) return;
 
   const tr = t().gifts;
+  const label = tr.ibanCta || "IBAN";
   document.getElementById("gifts-title").textContent = t().sections.gifts;
-  document.getElementById("gifts-intro").textContent = tr.intro;
-  document.getElementById("gifts-note").textContent = tr.note;
-  document.getElementById("gifts-list").innerHTML = (tr.wishes ?? [])
-    .map(
-      (w) => `
-      <article class="gift-wish">
-        <p class="gift-wish-kicker">${w.kicker}</p>
-        <h3 class="gift-wish-title">${w.title}</h3>
-        <p class="gift-wish-text">${w.text}</p>
-      </article>`
-    )
-    .join("");
+  const intro = document.getElementById("gifts-intro");
+  if (intro) {
+    intro.innerHTML = tr.intro.replace(
+      /IBAN/g,
+      `<button type="button" class="iban-inline" data-toggle-iban aria-expanded="false" aria-controls="gifts-iban">${label}</button>`
+    );
+  }
+  const ibanBox = document.getElementById("gifts-iban");
+  if (ibanBox && bank) {
+    ibanBox.innerHTML = `
+      <p class="bank-name">${bank.accountName}</p>
+      <p class="bank-iban">${bank.iban}</p>
+      <p>${bank.bic}</p>
+      <p>${bank.bankName}</p>
+      <p>${bank.address.replace(/\n/g, "<br>")}</p>`;
+  }
 }
 
 function renderAccommodation() {
@@ -326,7 +313,7 @@ function renderContact() {
         <div class="contact-person">
           <span class="contact-person-name">${p.name}</span>
           <a class="contact-person-email" href="mailto:${p.email}">${p.email}</a>
-          <span class="contact-person-phone">${p.phone}</span>
+          <a class="contact-person-phone" href="tel:${String(p.phone).replace(/\s+/g, "")}">${p.phone}</a>
         </div>`
       )
       .join("");
@@ -339,7 +326,7 @@ function renderContact() {
         (w) => `
         <div class="witness-card">
           <span>${w.name}</span>
-          <span>${w.phone}</span>
+          ${w.phone ? `<a href="tel:${String(w.phone).replace(/\s+/g, "")}">${w.phone}</a>` : ""}
         </div>`
       )
       .join("");
@@ -469,39 +456,90 @@ function initSaveTheDateClicks() {
 }
 
 function initGiftsOverlay() {
-  let revealTimer;
+  const overlay = document.getElementById("gifts-overlay");
+  if (!overlay) return;
 
-  function pack() {
-    return document.getElementById("gift-pack");
+  const scene = overlay.querySelector(".gift-scene");
+  let timers = [];
+
+  function clearTimers() {
+    timers.forEach((id) => clearTimeout(id));
+    timers = [];
+  }
+
+  function placeOverCard() {
+    const card = document.getElementById("gift-pack");
+    if (!card || !scene) return;
+    const rect = card.getBoundingClientRect();
+    scene.style.top = `${rect.top}px`;
+    scene.style.left = `${rect.left}px`;
+    scene.style.width = `${rect.width}px`;
+    scene.style.height = `${rect.height}px`;
   }
 
   function close() {
-    const el = pack();
-    if (!el) return;
-    clearTimeout(revealTimer);
-    el.classList.remove("is-wrapping", "is-opening", "is-open");
+    clearTimers();
+    overlay.classList.remove("is-dim", "is-center", "is-lid", "is-full", "is-reveal");
+    overlay.hidden = true;
+    const ibanBox = document.getElementById("gifts-iban");
+    if (ibanBox) ibanBox.classList.remove("is-open");
+    document.body.style.overflow = "";
   }
 
   function open() {
-    const el = pack();
-    if (!el || !sections.gifts.enabled || el.classList.contains("is-open") || el.classList.contains("is-wrapping")) {
-      return;
-    }
-    clearTimeout(revealTimer);
+    if (!sections.gifts.enabled || !overlay.hidden) return;
+    clearTimers();
+    overlay.classList.remove("is-dim", "is-center", "is-lid", "is-full", "is-reveal");
+    placeOverCard();
+    overlay.hidden = false;
+    document.body.style.overflow = "hidden";
+
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) {
-      el.classList.add("is-wrapping", "is-opening", "is-open");
+      scene.style.top = "";
+      scene.style.left = "";
+      scene.style.width = "";
+      scene.style.height = "";
+      overlay.classList.add("is-dim", "is-full", "is-reveal");
       return;
     }
-    el.classList.add("is-wrapping");
-    revealTimer = setTimeout(() => {
-      el.classList.add("is-opening");
-      revealTimer = setTimeout(() => {
-        el.classList.add("is-open");
-        el.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 650);
-    }, 420);
+
+    void scene.offsetWidth;
+    overlay.classList.add("is-dim");
+    scene.style.top = "";
+    scene.style.left = "";
+    scene.style.width = "";
+    scene.style.height = "";
+    overlay.classList.add("is-center");
+    timers.push(setTimeout(() => overlay.classList.add("is-lid"), 560));
+    timers.push(setTimeout(() => overlay.classList.add("is-full"), 1180));
+    timers.push(setTimeout(() => overlay.classList.add("is-reveal"), 1880));
   }
+
+  function toggleIban(trigger) {
+    const box = document.getElementById("gifts-iban");
+    if (!box) return;
+    const open = !box.classList.contains("is-open");
+    box.classList.toggle("is-open", open);
+    overlay.querySelectorAll("[data-toggle-iban]").forEach((el) => {
+      el.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    if (trigger) trigger.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  overlay.addEventListener("click", (e) => {
+    const ibanTrigger = e.target.closest("[data-toggle-iban]");
+    if (ibanTrigger) {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleIban(ibanTrigger);
+      return;
+    }
+    if (e.target.closest("[data-close-gifts]")) {
+      e.preventDefault();
+      close();
+    }
+  });
 
   document.addEventListener("click", (e) => {
     if (e.target.closest("[data-close-gifts]")) {
@@ -509,13 +547,11 @@ function initGiftsOverlay() {
       close();
       return;
     }
-    const el = pack();
-    if (!el) return;
-    if (el.classList.contains("is-open") || el.classList.contains("is-wrapping")) return;
-    if (e.target.closest("#gift-pack")) open();
+    if (e.target.closest("[data-toggle-iban]")) return;
+    if (e.target.closest("[data-open-gifts], #gift-pack")) open();
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") close();
+    if (e.key === "Escape" && !overlay.hidden) close();
   });
 }
 
