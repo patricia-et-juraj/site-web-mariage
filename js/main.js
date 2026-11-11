@@ -279,7 +279,7 @@ function renderContact() {
         <div class="contact-person">
           <span class="contact-person-name">${p.name}</span>
           <a class="contact-person-email" href="mailto:${p.email}">${p.email}</a>
-          <span class="contact-person-phone">${p.phone}</span>
+          <a class="contact-person-phone" href="tel:${String(p.phone).replace(/\s+/g, "")}">${p.phone}</a>
         </div>`
       )
       .join("");
@@ -292,7 +292,7 @@ function renderContact() {
         (w) => `
         <div class="witness-card">
           <span>${w.name}</span>
-          <span>${w.phone}</span>
+          ${w.phone ? `<a href="tel:${String(w.phone).replace(/\s+/g, "")}">${w.phone}</a>` : ""}
         </div>`
       )
       .join("");
