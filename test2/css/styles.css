@@ -974,6 +974,154 @@ h3 {
   color: var(--color-text-muted);
 }
 
+.gift-pack {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: background 0.45s ease, box-shadow 0.45s ease, min-height 0.55s ease;
+}
+
+.gift-pack-front {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transition: opacity 0.35s ease, transform 0.45s ease;
+}
+
+.gift-pack-lid,
+.gift-pack-ribbon {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.gift-pack-lid {
+  z-index: 4;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 42%;
+  background: linear-gradient(180deg, #a24b54, #6b2830);
+  transform-origin: bottom center;
+  transition: opacity 0.3s ease, transform 0.7s cubic-bezier(0.2, 0.85, 0.25, 1);
+  box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.gift-pack-bow-l,
+.gift-pack-bow-r {
+  position: absolute;
+  top: 18%;
+  width: 1.6rem;
+  height: 1.1rem;
+  border: 3px solid #d4b07a;
+  border-radius: 50%;
+  background: rgba(212, 176, 122, 0.2);
+}
+
+.gift-pack-bow-l {
+  left: 28%;
+  transform: rotate(-32deg);
+}
+
+.gift-pack-bow-r {
+  right: 28%;
+  transform: rotate(32deg);
+}
+
+.gift-pack-knot {
+  position: absolute;
+  left: 50%;
+  top: 22%;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-left: -0.35rem;
+  border-radius: 50%;
+  background: #d4b07a;
+  box-shadow: 0 0 0 2px #4a1a20;
+}
+
+.gift-pack-ribbon {
+  z-index: 3;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 0.72rem;
+  transform: translateX(-50%);
+  background: #d4b07a;
+  transition: opacity 0.3s ease;
+}
+
+.gift-pack-inside {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.45s ease 0.1s, transform 0.45s ease 0.1s, max-height 0.55s ease;
+}
+
+.gift-pack.is-wrapping {
+  background: linear-gradient(180deg, #7a3038 0%, #4a1a20 100%);
+  box-shadow: 0 10px 28px rgba(74, 26, 32, 0.22);
+}
+
+.gift-pack.is-wrapping .gift-pack-front {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+
+.gift-pack.is-wrapping .gift-pack-lid,
+.gift-pack.is-wrapping .gift-pack-ribbon {
+  opacity: 1;
+}
+
+.gift-pack.is-opening .gift-pack-lid {
+  transform: rotateX(-155deg);
+}
+
+.gift-pack.is-open {
+  grid-column: 1 / -1;
+  cursor: default;
+  background: var(--color-surface);
+  min-height: 0;
+}
+
+.gift-pack.is-open .gift-pack-front,
+.gift-pack.is-open .gift-pack-ribbon {
+  display: none;
+}
+
+.gift-pack.is-open .gift-pack-lid {
+  height: 1.15rem;
+  opacity: 1;
+  transform: none;
+}
+
+.gift-pack.is-open .gift-pack-inside {
+  max-height: 80rem;
+  opacity: 1;
+  transform: none;
+  padding-top: 1.4rem;
+}
+
+.gift-pack .gifts-overlay-close {
+  position: absolute;
+  top: 0.15rem;
+  right: 0;
+}
+
+.gift-pack .gifts-overlay-title {
+  margin-top: 0.35rem;
+}
+
 /* ── Liste de mariage (overlay + urne) ── */
 .gifts-overlay {
   position: fixed;

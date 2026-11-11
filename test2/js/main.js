@@ -186,6 +186,29 @@ function renderDetails() {
         d.more && sections.gifts?.enabled
           ? `<button type="button" class="btn btn-outline detail-maps-btn" data-open-gifts>${tr.gifts.seeMore}</button>`
           : "";
+      if (d.more && sections.gifts?.enabled) {
+        return `
+      <article class="detail-card gift-pack" id="gift-pack">
+        <div class="gift-pack-lid" aria-hidden="true">
+          <span class="gift-pack-bow-l"></span>
+          <span class="gift-pack-bow-r"></span>
+          <span class="gift-pack-knot"></span>
+        </div>
+        <div class="gift-pack-ribbon" aria-hidden="true"></div>
+        <div class="gift-pack-front">
+          <h3>${d.title}</h3>
+          <p>${venueLink(d.content.replace(/\n/g, "<br>"))}</p>
+          ${more}
+        </div>
+        <div class="gift-pack-inside">
+          <button type="button" class="gifts-overlay-close" data-close-gifts aria-label="${t().gallery.close}">&times;</button>
+          <h2 id="gifts-title" class="gifts-overlay-title"></h2>
+          <p id="gifts-intro" class="gifts-overlay-intro"></p>
+          <div id="gifts-list" class="gifts-list"></div>
+          <p id="gifts-note" class="gifts-note"></p>
+        </div>
+      </article>`;
+      }
       return `
       <article class="detail-card">
         <h3>${d.title}</h3>
@@ -197,11 +220,8 @@ function renderDetails() {
 }
 
 function renderGifts() {
-  const overlay = document.getElementById("gifts-overlay");
-  if (!sections.gifts.enabled) {
-    overlay?.setAttribute("hidden", "");
-    return;
-  }
+  if (!sections.gifts.enabled) return;
+  if (!document.getElementById("gifts-title")) return;
 
   const tr = t().gifts;
   document.getElementById("gifts-title").textContent = t().sections.gifts;
@@ -449,47 +469,53 @@ function initSaveTheDateClicks() {
 }
 
 function initGiftsOverlay() {
-  const overlay = document.getElementById("gifts-overlay");
-  if (!overlay) return;
-
-  const closeBtn = overlay.querySelector(".gifts-overlay-close");
-  const backdrop = overlay.querySelector(".gifts-overlay-backdrop");
-  const box = overlay.querySelector(".giftbox");
-  const content = overlay.querySelector(".gifts-overlay-content");
   let revealTimer;
 
+  function pack() {
+    return document.getElementById("gift-pack");
+  }
+
   function close() {
+    const el = pack();
+    if (!el) return;
     clearTimeout(revealTimer);
-    overlay.hidden = true;
-    overlay.classList.remove("is-open");
-    box?.classList.remove("is-open");
-    content?.classList.remove("is-visible");
-    document.body.style.overflow = "";
+    el.classList.remove("is-wrapping", "is-opening", "is-open");
   }
 
   function open() {
-    if (!sections.gifts.enabled) return;
+    const el = pack();
+    if (!el || !sections.gifts.enabled || el.classList.contains("is-open") || el.classList.contains("is-wrapping")) {
+      return;
+    }
     clearTimeout(revealTimer);
-    overlay.hidden = false;
-    overlay.classList.remove("is-open");
-    box?.classList.remove("is-open");
-    content?.classList.remove("is-visible");
-    document.body.style.overflow = "hidden";
-    requestAnimationFrame(() => {
-      overlay.classList.add("is-open");
-      requestAnimationFrame(() => box?.classList.add("is-open"));
-    });
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    revealTimer = setTimeout(() => content?.classList.add("is-visible"), reduce ? 0 : 900);
+    if (reduce) {
+      el.classList.add("is-wrapping", "is-opening", "is-open");
+      return;
+    }
+    el.classList.add("is-wrapping");
+    revealTimer = setTimeout(() => {
+      el.classList.add("is-opening");
+      revealTimer = setTimeout(() => {
+        el.classList.add("is-open");
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 650);
+    }, 420);
   }
 
   document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-open-gifts]")) open();
+    if (e.target.closest("[data-close-gifts]")) {
+      e.preventDefault();
+      close();
+      return;
+    }
+    const el = pack();
+    if (!el) return;
+    if (el.classList.contains("is-open") || el.classList.contains("is-wrapping")) return;
+    if (e.target.closest("#gift-pack")) open();
   });
-  closeBtn?.addEventListener("click", close);
-  backdrop?.addEventListener("click", close);
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && !overlay.hidden) close();
+    if (e.key === "Escape") close();
   });
 }
 
