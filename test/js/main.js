@@ -113,7 +113,7 @@ function renderHero() {
   if (ctaRsvpHint) ctaRsvpHint.textContent = tr.hero.ctaRsvpHint;
   if (ctaStd) ctaStd.textContent = tr.hero.ctaSaveTheDate;
 
-  document.title = `${couple.person1} & ${couple.person2} — ${tr.meta.titleSuffix}`;
+  document.title = `${couple.person1} & ${couple.person2} - ${tr.meta.titleSuffix}`;
   document.querySelector('meta[name="description"]')?.setAttribute("content", tr.meta.description);
 }
 
