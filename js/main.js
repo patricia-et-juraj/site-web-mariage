@@ -157,12 +157,14 @@ function renderEvents() {
       if (e.kind === "day") {
         return `<div class="event-day"><p class="event-day-label">${e.label}</p></div>`;
       }
+      const description = e.description
+        ? `<p>${venueLink(e.description)}</p>`
+        : "";
       return `
       <article class="event-card">
         <div class="event-body">
           <h3>${e.time ? `<span class="event-time">${e.time}</span> ` : ""}${e.title}</h3>
-          <p>${venueLink(e.description)}</p>
-          <span class="event-location">${venueLink(e.location)}</span>
+          ${description}
         </div>
       </article>`;
     })

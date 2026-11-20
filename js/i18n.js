@@ -54,38 +54,31 @@ export const translations = {
       {
         time: "15h",
         title: "Cérémonie",
-        description: "Cérémonie au Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
       },
       {
         time: "~16h",
         title: "Vin d'honneur",
-        description: "Cocktail et apéritif dans la cour du Ranch des Rochettes — c'est aussi le moment de la séance photo.",
-        location: "Ranch des Rochettes",
+        description: "Cocktail et apéritif dans la cour — c'est aussi le moment de la séance photo.",
       },
       {
         time: "~19h",
         title: "Repas",
-        description: "Repas assis en plusieurs services au Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
+        description: "Repas assis en plusieurs services.",
       },
       {
         time: "~21h",
         title: "Soirée dansante",
         description: "Ouverture du bal et fête jusqu'au bout de la nuit !",
-        location: "Ranch des Rochettes",
       },
       {
         title: "Nuit sur place",
-        description: "Incluse dans l'invitation, au Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
+        description: "Incluse dans l'invitation.",
       },
       { kind: "day", label: "Dimanche 9h30" },
       {
         time: "9h30 – 12h30",
         title: "Brunch du lendemain",
         description: "Brunch de 3 heures pour prolonger les retrouvailles.",
-        location: "Ranch des Rochettes",
       },
     ],
     details: [
@@ -287,38 +280,31 @@ export const translations = {
       {
         time: "15:00",
         title: "Obrad",
-        description: "Svadobný obrad v Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
       },
       {
         time: "~16:00",
         title: "Prípitok",
-        description: "Koktail a aperitív na dvore Ranch des Rochettes — zároveň aj čas na spoločné fotenie.",
-        location: "Ranch des Rochettes",
+        description: "Koktail a aperitív na dvore — zároveň aj čas na spoločné fotenie.",
       },
       {
         time: "~19:00",
         title: "Večera",
-        description: "Slávnostná večera v niekoľkých chodoch v Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
+        description: "Slávnostná večera v niekoľkých chodoch.",
       },
       {
         time: "~21:00",
         title: "Tanečná zábava",
         description: "Otvorenie tanca a párty až do neskorej noci!",
-        location: "Ranch des Rochettes",
       },
       {
         title: "Noc na mieste",
-        description: "Zahrnutá v pozvánke, v Ranch des Rochettes.",
-        location: "Ranch des Rochettes",
+        description: "Zahrnutá v pozvánke.",
       },
       { kind: "day", label: "Nedeľa 9:30" },
       {
         time: "9:30 – 12:30",
         title: "Brunch na druhý deň",
         description: "Trojhodinový brunch na pokračovanie oslavy.",
-        location: "Ranch des Rochettes",
       },
     ],
     details: [
