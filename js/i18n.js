@@ -101,6 +101,10 @@ export const translations = {
           "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous et nous essaierons de trouver une alternative.",
       },
       {
+        title: "Dress-code",
+        content: "Il n'y a pas de dress-code spécial : venez comme vous êtes.",
+      },
+      {
         title: "Enfants et conjoints",
         content: "Les personnes invitées figurent sur les invitations.",
       },
@@ -325,6 +329,10 @@ export const translations = {
         title: "Doprava",
         content:
           "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám a pokúsime sa nájsť alternatívu.",
+      },
+      {
+        title: "Dress-code",
+        content: "Nie je žiadny špeciálny dress-code: príďte takí, akí ste.",
       },
       {
         title: "Deti a partneri",
