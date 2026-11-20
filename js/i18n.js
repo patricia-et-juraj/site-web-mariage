@@ -101,10 +101,6 @@ export const translations = {
           "Le plus simple et le plus pratique est de venir en voiture. Si ce n'est pas possible, écrivez-nous et nous essaierons de trouver une alternative.",
       },
       {
-        title: "Dress-code",
-        content: "Il n'y a pas de dress-code spécial : venez comme vous êtes.",
-      },
-      {
         title: "Enfants et conjoints",
         content: "Les personnes invitées figurent sur les invitations.",
       },
@@ -119,9 +115,8 @@ export const translations = {
         more: true,
       },
       {
-        title: "Photos",
-        content:
-          "Un photographe professionnel sera présent. C'est lui qui prendra les photos de la cérémonie.",
+        title: "Dress-code",
+        content: "Il n'y a pas de dress-code spécial : venez comme vous êtes.",
       },
     ],
     maps: {
@@ -331,10 +326,6 @@ export const translations = {
           "Najjednoduchšie a najpraktickejšie je prísť autom. Ak to nie je možné, napíšte nám a pokúsime sa nájsť alternatívu.",
       },
       {
-        title: "Dress-code",
-        content: "Nie je žiadny špeciálny dress-code: príďte takí, akí ste.",
-      },
-      {
         title: "Deti a partneri",
         content: "Na pozvánkach je uvedené, kto je pozvaný.",
       },
@@ -349,9 +340,8 @@ export const translations = {
         more: true,
       },
       {
-        title: "Fotografie",
-        content:
-          "Profesionálny fotograf bude prítomný. On sa postará o fotografie z obradu.",
+        title: "Dress-code",
+        content: "Nie je žiadny špeciálny dress-code: príďte takí, akí ste.",
       },
     ],
     maps: {
