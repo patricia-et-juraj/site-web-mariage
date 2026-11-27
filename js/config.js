@@ -51,14 +51,14 @@ export const siteConfig = {
   contact: {
     people: [
       {
-        name: "Juraj",
-        email: "juraj.rosinsky@gmail.com",
-        phone: "+41 76 737 40 42",
-      },
-      {
         name: "Patricia",
         email: "patricia.maizc@hotmail.com",
         phone: "+41 78 861 67 15",
+      },
+      {
+        name: "Juraj",
+        email: "juraj.rosinsky@gmail.com",
+        phone: "+41 76 737 40 42",
       },
     ],
   },
